@@ -1,0 +1,648 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mix;
+@use 'sass:color';
+@use 'sass:map';
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 50px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: map.get(v.$font-sizes, 'sm');
+  font-weight: map.get(v.$font-weights, 'semibold');
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  @include mix.button-base;
+
+  &:focus {
+    @include mix.box-shadow(0 0 0 3px rgba(v.$primary, 0.2));
+    outline: none;
+  }
+  
+  &:disabled, 
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+    @include mix.transform(none !important);
+  }
+  
+  &:hover:not(:disabled):not(.disabled) {
+    @include mix.transform(translateY(-1px));
+    @include mix.box-shadow(v.$box-shadow);
+    
+    @include mix.respond-to-min('md') {
+      @include mix.transform(translateY(-2px));
+      @include mix.box-shadow(v.$box-shadow-lg);
+    }
+    
+    @include mix.respond-to-min('lg') {
+      @include mix.transform(translateY(-3px));
+    }
+    
+    svg, i {
+      @include mix.transform(scale(1.1));
+    }
+  }
+  
+  &:active:not(:disabled):not(.disabled) {
+    @include mix.transform(translateY(0));
+  }
+
+  &.btn-xs {
+    padding: 0.375rem 1rem;
+    font-size: map.get(v.$font-sizes, 'xs');
+    border-radius: 20px;
+    
+    @include mix.respond-to-min('md') {
+      padding: 0.5rem 1.25rem;
+      font-size: map.get(v.$font-sizes, 'xs');
+      border-radius: 25px;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      padding: 0.5rem 1.5rem;
+      font-size: map.get(v.$font-sizes, 'sm');
+      border-radius: 25px;
+    }
+  }
+  
+  &.btn-sm {
+    padding: 0.5rem 1.5rem;
+    font-size: map.get(v.$font-sizes, 'xs');
+    border-radius: 25px;
+    
+    @include mix.respond-to-min('md') {
+      padding: 0.625rem 1.875rem;
+      font-size: map.get(v.$font-sizes, 'sm');
+      border-radius: 30px;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      padding: 0.75rem 2.25rem;
+      font-size: map.get(v.$font-sizes, 'sm');
+      border-radius: 30px;
+    }
+  }
+  
+  &.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: map.get(v.$font-sizes, 'base');
+    border-radius: 50px;
+    
+    @include mix.respond-to-min('md') {
+      padding: 1.125rem 3.125rem;
+      font-size: map.get(v.$font-sizes, 'lg');
+      border-radius: 60px;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      padding: 1.25rem 3.75rem;
+      font-size: map.get(v.$font-sizes, 'lg');
+      border-radius: 60px;
+    }
+    
+    @include mix.respond-to-min('xl') {
+      padding: 1.375rem 4rem;
+      font-size: map.get(v.$font-sizes, 'xl');
+      border-radius: 70px;
+    }
+  }
+  
+  &.btn-xl {
+    padding: 1.125rem 3rem;
+    font-size: map.get(v.$font-sizes, 'lg');
+    border-radius: 60px;
+    
+    @include mix.respond-to-min('md') {
+      padding: 1.25rem 3.5rem;
+      font-size: map.get(v.$font-sizes, 'xl');
+      border-radius: 70px;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      padding: 1.375rem 4rem;
+      font-size: map.get(v.$font-sizes, 'xl');
+      border-radius: 70px;
+    }
+    
+    @include mix.respond-to-min('xl') {
+      padding: 1.5rem 4.5rem;
+      font-size: map.get(v.$font-sizes, '2xl');
+      border-radius: 80px;
+    }
+  }
+
+  &.btn-square { 
+    border-radius: 0; 
+    
+    @include mix.respond-to-min('md') {
+      border-radius: 2px;
+    }
+  }
+  
+  &.btn-rounded { 
+    border-radius: v.$border-radius-sm;
+    
+    @include mix.respond-to-min('md') {
+      border-radius: v.$border-radius;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      border-radius: v.$border-radius-lg;
+    }
+  }
+  
+  &.btn-pill { 
+    border-radius: 30px;
+    
+    @include mix.respond-to-min('md') {
+      border-radius: 40px;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      border-radius: 50px;
+    }
+  }
+  
+  &.btn-circle { 
+    border-radius: 50%; 
+  }
+
+  &.btn-block {
+    width: 100%;
+    display: flex;
+  }
+
+  svg, i {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.375rem;
+    @include mix.transition(transform 0.3s ease);
+    
+    @include mix.respond-to-min('md') {
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      width: 18px;
+      height: 18px;
+      margin-right: 0.625rem;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+      margin-left: 0.375rem;
+      
+      @include mix.respond-to-min('md') {
+        margin-left: 0.5rem;
+      }
+      
+      @include mix.respond-to-min('lg') {
+        margin-left: 0.625rem;
+      }
+    }
+    
+    &:only-child {
+      margin: 0;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: v.$primary;
+  color: v.$white;
+  border-color: v.$primary;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: v.$primary-dark;
+    border-color: v.$primary-dark;
+    color: v.$white;
+  }
+  
+  &:active:not(:disabled):not(.disabled) {
+    background-color: color.scale(v.$primary-dark, $lightness: -10%);
+    border-color: color.scale(v.$primary-dark, $lightness: -10%);
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: v.$primary;
+  border-color: v.$primary;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: v.$primary;
+    color: v.$white;
+    border-color: v.$primary;
+  }
+  
+  &:active:not(:disabled):not(.disabled) {
+    background-color: v.$primary-dark;
+    border-color: v.$primary-dark;
+    color: v.$white;
+  }
+}
+
+.btn-outline {
+  background-color: v.$primary-dark;
+  color: v.$white;
+  border-color: v.$white;
+  @include mix.transition(all 0.3s ease);
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: v.$primary;
+    color: v.$white;
+    border-color: v.$primary;
+  }
+  
+  &:active:not(:disabled):not(.disabled) {
+    background-color: v.$primary;
+    color: v.$white;
+    border-color: v.$primary;
+  }
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border-color: transparent;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: transparent;
+    color: v.$black;
+    border-color: v.$white;
+  }
+  
+  &:active:not(:disabled):not(.disabled) {
+    background-color: rgba(v.$white, 0.1);
+    border-color: rgba(v.$white, 0.5);
+  }
+}
+
+.btn-text {
+  background-color: transparent;
+  color: v.$primary;
+  border-color: transparent;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: rgba(v.$primary, 0.1);
+    color: v.$primary;
+    border-color: transparent;
+    @include mix.transform(translateY(-1px));
+  }
+  
+  &:active:not(:disabled):not(.disabled) {
+    background-color: rgba(v.$primary, 0.2);
+    @include mix.transform(translateY(0));
+  }
+}
+
+.btn-get-quotes {
+  @include mix.box-shadow(v.$box-shadow);
+  background-color: v.$primary;
+  color: v.$white;
+  border-color: v.$primary;
+  position: relative;
+  overflow: hidden;
+  
+  @include mix.respond-to-max('sm') {
+    padding: 0.625rem 1.75rem;
+    font-size: map.get(v.$font-sizes, 'sm');
+  }
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: v.$primary-dark;
+    color: v.$white;
+    border-color: v.$white;
+  }
+  
+  &:active:not(:disabled):not(.disabled) {
+    background-color: color.scale(v.$primary-dark, $lightness: -10%);
+    border-color: v.$white;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    @include mix.transition(left 0.5s);
+  }
+  
+  &:hover::before {
+    left: 100%;
+  }
+}
+
+.btn-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  min-width: 2.25rem;
+  padding: 0 !important;
+  
+  @include mix.respond-to-min('md') {
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+  }
+  
+  @include mix.respond-to-min('lg') {
+    width: 2.75rem;
+    height: 2.75rem;
+    min-width: 2.75rem;
+  }
+  
+  @include mix.respond-to-min('xl') {
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+  }
+  
+  &.btn-xs { 
+    width: 1.75rem; 
+    height: 1.75rem; 
+    min-width: 1.75rem;
+    
+    @include mix.respond-to-min('md') {
+      width: 2rem; 
+      height: 2rem; 
+      min-width: 2rem;
+    }
+  }
+  
+  &.btn-sm { 
+    width: 2rem; 
+    height: 2rem; 
+    min-width: 2rem;
+    
+    @include mix.respond-to-min('md') {
+      width: 2.25rem; 
+      height: 2.25rem; 
+      min-width: 2.25rem;
+    }
+  }
+  
+  &.btn-lg { 
+    width: 2.75rem; 
+    height: 2.75rem; 
+    min-width: 2.75rem;
+    
+    @include mix.respond-to-min('md') {
+      width: 3.25rem; 
+      height: 3.25rem; 
+      min-width: 3.25rem;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      width: 3.5rem; 
+      height: 3.5rem; 
+      min-width: 3.5rem;
+    }
+  }
+  
+  &.btn-xl { 
+    width: 3.25rem; 
+    height: 3.25rem; 
+    min-width: 3.25rem;
+    
+    @include mix.respond-to-min('md') {
+      width: 3.75rem; 
+      height: 3.75rem; 
+      min-width: 3.75rem;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      width: 4rem; 
+      height: 4rem; 
+      min-width: 4rem;
+    }
+  }
+  
+  svg, i {
+    margin: 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+    
+    @include mix.respond-to-min('md') {
+      width: 18px !important;
+      height: 18px !important;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+}
+
+.btn-social {
+  @extend .btn-icon;
+  background-color: rgba(v.$white, 0.1);
+  color: v.$black;
+  border-color: transparent;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    color: v.$white;
+  }
+  
+  &.btn-twitter:hover { 
+    background-color: #1da1f2; 
+    border-color: #1da1f2; 
+  }
+  
+  &.btn-facebook:hover { 
+    background-color: #4267b2; 
+    border-color: #4267b2; 
+  }
+  
+  &.btn-linkedin:hover { 
+    background-color: #0077b5; 
+    border-color: #0077b5; 
+  }
+  
+  &.btn-instagram:hover { 
+    background-color: #e4405f; 
+    border-color: #e4405f; 
+  }
+  
+  &.btn-youtube:hover { 
+    background-color: #ff0000; 
+    border-color: #ff0000; 
+  }
+  
+  &.btn-github:hover { 
+    background-color: #333; 
+    border-color: #333; 
+  }
+}
+
+.btn-group {
+  display: inline-flex;
+  vertical-align: middle;
+  
+  @include mix.respond-to-max('sm') {
+    flex-direction: column;
+    width: 100%;
+    
+    .btn {
+      margin-left: 0 !important;
+      margin-bottom: -1px;
+      border-radius: v.$border-radius !important;
+      
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  
+  @include mix.respond-to-min('sm') {
+    .btn {
+      position: relative;
+      flex: 1 1 auto;
+      
+      &:not(:first-child) {
+        margin-left: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      
+      &:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      
+      &:hover {
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.cta-buttons {
+  @include mix.respond-to-max('sm') {
+    flex-direction: column !important;
+    gap: map.get(v.$spacers, 2) !important;
+    
+    .btn {
+      width: 100% !important;
+    }
+  }
+  
+  @include mix.respond-to-min('sm') {
+    gap: map.get(v.$spacers, 3) !important;
+  }
+  
+  @include mix.respond-to-min('lg') {
+    gap: map.get(v.$spacers, 4) !important;
+  }
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: v.$white;
+  border-color: #28a745;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: #218838;
+    border-color: #218838;
+    color: v.$white;
+  }
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #212529;
+  border-color: #ffc107;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: #e0a800;
+    border-color: #e0a800;
+    color: #212529;
+  }
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: v.$white;
+  border-color: #dc3545;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: #c82333;
+    border-color: #c82333;
+    color: v.$white;
+  }
+}
+
+.btn-light {
+  background-color: v.$white;
+  color: v.$primary;
+  border-color: v.$white;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: color.scale(v.$white, $lightness: -10%);
+    color: v.$primary;
+    border-color: color.scale(v.$white, $lightness: -10%);
+  }
+}
+
+.btn-dark {
+  background-color: #212529;
+  color: v.$white;
+  border-color: #212529;
+  
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: #16181b;
+    color: v.$white;
+    border-color: #16181b;
+  }
+}
+
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid transparent;
+    border-top-color: v.$white;
+    border-radius: 50%;
+    animation: btn-loading-spin 1s linear infinite;
+    
+    @include mix.respond-to-min('md') {
+      margin: -8px 0 0 -8px;
+      width: 16px;
+      height: 16px;
+      border-width: 2px;
+    }
+    
+    @include mix.respond-to-min('lg') {
+      margin: -10px 0 0 -10px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@keyframes btn-loading-spin {
+  0% { @include mix.transform(rotate(0deg)); }
+  100% { @include mix.transform(rotate(360deg)); }
+}

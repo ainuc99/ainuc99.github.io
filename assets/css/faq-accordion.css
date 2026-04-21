@@ -1,0 +1,270 @@
+.faq-section .faq-header {
+ max-width: 600px;
+ margin: 0 auto;
+}
+
+.faq-section .faq-header .heading-lg {
+ color: #000;
+ margin-bottom: 1rem;
+}
+
+.faq-section .faq-header .subtitle {
+ color: #9e9e9e;
+ font-size: 1.125rem;
+ font-weight: 400;
+}
+
+.faq-section .faq-content {
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+.faq-section .faq-item {
+ background-color: #ffffff;
+ border: 1px solid #e0e0e0;
+ border-radius: 1rem;
+ margin-bottom: 1rem;
+ overflow: hidden;
+ -webkit-transition: all 0.3s ease;
+ -moz-transition: all 0.3s ease;
+ -ms-transition: all 0.3s ease;
+ -o-transition: all 0.3s ease;
+ transition: all 0.3s ease;
+}
+
+.faq-section .faq-item:hover {
+ -webkit-box-shadow: 0 0 20px rgba(116, 116, 116, 0.1);
+ -moz-box-shadow: 0 0 20px rgba(116, 116, 116, 0.1);
+ box-shadow: 0 0 20px rgba(116, 116, 116, 0.1);
+}
+
+.faq-section .faq-item.active {
+ border-color: #1e88e5;
+ -webkit-box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.1);
+ -moz-box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.1);
+ box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.1);
+}
+
+.faq-section .faq-item.active .faq-question {
+ background-color: rgba(30, 136, 229, 0.05);
+}
+
+.faq-section .faq-item.active .faq-toggle {
+ color: #1e88e5;
+}
+
+.faq-section .faq-item.active .faq-toggle .faq-icon {
+ -webkit-transform: rotate(180deg);
+ -moz-transform: rotate(180deg);
+ -ms-transform: rotate(180deg);
+ -o-transform: rotate(180deg);
+ transform: rotate(180deg);
+}
+
+.faq-section .faq-question {
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -moz-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: horizontal;
+ -webkit-box-direction: normal;
+ -webkit-flex-direction: row;
+ -moz-flex-direction: row;
+ -ms-flex-direction: row;
+ flex-direction: row;
+ -webkit-box-pack: justify;
+ -webkit-justify-content: space-between;
+ -moz-justify-content: space-between;
+ -ms-justify-content: space-between;
+ justify-content: space-between;
+ -webkit-box-align: center;
+ -webkit-align-items: center;
+ -moz-align-items: center;
+ -ms-align-items: center;
+ align-items: center;
+ -webkit-flex-wrap: nowrap;
+ -moz-flex-wrap: nowrap;
+ -ms-flex-wrap: nowrap;
+ flex-wrap: nowrap;
+ padding: 1.5rem;
+ cursor: pointer;
+ -webkit-transition: all 0.3s ease;
+ -moz-transition: all 0.3s ease;
+ -ms-transition: all 0.3s ease;
+ -o-transition: all 0.3s ease;
+ transition: all 0.3s ease;
+}
+
+.faq-section .faq-question:hover {
+ background-color: rgba(30, 136, 229, 0.02);
+}
+
+.faq-section .faq-question .question-text {
+ font-size: 1.125rem;
+ font-weight: 600;
+ color: #000;
+ margin: 0;
+ padding-right: 1rem;
+ line-height: 1.4;
+}
+
+.faq-section .faq-question .faq-toggle {
+ background: none;
+ border: none;
+ cursor: pointer;
+ padding: 0.25rem;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ border-radius: 50%;
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -moz-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: horizontal;
+ -webkit-box-direction: normal;
+ -webkit-flex-direction: row;
+ -moz-flex-direction: row;
+ -ms-flex-direction: row;
+ flex-direction: row;
+ -webkit-box-pack: center;
+ -webkit-justify-content: center;
+ -moz-justify-content: center;
+ -ms-justify-content: center;
+ justify-content: center;
+ -webkit-box-align: center;
+ -webkit-align-items: center;
+ -moz-align-items: center;
+ -ms-align-items: center;
+ align-items: center;
+ -webkit-flex-wrap: nowrap;
+ -moz-flex-wrap: nowrap;
+ -ms-flex-wrap: nowrap;
+ flex-wrap: nowrap;
+ -webkit-transition: all 0.3s ease;
+ -moz-transition: all 0.3s ease;
+ -ms-transition: all 0.3s ease;
+ -o-transition: all 0.3s ease;
+ transition: all 0.3s ease;
+ flex-shrink: 0;
+ width: 32px;
+ height: 32px;
+}
+
+.faq-section .faq-question .faq-toggle:hover {
+ background-color: rgba(30, 136, 229, 0.1);
+ color: #1e88e5;
+}
+
+.faq-section .faq-question .faq-toggle:focus {
+ outline: 2px solid rgba(30, 136, 229, 0.3);
+ outline-offset: 2px;
+}
+
+.faq-section .faq-question .faq-toggle .faq-icon {
+ width: 16px;
+ height: 16px;
+ color: #9e9e9e;
+ -webkit-transition: all 0.3s ease;
+ -moz-transition: all 0.3s ease;
+ -ms-transition: all 0.3s ease;
+ -o-transition: all 0.3s ease;
+ transition: all 0.3s ease;
+}
+
+.faq-section .faq-answer {
+ max-height: 0;
+ overflow: hidden;
+ -webkit-transition: max-height 0.4s ease-out;
+ -moz-transition: max-height 0.4s ease-out;
+ -ms-transition: max-height 0.4s ease-out;
+ -o-transition: max-height 0.4s ease-out;
+ transition: max-height 0.4s ease-out;
+}
+
+.faq-section .faq-answer .answer-content {
+ padding: 15px;
+ padding-top: 10px;
+}
+
+.faq-section .faq-answer .answer-content p {
+ font-size: 1rem;
+ font-weight: 400;
+ color: #424242;
+ line-height: 1.6;
+ margin: 0;
+}
+
+.faq-section .faq-answer.open {
+ max-height: 500px;
+ -webkit-transition: max-height 0.4s ease-in;
+ -moz-transition: max-height 0.4s ease-in;
+ -ms-transition: max-height 0.4s ease-in;
+ -o-transition: max-height 0.4s ease-in;
+ transition: max-height 0.4s ease-in;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+ .faq-section .faq-question {
+   padding: 1rem;
+ }
+
+ .faq-section .faq-question .question-text {
+   font-size: 1rem;
+   padding-right: 0.5rem;
+ }
+
+ .faq-section .faq-answer .answer-content {
+   padding: 0 1rem 1rem;
+ }
+
+ .faq-section .faq-answer .answer-content p {
+   font-size: 0.875rem;
+ }
+}
+
+@media (max-width: 576px) {
+ .faq-section .faq-item {
+   margin-bottom: 0.5rem;
+ }
+
+ .faq-section .faq-question {
+   padding: 0.5rem 1rem;
+ }
+
+ .faq-section .faq-question .question-text {
+   font-size: 0.875rem;
+ }
+
+ .faq-section .faq-question .faq-toggle {
+   width: 28px;
+   height: 28px;
+ }
+
+ .faq-section .faq-question .faq-toggle .faq-icon {
+   width: 14px;
+   height: 14px;
+ }
+
+ .faq-section .faq-answer .answer-content {
+   padding: 0 1rem 0.5rem;
+ }
+}
+
+/* Animation for smooth accordion effect */
+@keyframes slideDown {
+ from {
+   opacity: 0;
+   transform: translateY(-10px);
+ }
+ to {
+   opacity: 1;
+   transform: translateY(0);
+ }
+}
+
+.faq-section .faq-answer.open .answer-content {
+ animation: slideDown 0.3s ease-out;
+}

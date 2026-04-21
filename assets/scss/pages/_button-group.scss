@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mix;
+@use 'sass:map';
+
+// Button Groups for Demo
+.button-group {
+  .inline {
+    @include mix.flex(row, flex-start, center, wrap);
+  }
+
+  .btn-group {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  
+  .cta-buttons {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}

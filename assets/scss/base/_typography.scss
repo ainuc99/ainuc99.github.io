@@ -1,0 +1,261 @@
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mix;
+@use 'sass:color';
+
+// Font face declarations for locally hosted Poppins font
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Font face declarations for locally hosted Inter font - Optimized version
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/static/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/static/Inter_18pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/static/Inter_18pt-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/static/Inter_18pt-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Base typography
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: map.get(v.$font-weights, 'regular');
+  font-size: map.get(v.$font-sizes, 'base');
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: map.get(v.$font-weights, 'bold');
+  color: var(--color-text-primary);
+  margin-bottom: map.get(v.$spacers, 3);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: map.get(v.$font-sizes, '2xl');
+
+  @include mix.respond-to-min('md') {
+    font-size: map.get(v.$font-sizes, '3xl');
+  }
+}
+
+h2 {
+  font-size: map.get(v.$font-sizes, '3xl');
+
+  @include mix.respond-to-max('sm') {
+    font-size: map.get(v.$font-sizes, 'lg');
+  }
+}
+
+h3 {
+  font-size: map.get(v.$font-sizes, '2xl');
+  font-weight: map.get(v.$font-weights, 'semibold');
+}
+
+h4 {
+  font-size: map.get(v.$font-sizes, 'xl');
+  font-weight: map.get(v.$font-weights, 'semibold');
+}
+
+h5 {
+  font-size: map.get(v.$font-sizes, 'lg');
+  font-weight: map.get(v.$font-weights, 'medium');
+}
+
+h6 {
+  font-size: map.get(v.$font-sizes, 'base');
+  font-weight: map.get(v.$font-weights, 'medium');
+}
+
+// Paragraphs
+p {
+  margin-bottom: map.get(v.$spacers, 3);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Links
+a {
+  color: v.$primary;
+  text-decoration: none;
+  transition: v.$transition-base;
+
+  &:hover {
+    color: color.scale(v.$primary, $lightness: -10%);
+  }
+}
+
+// Text utilities
+.text-primary {
+  color: v.$primary !important;
+}
+
+.text-gradient {
+  background: v.$primary-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.font-light {
+  font-weight: map.get(v.$font-weights, 'light') !important;
+}
+
+.font-normal {
+  font-weight: map.get(v.$font-weights, 'regular') !important;
+}
+
+.font-medium {
+  font-weight: map.get(v.$font-weights, 'medium') !important;
+}
+
+.font-semibold {
+  font-weight: map.get(v.$font-weights, 'semibold') !important;
+}
+
+.font-bold {
+  font-weight: map.get(v.$font-weights, 'bold') !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+// Heading custom classes
+.heading-lg {
+  font-size: map.get(v.$font-sizes, '4xl');
+  font-weight: map.get(v.$font-weights, 'bold');
+  margin-bottom: map.get(v.$spacers, 4);
+}
+
+.heading-md {
+  font-size: map.get(v.$font-sizes, '3xl');
+  font-weight: map.get(v.$font-weights, 'semibold');
+  margin-bottom: map.get(v.$spacers, 3);
+}
+
+.subtitle {
+  font-size: map.get(v.$font-sizes, 'lg');
+  color: v.$gray;
+  margin-bottom: map.get(v.$spacers, 4);
+}
+
+// Font family utilities
+.font-heading {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.font-body {
+  font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.font-mono {
+  font-family: 'Fira Code', monospace !important;
+}
+
+// Font size utility classes
+.font-size-xs {
+  font-size: map.get(v.$font-sizes, 'xs') !important;
+}
+
+.font-size-sm {
+  font-size: map.get(v.$font-sizes, 'sm') !important;
+}
+
+.font-size-base {
+  font-size: map.get(v.$font-sizes, 'base') !important;
+}
+
+.font-size-lg {
+  font-size: map.get(v.$font-sizes, 'lg') !important;
+}
+
+.font-size-xl {
+  font-size: map.get(v.$font-sizes, 'xl') !important;
+}
+
+.font-size-2xl {
+  font-size: map.get(v.$font-sizes, '2xl') !important;
+}
+
+.font-size-3xl {
+  font-size: map.get(v.$font-sizes, '3xl') !important;
+}
+
+.font-size-4xl {
+  font-size: map.get(v.$font-sizes, '4xl') !important;
+}
+
+.font-size-5xl {
+  font-size: map.get(v.$font-sizes, '5xl') !important;
+}

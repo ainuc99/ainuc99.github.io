@@ -1,0 +1,214 @@
+// ==========================================================================
+// VARIABLES
+// ==========================================================================
+
+@use 'sass:map';
+
+// Colors
+// -------------------------
+$colors: (
+  'primary': (
+    'base': #1e88e5,     // Main blue as in "ITAgency" 
+    'light': #64b5f6,    // Lighter blue for hover
+    'dark': #072066,     // Dark blue for backgrounds like hero
+    'gradient': linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%)
+  ),
+  'secondary': (
+    'base': #f5f5f5,     // Grayish white for backgrounds
+    'light': #ffffff,    // Pure white
+    'dark': #e0e0e0      // Light gray for borders and separators
+  ),
+  'neutral': (
+    'light': #f5f5f5,    // Very light gray
+    'base': #9e9e9e,     // Medium gray
+    'dark': #424242,     // Dark gray for secondary text
+    'darker': #000    // Almost black for main text
+  ),
+  'accent': #2196f3      // Accent blue for highlights
+);
+
+// Direct color variables
+$primary: map.get(map.get($colors, 'primary'), 'base');
+$primary-light: map.get(map.get($colors, 'primary'), 'light');
+$primary-dark: map.get(map.get($colors, 'primary'), 'dark');
+$primary-gradient: map.get(map.get($colors, 'primary'), 'gradient');
+
+$white: map.get(map.get($colors, 'secondary'), 'light');
+$light-gray: map.get(map.get($colors, 'secondary'), 'dark');
+$gray: map.get(map.get($colors, 'neutral'), 'base');
+$dark-gray: map.get(map.get($colors, 'neutral'), 'dark');
+$black: map.get(map.get($colors, 'neutral'), 'darker');
+$accent: map.get($colors, 'accent');
+
+// Breakpoints
+$breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 1024px,
+  'md-c': 1025px,
+  'lg': 1280px,
+  'xl': 1440px,
+  'xxl': 1600px
+);
+
+// Spacing
+$spacers: (
+  0: 0,
+  1: 0.25rem,   // 4px
+  2: 0.5rem,    // 8px
+  3: 1rem,      // 16px
+  4: 1.5rem,    // 24px
+  5: 3rem,      // 48px
+  6: 4rem,      // 64px
+  7: 5rem,      // 80px
+  8: 6rem,      // 96px
+  9: 8rem,      // 128px
+  10: 10rem,    // 160px
+  11: 12rem,    // 192px
+  12: 15rem,    // 240px
+  13: 18rem,    // 288px
+  14: 20rem,    // 320px
+  15: 25rem,    // 400px
+  16: 30rem,    // 480px
+  17: 35rem,    // 560px
+  18: 40rem,    // 640px
+  19: 45rem,    // 720px
+  20: 50rem     // 800px
+);
+
+// Typography
+// -------------------------
+$font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-heading: 'Poppins', sans-serif;
+
+// Font sizes
+$font-sizes: (
+  'xs': 0.75rem,    // 12px
+  'sm': 0.875rem,   // 14px
+  'base': 1rem,     // 16px
+  'lg': 1.125rem,   // 18px
+  'xl': 1.25rem,    // 20px
+  '2xl': 1.5rem,    // 24px
+  '3xl': 1.875rem,  // 30px
+  '4xl': 2.25rem,   // 36px
+  '5xl': 3rem,      // 48px
+  '6xl': 3.20rem
+);
+
+// Font weights
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700
+);
+
+// Border radius
+// -------------------------
+$border-radius-sm: 0.25rem;  // 4px
+$border-radius: 0.5rem;      // 8px
+$border-radius-lg: 1rem;     // 16px
+
+// Shadows
+// -------------------------
+$box-shadow: 0 0 20px rgba(116, 116, 116, 0.1);
+$box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+// Transitions
+// -------------------------
+$transition-base: all 0.3s ease-in-out;
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Z-index
+// -------------------------
+$z-indices: (
+  'modal': 1000,
+  'dropdown': 900,
+  'navbar': 800,
+  'tooltip': 700,
+  'fixed': 500,
+  'above': 10,
+  'default': 1,
+  'below': -1
+);
+
+// Grid System Variables
+$grid-gap-base: 1.5rem !default;
+$grid-gap-sm: 1rem !default;
+$grid-gap-lg: 2rem !default;
+$grid-gap-xl: 3rem !default;
+
+// Grid Container Sizes (optional)
+$grid-container-sm: 540px !default;
+$grid-container-md: 720px !default;
+$grid-container-lg: 960px !default;
+$grid-container-xl: 1140px !default;
+$grid-container-xxl: 1320px !default;
+
+// Grid Breakpoints (should match your existing breakpoints)
+$grid-breakpoint-xs: 0 !default;
+$grid-breakpoint-sm: 576px !default;
+$grid-breakpoint-md: 768px !default;
+$grid-breakpoint-lg: 992px !default;
+$grid-breakpoint-xl: 1200px !default;
+$grid-breakpoint-xxl: 1400px !default;
+
+// ==========================================================================
+// THEME COLORS FOR LIGHT & DARK MODE
+// ==========================================================================
+// Define colors as CSS Custom Properties for dynamic theme switching.
+
+:root {
+ // --- Light Mode Colors (Default Theme) ---
+ --color-primary: #{$primary};
+ --color-primary-light: #{$primary-light};
+ --color-primary-dark: #{$primary-dark};
+ --color-accent: #{$accent};
+ --color-white: #{$white};  
+ --color-black: #{$black};  
+
+ // Backgrounds and Surfaces
+ --color-background: #{$primary-dark};    // Main background color for <body>
+ --color-surface: #{$white};              // Background for "boxes" like cards and sections
+ --color-surface-scase: #f8f9fa;          // Background for article.html
+ --color-border: #{$light-gray};          // Color for borders and separators
+ 
+ // Text Colors in Light Mode
+ --color-text-primary: #{$black};         // For Headers (h1, h2, h3...) and very important text
+ --color-text-secondary: #{$dark-gray};   // For paragraphs (p) and main body text
+ --color-text-muted: #{$black};           // For less important text (metadata, placeholders, etc.)
+ --color-surface-mcase: #{$black};        // Text color for article.html
+ 
+ // Shadows
+ --box-shadow: #{$box-shadow};
+ --box-shadow-sm: #{$box-shadow-sm};
+ --box-shadow-lg: #{$box-shadow-lg};
+ --box-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+ // Menu Color
+ --menu-icon-color: #{$black}; 
+}
+
+// --- Dark Mode Styles ---
+body.dark-mode {
+  --color-background: #{$black}; 
+  --color-surface: #{$black};
+  --color-surface-scase: #{$black};
+  --color-border: #30363d; 
+  --color-white: #{$black};
+  --color-black: #{$white};  
+  
+  --color-text-primary: rgba(255, 255, 255, 0.87); 
+  --color-text-secondary: rgba(255, 255, 255, 0.60); 
+  --color-text-muted: var(--color-text-secondary);
+  --color-surface-mcase: #{$white}; 
+  
+  --box-shadow: 0 0 20px #{rgba($primary, 0.2)};
+  --box-shadow-sm: 0 1px 2px #{rgba($primary, 0.15)};
+  --box-shadow-lg: 0 10px 15px -3px #{rgba($primary, 0.2)};
+  --box-shadow-hover: var(--box-shadow);
+
+  --menu-icon-color: #{$white}; 
+}

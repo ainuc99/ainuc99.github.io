@@ -1,0 +1,15 @@
+/*
+ * ITAgency - HTML Template
+ * Pages Styles SCSS file
+ */
+
+// Sass Modules
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:color';
+
+// Abstracts 
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as mix;
+
+@use 'pages';

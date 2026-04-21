@@ -6,7 +6,7 @@
     <title>ITAgency - Professional IT Services & Web Development</title>
     <meta name="description" content="Leading IT agency providing web development, mobile apps, cloud solutions, and digital marketing. Transform your business with cutting-edge technology solutions.">
     <meta name="keywords" content="IT services, web development, mobile apps, cloud solutions, digital marketing">
-
+    
 
 
     <!-- Favicon -->
@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="assets/css/universal-slider.css">
     <link rel="stylesheet" href="assets/css/hover3d-effects.css">
     <link rel="stylesheet" href="assets/css/auto-progress-bar.css">
-
+    
     <!-- General CSS files -->
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="body-1">
-    <div id="particles-js" class="particles-background"></div>
-
+<body class="body-2">
+    <canvas id="meteorShowerCanvas" class="meteorShowerCanvas"></canvas>
+   
     <!-- Tech Page Loader -->
     <div id="page-loader" class="page-loader">
         <div class="loader-container">
@@ -99,7 +99,7 @@
 
             <!-- Get Quotes Button -->
             <div class="actions d-flex-center">
-                <a href="contact-us.html" class="btn btn-get-quotes">Get Quotes</a>
+                <a pages/contact-us.html class="btn btn-get-quotes">Get Quotes</a>
                 <div class="theme-switcher">
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
                         <svg id="theme-toggle-light-icon" class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.894 17.894a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.106 6.106a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
@@ -119,8 +119,8 @@
 
     <!-- Hero -->
     <section class="hero container flex-column-center p-3">
-        <div class="hero-content-home-1">
-            <div class="hero-info">
+        <div class="hero-content-home-4">
+            <div class="hero-info pt-7 pb-5">
                 <div class="hero-info-content flex-column-center pb-5">
                     <h2 class="text-white heading-hero text-shadow" 
                         data-aos="fade-down" 
@@ -128,16 +128,8 @@
                         data-aos-delay="100">
                         Technology Solutions Excellence
                     </h2>
-
-                    <div data-aos="fade-right" 
-                     data-aos-duration="600" 
-                     data-aos-delay="300">
-                        <h3 class="text-primary text-shadowl--letterpress">
-                            In <span id="typed-element"></span>
-                        </h3>
-                    </div>
                     
-                    <p class="text-white w-75 text-shadow--strong" 
+                    <p class="hero-sub-text text-white text-shadow--strong" 
                     data-aos="fade-up" 
                     data-aos-duration="600" 
                     data-aos-delay="500">
@@ -146,7 +138,7 @@
                 </div>
 
                 <div class="cta w-100">
-                    <div class="social-links pb-4 d-flex-between" 
+                    <div class="social-links gap-3 pb-4 d-flex-between" 
                         data-aos="fade-in" 
                         data-aos-duration="400">
                         <a href="javascript:void(0)" class="social-link icon-transition sm"  
@@ -174,8 +166,8 @@
                             <svg><use xlink:href="#instagram"></use></svg>
                         </a>
                     </div>
-
-                    <div class="cta-buttons w-100 d-flex gap-4">
+                    
+                    <div class="cta-buttons d-flex gap-4">
                         <a href="contact-us.html" class="btn btn-get-quotes" 
                         data-aos="fade-right" 
                         data-aos-duration="500" 
@@ -190,6 +182,9 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            <div class="hero-image" data-hover-3d>
+                <img src="assets/images/backgrounds/hero-04.png" alt="Hero Image Main">
             </div>
         </div>
     </section>
@@ -354,7 +349,7 @@
                     Blanditiis quod veniam temporibus eaque, a neque nulla.
                 </p>
 
-                <a href="javascript:void(0)" class="btn btn-outline" 
+                <a pages/contact-us.html class="btn btn-outline" 
                     data-aos="fade-right" 
                     data-aos-duration="500" 
                     data-aos-delay="950">
@@ -1468,7 +1463,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer pt-5 pb-5">
+    <footer class="footer pb-5">
         <div class="footer-main">
             <div class="container">
                 <div class="footer-content">
@@ -1640,21 +1635,16 @@
     </button>
 
     <!-- JavaScript -->
-    <script src="assets/lib/particles/particles.min.js"></script>
     <script src="assets/lib/aos/aos.js"></script>
     <script src="assets/lib/hover3dBgEffects/hover3d-bg-effects.js"></script>
-    <script src="assets/lib/typed/typed.umd.js"></script>
     
     <script src="assets/js/custom-isotope.js"></script>
     <script src="assets/js/testimonials.js"></script>
+    <script src="assets/js/meteor-shower-effect.js"></script>
     <script src="assets/js/auto-progress-bar.js"></script>
     <script src="assets/js/animate-counters.js"></script>
     <script src="assets/js/universal-slider.js"></script>
     <script src="assets/js/contact-form-demo.js"></script>
-
-    <script src="assets/data/particles-config.js"></script>
-    <script src="assets/data/services.js"></script>
-    
     <script src="assets/js/main-01.js"></script>
 </body>
 </html>

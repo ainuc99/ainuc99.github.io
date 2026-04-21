@@ -1,0 +1,2439 @@
+// Import Sass modules for variables, mixins, and built-in functions
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mix;
+@use 'sass:map';
+@use 'sass:color';
+
+// Base body styling with background image and overflow settings
+
+html,
+body {
+  overflow: hidden;
+  overflow-y: auto;
+  padding-top: 40px;
+  background-color: none;
+  background-image: none;
+}
+
+.body-1 {
+  background-color:var(--color-background);
+  @include mix.background(
+    url('../images/backgrounds/hand-ia-bgremove.png'), 
+    var(--color-background), 
+    contain, 
+    no-repeat, 
+    left center, 
+    fixed
+  );
+}
+
+.body-2 {
+  @include mix.background(
+    url('../images/backgrounds/geometry-tech.png'),
+    var(--color-background),
+    cover,
+    no-repeat,
+    center center,
+    fixed
+  );
+}
+
+.body-3 {
+  @include mix.background(
+    url('../images/backgrounds/line-tech.png'),
+    var(--color-background),
+    cover,
+    no-repeat,
+    center center,
+    fixed
+  );
+}
+
+// Data Lines animation background layer
+#dataLinesCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+// Particles animation background layer
+.particles-background,
+.meteorShowerCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;         // Behind all content
+}
+
+// Hero section - main landing area
+.hero {
+  position: relative;
+  height: 92vh;       // Almost full viewport height
+  z-index: 1;         // Above particles background
+  padding: 0;
+  
+  @include mix.respond-to-max('md') {
+    @include mix.flex(column, center, center);
+    height: 800px; 
+    padding-bottom: 10px;
+  }
+
+  .hero-content,
+  .hero-content-home-1,
+  .hero-content-home-4 {
+    @include mix.flex(row, space-between, center, wrap);
+    
+    @include mix.respond-to-max('md') {
+      @include mix.flex(column, center, center);
+      gap: map.get(v.$spacers, 4);
+    }
+
+    .hero-info {
+      .hero-info-content {
+        .heading-hero {
+          font-size: map.get(v.$font-sizes, '2xl');
+          font-weight: map.get(v.$font-weights, 'bold');
+          margin-bottom: map.get(v.$spacers, 3);
+
+          // Progressively larger on bigger screens
+          @include mix.respond-to-min('md') {
+            font-size: map.get(v.$font-sizes, '3xl');
+          }
+          
+          @include mix.respond-to-min('lg') {
+            font-size: map.get(v.$font-sizes, '4xl');
+          }
+        }
+      }
+
+      .cta {
+        .social-links {
+          max-width: 150px;
+
+          .social-link {
+            svg {
+              color: v.$primary;
+            }
+          }
+        }
+      }
+
+       @include mix.respond-to-max('md') {
+        text-align: center;
+
+        .hero-info-content {
+          @include mix.flex(column, center, center);
+        }
+
+        .cta {
+          @include mix.flex(column, center, center);
+
+          .social-links {
+            width: 100%;
+          }
+
+          .cta-buttons {
+            @include mix.flex(column, center, center);
+          }
+        }
+      }
+    }
+
+    .hero-image {
+      position: relative;
+      max-width: 500px;
+      height: auto;
+      display: block;
+
+      @include mix.respond-to-max('md') {
+        max-width: 300px;
+        margin-top: map.get(v.$spacers, 4);
+      }
+    }
+  }
+
+  .hero-content-home-1 {
+    @include mix.flex(column, center, flex-end);
+    max-width: 1150px;
+  }
+
+  .hero-content-home-4 {
+    @include mix.flex(column, center, center, wrap);
+
+    .hero-info {
+      text-align: center;
+
+      .cta {
+        @include mix.flex(column, center, center, wrap);
+      }
+    }
+  }
+}
+
+// Main content area with white background
+.main {
+  background-color: var(--color-surface);
+
+  .main-content {
+    // Single column grid with large gap
+    @include mix.grid(1, map.get(v.$spacers, 9));
+
+    // Services section with card grid layout
+    .service-cards-modern {
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  // 3 columns on desktop
+        gap: map.get(v.$spacers, 3);
+        align-self: center;
+        
+        // Responsive breakpoints: 3 -> 2 -> 1 columns
+        @include mix.respond-to-max('md') {
+          grid-template-columns: repeat(2, 1fr);
+          gap: map.get(v.$spacers, 4);
+        }
+        
+        @include mix.respond-to-max('sm') {
+          grid-template-columns: 1fr;
+          gap: map.get(v.$spacers, 3);
+        }
+
+        // Individual service cards
+        .service-card {
+          width: 100%;
+          height: 292px; 
+          background-color: var(--color-surface);
+          padding: map.get(v.$spacers, 4);
+          gap: map.get(v.$spacers, 3);
+          @include mix.flex(column, center, center);  // Centered content
+          @include mix.box-shadow(var(--box-shadow));
+          @include mix.transition(v.$transition-smooth);
+
+          // Hover effect with scale and lift animation
+          &:hover {
+            @include mix.transform(scale(1.02) translateY(-5px));
+            @include mix.box-shadow(var(--box-shadow-hover));
+            @include mix.transition(v.$transition-smooth);
+          }
+
+          // AOS (Animate On Scroll) integration
+          &[data-aos] {
+            will-change: transform, opacity;      // Performance optimization
+            
+            &:hover {
+              @include mix.transform(scale(1.02) translateY(-5px));
+            }
+            
+            &.aos-animate:hover {
+              @include mix.transform(scale(1.02) translateY(-5px));
+            }
+          }
+
+          // Service icon styling
+          .service-icon {
+            color: v.$primary-dark;
+            
+            svg {
+              width: 100px; 
+              height: 100px;                   // Large, prominent icons
+            }
+          }
+
+          .service-description {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .service-cards-classic {
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  // 3 columns on desktop
+        gap: map.get(v.$spacers, 4);
+        align-self: center;
+        
+        // Responsive breakpoints: 3 -> 2 -> 1 columns
+        @include mix.respond-to-max('md') {
+          grid-template-columns: repeat(2, 1fr);
+          gap: map.get(v.$spacers, 4);
+        }
+        
+        @include mix.respond-to-max('sm') {
+          grid-template-columns: 1fr;
+          gap: map.get(v.$spacers, 3);
+        }
+
+        // Individual service cards
+        .service-card {
+          width: 100%;
+          height: 292px; 
+          background-color: var(--color-surface);
+          padding: map.get(v.$spacers, 4);
+          gap: map.get(v.$spacers, 4);
+          border: 1px solid var(--color-primary);
+          border-radius: 5px;
+          @include mix.flex(column, center, center);  // Centered content
+
+          // Service icon styling
+          .service-icon {
+            color: v.$primary-dark;
+            
+            svg {
+              width: 100px; 
+              height: 100px;                   // Large, prominent icons
+            }
+          }
+
+          .service-description {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    // About Us section animation
+    .about-us-modern {
+      overflow: hidden;
+
+      .container {
+        @include mix.flex(row, space-between, center);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 map.get(v.$spacers, 3);
+
+        @include mix.respond-to-max('md') {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      .about-content {
+        max-width: 600px;
+
+        .section-title {
+          font-family: v.$font-family-heading;
+          font-size: map.get(v.$font-sizes, '4xl');
+          color: var(--color-text-primary);
+          margin-bottom: map.get(v.$spacers, 3);
+
+          .highlighted-year {
+            color: var(--color-primary);
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              width: 100%;
+              height: 3px;
+              background: var(--color-primary);
+            }
+          }
+        }
+
+        .section-description {
+          color: var(--color-text-secondary);
+          font-size: map.get(v.$font-sizes, 'lg');
+          margin-bottom: map.get(v.$spacers, 4);
+          line-height: 1.7;
+        }
+
+        .features-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: map.get(v.$spacers, 3);
+
+          @include mix.respond-to-max('sm') {
+            grid-template-columns: 1fr;
+          }
+
+          .feature-item {
+            background: var(--color-surface-scase);
+            padding: map.get(v.$spacers, 3);
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            border: 1px solid transparent;
+            @include mix.transition(v.$transition-base);
+
+            &:hover {
+              box-shadow: var(--box-shadow-hover);
+              background: var(--color-surface-scase);
+              border: 1px solid var(--color-primary-light);
+              @include mix.transition(v.$transition-base);
+            }
+
+            .feature-icon {
+              font-size: 2rem;
+              color: var(--color-primary);
+              margin-bottom: map.get(v.$spacers, 2);
+            }
+
+            h4 {
+              color: var(--color-text-primary);
+              margin-bottom: map.get(v.$spacers, 2);
+              font-size: map.get(v.$font-sizes, 'xl');
+            }
+
+            p {
+              color: var(--color-text-muted);
+              font-size: map.get(v.$font-sizes, 'sm');
+            }
+          }
+        }
+      }
+
+      .about-image {
+        max-width: 500px;
+        @include mix.border-radius(v.$border-radius);
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+
+        @include mix.respond-to-max('md') {
+          margin-top: map.get(v.$spacers, 4);
+        }
+      }
+    }
+
+    /* Styles for the 'About Our Company' section */
+    .about-our-company {
+      @include mix.grid(2);
+
+      @include mix.respond-to-max('md') {
+        @include mix.grid(1);
+        padding-bottom: map.get(v.$spacers, 2);
+      }
+
+      .about-info {
+        max-width: 515px;
+
+        @include mix.respond-to-max('md') {
+          max-width: 100%;
+        }
+
+        .about-texts {
+          @include mix.grid(1, map.get(v.$spacers, 1));
+
+          .about-info-title {
+            color: var(--color-text-primary);
+          }
+        }
+
+        .about-progress {
+          @include mix.grid(1, map.get(v.$spacers, 4));
+        }
+      }
+
+      .about-image {
+        @include mix.flex(column, center, center); 
+        max-width: 100%;
+        height: 90%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    // Step info section with circular layout on desktop
+    .step-info {
+      .box-step-info {
+        position: relative;
+        @include mix.flex(column, center, center);
+        width: 100%;
+        height: 800px;
+
+        @include mix.respond-to-max('md') {
+          height: auto;
+        }
+
+        .step {
+          @include mix.flex(column, center, center);
+          position: absolute;
+          height: auto;
+
+          @include mix.respond-to-max('md') {
+            position: relative;
+          }
+
+          &.up,
+          &.down {
+            left: 0px;
+            width: 100%;
+          }
+
+          &.up {
+            top: 0px;
+          }
+
+          &.right {
+            right: 0px;
+          }
+
+          &.down {
+            bottom: 0px;
+          }
+
+          &.left {
+            left: 0px;
+          }
+
+          // Process cards
+          .process-info {
+            @include mix.respond-to-max('md') {
+              position: relative;
+              width: 100%;
+              max-width: 400px;
+              margin: 0 auto map.get(v.$spacers, 3) auto;
+              padding: map.get(v.$spacers, 3);
+              background-color: rgba(v.$white, 0.05);
+              @include mix.border-radius(v.$border-radius-lg);
+              backdrop-filter: blur(10px);
+              border: 1px solid rgba(v.$primary, 0.1);
+              @include mix.transition(v.$transition-base);
+
+              &:hover {
+                background-color: rgba(v.$white, 0.1);
+                border-color: rgba(v.$primary, 0.3);
+                @include mix.transform(translateY(-5px));
+              }
+
+              @include mix.flex(column, flex-start, center);
+              gap: map.get(v.$spacers, 2);
+            }
+
+            .process-icon {
+              position: relative;
+              color: var(--color-text-primary);
+              @include mix.transition(all 0.5s);
+
+              svg {
+                width: 128px;
+                height: 128px;
+              }
+
+              @include mix.respond-to-max('md') {
+                flex-shrink: 0;
+
+                svg {
+                  width: 90px;
+                  height: 90px;
+                }
+              }
+            }
+
+            .process-text {
+              position: relative;
+
+              @include mix.respond-to-min('md') {
+                top: 10px;
+                left: 10px;
+                max-width: 220px;
+              }
+
+              @include mix.respond-to-max('md') {
+                flex: 1;
+                top: 0;
+                left: 0;
+                max-width: none;
+              }
+
+              .text {
+                color: var(--color-text-primary);
+                font-weight: map.get(v.$font-weights, 'bold');
+                display: block;
+                margin-bottom: map.get(v.$spacers, 2);
+
+                @include mix.respond-to-min('md') {
+                  font-size: map.get(v.$font-sizes, '2xl');
+                  max-width: 220px;
+                }
+
+                @include mix.respond-to-max('md') {
+                  font-size: map.get(v.$font-sizes, 'base');
+                }
+              }
+
+              p {
+                line-height: 1.6;
+                margin: 0;
+                font-size: 0.97rem;
+              }
+            }
+
+            // Icon hover (desktop)
+            @include mix.respond-to-min('md') {
+              &:hover {
+                .process-icon {
+                  transform: translateY(-20px);
+                }
+              }
+            }
+          }
+        }
+
+        // Central image
+        .central-image {
+          width: 300px;
+          height: 300px;
+          margin-top: 10px;
+          overflow: hidden;
+          @include mix.transition(all 0.5s);
+          @include mix.transform(scale(1));
+          transform-origin: center center;
+          border-radius: 50%;
+
+          @include mix.respond-to-min('md') {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include mix.transform(translate(-50%, -50%));
+            z-index: 1;
+          }
+
+          @include mix.respond-to-max('md') {
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            right: auto !important;
+            @include mix.transform(none);
+            width: 200px;
+            height: 200px;
+            margin: map.get(v.$spacers, 3) auto !important;
+            display: block;
+          }
+
+          .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          &:hover {
+            @include mix.transition(all 0.5s);
+
+            @include mix.respond-to-min('md') {
+              @include mix.transform(translate(-50%, -50%) scale(1.02) translateY(-5px));
+            }
+
+            @include mix.respond-to-max('md') {
+              @include mix.transform(scale(1.05));
+            }
+          }
+        }
+      }
+    }
+    
+    // Portfolio section with filtering and grid layout
+    .portfolio {
+      .portfolio-filters-container {
+        margin-bottom: map.get(v.$spacers, 5);
+      }
+
+      // Filter buttons for portfolio categories
+      .portfolio-filters {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @include mix.flex(row, center, center, wrap);
+        gap: map.get(v.$spacers, 2);
+
+        @include mix.respond-to-max('sm') {
+          gap: map.get(v.$spacers, 1);
+        }
+
+        .filter-btn {
+          padding: map.get(v.$spacers, 2) map.get(v.$spacers, 3);
+          background-color: transparent;
+          color: var(--color-text-secondary);
+          border: 2px solid v.$light-gray;
+          @include mix.border-radius(v.$border-radius);
+          cursor: pointer;
+          font-weight: map.get(v.$font-weights, 'medium');
+          font-size: map.get(v.$font-sizes, 'sm');
+          @include mix.transition(v.$transition-smooth);
+          white-space: nowrap;                  // Prevent text wrapping
+
+          @include mix.respond-to-max('sm') {
+            padding: map.get(v.$spacers, 1) map.get(v.$spacers, 2);
+            font-size: map.get(v.$font-sizes, 'xs');
+          }
+
+          // Hover state
+          &:hover {
+            color: v.$primary;
+            border-color: v.$primary;
+            @include mix.transform(translateY(-2px));
+          }
+
+          // Active/selected state
+          &.active {
+            background-color: v.$primary;
+            color: v.$white;
+            border-color: v.$primary;
+            @include mix.box-shadow(v.$box-shadow);
+          }
+        }
+      }
+
+      // Portfolio grid with responsive columns
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);    // 4 columns on largest screens
+        gap: map.get(v.$spacers, 3);
+        
+        // Progressive column reduction: 4 -> 3 -> 2 -> 1
+        @include mix.respond-to-max('xl') {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @include mix.respond-to-max('md') {
+          grid-template-columns: repeat(2, 1fr);
+          gap: map.get(v.$spacers, 3);
+        }
+        
+        @include mix.respond-to-max('sm') {
+          grid-template-columns: 1fr;
+          gap: map.get(v.$spacers, 3);
+        }
+
+        .portfolio-item {
+          width: 100%;
+          @include mix.box-shadow(var(--box-shadow));
+
+          // Custom easing curve for smooth animations
+          @include mix.transition(all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94));
+          
+          // Isotope.js integration classes
+          &.isotope-item {
+            z-index: 2;
+          }
+          
+          &.isotope-hidden.isotope-item {
+            pointer-events: none;               // Disable interactions when hidden
+            z-index: 1;
+          }
+
+          // AOS integration with hover effects
+          &[data-aos] {
+            will-change: transform, opacity;
+            
+            &:hover .portfolio-card {
+              @include mix.transform(translateY(-8px));
+            }
+            
+            &.aos-animate:hover .portfolio-card {
+              @include mix.transform(translateY(-8px));
+            }
+          }
+
+          // Portfolio card container
+          .portfolio-card {
+            background-color: var(--color-surface);
+            @include mix.border-radius(v.$border-radius-lg);
+            @include mix.box-shadow(v.$box-shadow);
+            @include mix.transition(v.$transition-smooth);
+            overflow: hidden;
+            height: 100%;                       // Full height for equal card heights
+            @include mix.flex(column, stretch, stretch);
+
+            &:hover {
+              @include mix.transform(translateY(-8px));
+              @include mix.box-shadow(v.$box-shadow-lg);
+
+              // Image zoom effect on hover
+              .portfolio-image .image {
+                @include mix.transform(scale(1.1));
+              }
+            }
+
+            // Portfolio image container
+            .portfolio-image {
+              position: relative;
+              height: 200px;                    // Fixed height for consistency
+              overflow: hidden;
+              @include mix.border-radius(v.$border-radius-lg v.$border-radius-lg 0 0);
+
+              .image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include mix.transition(transform 0.5s ease);
+              }
+            }
+
+            // Portfolio card content
+            .portfolio-info {
+              padding: map.get(v.$spacers, 4);
+              flex-grow: 1;
+              @include mix.flex(column, flex-start, stretch);
+
+              h4 {
+                font-size: map.get(v.$font-sizes, 'lg');
+                font-weight: map.get(v.$font-weights, 'semibold');
+                margin-bottom: map.get(v.$spacers, 2);
+                line-height: 1.3;
+              }
+
+              .portfolio-category {
+                font-size: map.get(v.$font-sizes, 'sm');
+                color: v.$primary;
+                font-weight: map.get(v.$font-weights, 'medium');
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+              }
+            }
+          }
+        }
+      }
+
+      // Empty state when no portfolio items match filter
+      .portfolio-empty {
+        text-align: center;
+        padding: map.get(v.$spacers, 8) map.get(v.$spacers, 4);
+        color: v.$gray;
+        
+        h3 {
+          font-size: map.get(v.$font-sizes, 'xl');
+          margin-bottom: map.get(v.$spacers, 2);
+        }
+        
+        p {
+          font-size: map.get(v.$font-sizes, 'base');
+        }
+      }
+
+      // Loading state indicator
+      .portfolio-loading {
+        text-align: center;
+        padding: map.get(v.$spacers, 6);
+        
+        // CSS-only spinner using pseudo-element
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          border: 4px solid v.$light-gray;
+          border-top: 4px solid v.$primary;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+      }
+
+      // Keyframe animation for loading spinner
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    }
+
+    // Pricing section for service plans
+    .pricing-plants {
+      .options-plants {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: map.get(v.$spacers, 4);
+        
+        @include mix.respond-to-max('xl') {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @include mix.respond-to-max('md') {
+          grid-template-columns: repeat(2, 1fr);
+          gap: map.get(v.$spacers, 3);
+        }
+        
+        @include mix.respond-to-max('sm') {
+          grid-template-columns: 1fr;
+          gap: map.get(v.$spacers, 3);
+        }
+
+        // Base styles for both regular and popular pricing cards
+        .plants,
+        .most-popular {
+          position: relative;
+          display: grid;
+          gap: map.get(v.$spacers, 2);
+          background-color: var(--color-surface);
+          padding: map.get(v.$spacers, 4);
+          box-shadow: v.$box-shadow-lg;
+          border-radius: 20px;
+          border: 1px solid var(--color-primary);
+          @include mix.transition(all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94));
+
+          // "Most Popular" badge (hidden by default)
+          .tag-most-popular {
+            position: absolute;
+            top: 0px;
+            right: map.get(v.$spacers, 4);
+            color: v.$black;
+            background-color: v.$white;
+            padding: 10px;
+            border-radius: 0px 0px 10px 10px;
+            visibility: hidden;                 // Only visible on .most-popular
+          }
+
+          .plant-header {
+            h2 {
+              font-size: map.get(v.$spacers, 4);
+              font-weight: 500;
+            }
+          }
+
+          .price {
+            .price-main {
+              color: var(--color-text-primary);
+              font-size: 2.2rem;
+              font-weight: 600;
+
+              .price-discount {
+                color: v.$gray;
+                text-decoration: line-through;
+              }
+            }
+          }
+
+          // Benefits list section
+          .benefits {
+            padding-top: 10px;
+
+            .line {
+              border: 1px solid rgba(250, 247, 247, 0.1);
+            }
+
+            .benefits-list {
+              padding-top: 10px;
+
+              .benefit-item {
+                display: flex;
+                align-items: center;
+                justify-content: baseline;
+                margin-bottom: 5px;
+
+                .benefit-icon {
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 10px;
+                }
+
+                .circle-x-svg {
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-right: 10px;
+                }
+
+                .circle-x-svg svg {
+                  color: inherit;
+                }
+
+                .text {
+                  color: var(--color-text-muted);
+                }
+              }
+            }
+          }
+
+          // Hover effect with scale animation
+          &:hover {
+            @include mix.transition(all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94));
+            transform: scale(1.1);
+          }
+        }
+
+        // Special styling for the highlighted "most popular" plan
+        .most-popular {
+          background-color: v.$primary-dark;
+
+          .tag-most-popular {
+            visibility: visible;                // Show the badge
+          }
+
+          .plant-header {
+            color: v.$gray;
+
+            h2 {  
+              color: v.$white;
+            }
+          }
+
+          .price {
+            .price-main {
+              color: v.$white;
+            }
+          }
+
+          // Different colors for benefits in popular plan
+          .benefits-list {
+              .benefit-item {
+                .benefit-icon {
+                  color: v.$gray;
+                }
+
+                .text {
+                  color: v.$white !important;
+                }
+
+                .circle-x-svg svg {
+                  color: v.$gray !important;
+                }
+              }
+            }
+        }
+      }
+    }
+
+    // Team section with member cards
+    .team {
+      .team-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: map.get(v.$spacers, 4);
+        
+        @include mix.respond-to-max('xl') {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @include mix.respond-to-max('md') {
+          grid-template-columns: repeat(2, 1fr);
+          gap: map.get(v.$spacers, 3);
+        }
+        
+        @include mix.respond-to-max('sm') {
+          grid-template-columns: 1fr;
+          gap: map.get(v.$spacers, 3);
+        }
+
+        .item-team {
+          position: relative;
+          background-color: var(--color-surface);
+          @include mix.border-radius(v.$border-radius-lg);
+          @include mix.transition(all 0.6s);
+          @include mix.box-shadow(var(--box-shadow));
+          overflow: hidden;
+          height: 350px;
+          
+          &:hover {
+            @include mix.transform(scale(1.05));
+          }
+
+          .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+          }
+
+          // Floating social info overlay
+          .social-info {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--color-surface);
+            width: 100%;
+            max-width: 200px;
+            padding: map.get(v.$spacers, 2);
+            @include mix.border-radius(v.$border-radius-lg);
+
+            @include mix.respond-to-max('sm') {
+              bottom: 0px;
+              left: -30px;
+              transform: translateX(0);
+              border-radius: 0px 10px 0px 0px;
+            }
+
+            .info {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              margin-bottom: map.get(v.$spacers, 2);
+
+              .name {
+                font-size: map.get(v.$font-sizes, 'lg');
+                font-weight: map.get(v.$font-weights, 'semibold');
+                color: var(--color-text-primary);
+                margin-bottom: map.get(v.$spacers, 1);
+                text-align: center;
+              }
+
+              .rol {
+                font-size: map.get(v.$font-sizes, 'sm');
+                font-weight: map.get(v.$font-weights, 'regular');
+                color: v.$primary;
+                text-align: center;
+              }
+            }
+
+            // Social media links
+            .social-links {
+              display: flex;
+              justify-content: center;
+              gap: 10px;
+
+              svg {
+                width: 20px;
+                height: 20px;
+                color: var(--color-text-muted);
+                @include mix.transition(v.$transition-base);
+
+                &:hover {
+                  color: v.$primary;
+                  @include mix.transform(scale(1.1));
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Team Member section
+    .member-profile-page {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: map.get(v.$spacers, 6);
+      color: var(--color-text-primary);
+
+      @include mix.respond-to-max('md') {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        grid-column: 1 / -1;
+      }
+    }
+
+    // Left column: image, name, role, and social
+    .member-aside {
+      text-align: center;
+      background-color: var(--color-surface);
+      padding: map.get(v.$spacers, 4);
+      border-radius: v.$border-radius;
+      box-shadow: v.$box-shadow;
+
+      .image-wrapper {
+        img {
+          width: 100%;
+          border-radius: v.$border-radius;
+          margin-bottom: map.get(v.$spacers, 3);
+        }
+      }
+
+      .member-name {
+        font-size: map.get(v.$font-sizes, 'lg');
+        font-weight: map.get(v.$font-weights, 'bold');
+        margin-bottom: 0.25rem;
+      }
+
+      .member-role {
+        font-size: map.get(v.$font-sizes, 'sm');
+        color: var(--color-text-muted);
+        margin-bottom: map.get(v.$spacers, 3);
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: map.get(v.$spacers, 2);
+      }
+    }
+
+    // Right column: bio, skills, specialties
+    .member-main-content {
+      display: flex;
+      flex-direction: column;
+      gap: map.get(v.$spacers, 5);
+    }
+
+    // Biography section
+    .biography {
+      h3 {
+        font-size: map.get(v.$font-sizes, 'lg');
+        font-weight: map.get(v.$font-weights, 'bold');
+        margin-bottom: map.get(v.$spacers, 2);
+      }
+
+      p {
+        margin-bottom: map.get(v.$spacers, 2);
+        line-height: 1.7;
+      }
+    }
+
+    // Skills section using custom-progress
+    .skills {
+      h3 {
+        font-size: map.get(v.$font-sizes, 'lg');
+        font-weight: map.get(v.$font-weights, 'bold');
+        margin-bottom: map.get(v.$spacers, 3);
+      }
+
+      .about-progress {
+        display: flex;
+        flex-direction: column;
+        gap: map.get(v.$spacers, 3);
+      }
+    }
+
+    // Specialty section
+    .specialties {
+      h3 {
+        font-size: map.get(v.$font-sizes, 'lg');
+        font-weight: map.get(v.$font-weights, 'bold');
+        margin-bottom: map.get(v.$spacers, 3);
+      }
+
+      .specialty-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: map.get(v.$spacers, 2);
+        list-style: none;
+        padding: 0;
+
+        li {
+          background-color: var(--color-surface-scase);
+          padding: 0.75rem 1rem;
+          border-radius: v.$border-radius-sm;
+          color: var(--color-text-primary);
+          font-size: map.get(v.$font-sizes, 'sm');
+        }
+      }
+    }
+
+    // Blog section with article cards
+    .blog {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: map.get(v.$spacers, 4);
+
+      @include mix.respond-to-max('md') {
+        grid-template-columns: repeat(1, 1fr);
+        gap: map.get(v.$spacers, 3);
+      }
+
+      &.no-blog-sidebar {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .blog-grid {
+        display: grid;
+        @include mix.grid(1, map.get(v.$spacers, 4));
+
+        &.blog-grid-col2 {
+          @include mix.grid(2, map.get(v.$spacers, 4));
+        }
+
+        &.blog-grid-col3 {
+          @include mix.grid(3, map.get(v.$spacers, 4));
+        }
+
+        &.blog-grid-col2,
+        &.blog-grid-col3 {
+          @include mix.respond-to-max('md') {
+            grid-template-columns: repeat(1, 1fr);
+            gap: map.get(v.$spacers, 3);
+          }
+        }
+
+        .blog-card {
+          position: relative;
+          @include mix.flex(column, stretch, stretch);
+          height: 430px; // Fixed height for consistency
+          background-color: var(--color-surface);
+          @include mix.border-radius(v.$border-radius-lg);
+          @include mix.box-shadow(var(--box-shadow));
+          @include mix.transition(v.$transition-smooth);
+          overflow: hidden;
+          
+          // AOS integration
+          &[data-aos] {
+            will-change: transform, opacity;
+            
+            &:hover {
+              @include mix.transform(translateY(-8px));
+            }
+            
+            &.aos-animate:hover {
+              @include mix.transform(translateY(-8px));
+            }
+          }
+
+          &:hover {
+            @include mix.transform(translateY(-8px));
+            @include mix.box-shadow(v.$box-shadow-lg);
+
+            // Image zoom effect
+            .blog-image .image {
+              @include mix.transform(scale(1.05));
+            }
+
+            // Read more link animation
+            .read-more {
+              color: v.$primary-light;
+
+              svg {
+                @include mix.transform(translateX(5px));
+              }
+            }
+          }
+
+          // Blog post featured image
+          .blog-image {
+            position: relative;
+            overflow: hidden;
+
+            .image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center -50px;
+              @include mix.transition(v.$transition-smooth);
+            }
+
+            // Category tag overlay
+            .blog-category {
+              position: absolute;
+              top: map.get(v.$spacers, 3);
+              left: map.get(v.$spacers, 3);
+              z-index: 10;
+
+              .category-tag {
+                background: rgba(0, 0, 0, 0.6);
+                color: v.$white;
+                padding: map.get(v.$spacers, 1) map.get(v.$spacers, 2);
+                @include mix.border-radius(v.$border-radius-sm);
+                font-size: map.get(v.$font-sizes, 'xs');
+                font-weight: map.get(v.$font-weights, 'medium');
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                backdrop-filter: blur(4px);
+                @include mix.transition(v.$transition-base);
+              }
+            }
+          }
+
+          // Blog post content area
+          .blog-content {
+            padding: map.get(v.$spacers, 4);
+            @include mix.flex(column, flex-start, stretch);
+            gap: map.get(v.$spacers, 2);
+            height: 100%;
+            flex-grow: 1;
+          }
+
+          // Blog metadata (date, author)
+          .blog-meta {
+            @include mix.flex(row, space-between, center);
+            flex-wrap: wrap;
+            gap: map.get(v.$spacers, 2);
+            margin-bottom: map.get(v.$spacers, 2);
+
+            .blog-date,
+            .blog-author {
+              @include mix.flex(row, flex-start, center);
+              gap: map.get(v.$spacers, 1);
+              color: v.$gray;
+              font-size: map.get(v.$font-sizes, 'sm');
+
+              svg {
+                width: 16px;
+                height: 16px;
+                fill: currentColor;
+              }
+            }
+
+            @include mix.respond-to-max('sm') {
+              @include mix.flex(column, flex-start, flex-start);
+              gap: map.get(v.$spacers, 1);
+            }
+          }
+
+          // Blog post title
+          .blog-title {
+            font-size: map.get(v.$font-sizes, 'lg');
+            font-weight: map.get(v.$font-weights, 'semibold');
+            line-height: 1.4;
+            margin-bottom: map.get(v.$spacers, 2);
+            @include mix.transition(v.$transition-base);
+
+            &:hover {
+              color: v.$primary;
+            }
+          }
+
+          // Blog post excerpt
+          .blog-excerpt {
+            font-size: map.get(v.$font-sizes, 'sm');
+            line-height: 1.6;
+            margin-bottom: map.get(v.$spacers, 3);
+            flex-grow: 1;                       // Take remaining space
+          }
+
+          // Blog post footer with actions and stats
+          .blog-footer {
+            @include mix.flex(row, space-between, center);
+            margin-top: auto;
+            padding-top: map.get(v.$spacers, 3);
+            border-top: 1px solid v.$light-gray;
+
+            .read-more {
+              @include mix.flex(row, flex-start, center);
+              gap: map.get(v.$spacers, 1);
+              color: v.$primary;
+              font-weight: map.get(v.$font-weights, 'medium');
+              font-size: map.get(v.$font-sizes, 'sm');
+              text-decoration: none;
+              @include mix.transition(v.$transition-base);
+
+              svg {
+                width: 16px;
+                height: 16px;
+                fill: currentColor;
+                @include mix.transition(v.$transition-base);
+              }
+
+              &:hover {
+                color: v.$primary-light;
+              }
+            }
+
+            .blog-stats {
+              .reading-time {
+                @include mix.flex(row, flex-start, center);
+                gap: map.get(v.$spacers, 1);
+                color: v.$gray;
+                font-size: map.get(v.$font-sizes, 'xs');
+
+                svg {
+                  width: 14px;
+                  height: 14px;
+                  fill: currentColor;
+                }
+              }
+            }
+
+            @include mix.respond-to-max('sm') {
+              @include mix.flex(column, flex-start, flex-start);
+              gap: map.get(v.$spacers, 2);
+            }
+          }
+        }
+
+        // Responsive adjustments for blog cards
+        @include mix.respond-to-max('md') {
+          .blog-card {
+            .blog-image {
+              height: 180px;
+            }
+
+            .blog-content {
+              padding: map.get(v.$spacers, 3);
+            }
+
+            .blog-title {
+              font-size: map.get(v.$font-sizes, 'base');
+            }
+          }
+        }
+      }
+
+      .blog-sidebar {
+        background-color: var(--color-surface);
+        padding: map.get(v.$spacers, 4);
+        border-radius: v.$border-radius;
+        color: var(--color-text-primary);
+
+        .search-box {
+          display: flex;
+          margin-bottom: map.get(v.$spacers, 4);
+
+          input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid var(--color-border);
+            border-radius: v.$border-radius 0 0 v.$border-radius;
+            background-color: var(--color-surface-scase);
+            color: var(--color-text-primary);
+          }
+
+          button {
+            background-color: var(--color-primary);
+            color: v.$white;
+            border: none;
+            padding: 0 1rem;
+            border-radius: 0 v.$border-radius v.$border-radius 0;
+            cursor: pointer;
+
+            i {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        h4 {
+          font-weight: map.get(v.$font-weights, 'bold');
+          margin-bottom: map.get(v.$spacers, 3);
+          color: var(--color-text-primary);
+        }
+
+        .title {
+          padding: 20px 0px;
+        }
+
+        .categories ul,
+        .recent-posts ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text-primary);
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            span {
+              font-weight: map.get(v.$font-weights, 'bold');
+            }
+          }
+        }
+
+        .categories ul li {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid var(--color-border);
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          a {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            color: var(--color-text-primary);
+            text-decoration: none;
+            padding: 0.3rem 0.5rem;
+            border-radius: v.$border-radius-sm;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+              background-color: var(--color-primary);
+            }
+
+            &.active {
+              background-color: var(--color-primary);
+              color: v.$white;
+
+              span {
+                color: v.$white;
+              }
+            }
+
+            span {
+              font-weight: map.get(v.$font-weights, 'bold');
+            }
+          }
+        }
+
+        .recent-posts ul li {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: v.$border-radius-sm;
+            margin-right: map.get(v.$spacers, 2);
+            object-fit: cover;
+          }
+
+          div a {
+            font-weight: map.get(v.$font-weights, 'bold');
+            color: var(--color-text-primary);
+            text-decoration: none;
+
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+
+          div span {
+            display: block;
+            font-size: map.get(v.$font-sizes, 'sm');
+            color: var(--color-text-muted);
+          }
+        }
+
+        .tags .tag-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: map.get(v.$spacers, 2);
+
+          a {
+            background-color: var(--color-surface-scase);
+            color: var(--color-text-primary);
+            padding: 0.3rem 0.6rem;
+            border-radius: v.$border-radius-sm;
+            text-decoration: none;
+            font-size: map.get(v.$font-sizes, 'sm');
+
+            &:hover {
+              background-color: var(--color-primary);
+              color: v.$white;
+            }
+          }
+        }
+
+        .social-icons {
+          display: flex;
+          gap: map.get(v.$spacers, 4);
+
+          .social-link {
+            svg {
+              color: var(--color-text-primary);
+
+              &:hover {
+                color: var(--color-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Contact form section with two-column layout
+    .contact-form {
+      .contact-form-container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .contact-form-content {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;      // Unequal columns (form is wider)
+        gap: map.get(v.$spacers, 4);
+        
+        @include mix.respond-to-max('lg') {
+          grid-template-columns: 1fr;          // Single column on mobile
+          gap: map.get(v.$spacers, 4);
+        }
+      }
+
+      // Contact information card with gradient background
+      .contact-info-card {
+        background: linear-gradient(135deg, v.$primary-dark 0%, v.$primary 100%);
+        color: v.$white;
+        padding: map.get(v.$spacers, 4);
+        @include mix.border-radius(v.$border-radius-lg);
+        height: fit-content;
+        position: relative;
+        overflow: hidden;
+
+        // Decorative circle element
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 150px;
+          height: 150px;
+          background: rgba(v.$white, 0.1);
+          border-radius: 50%;
+          transform: translate(30%, -30%);
+        }
+
+        .contact-info-header {
+          margin-bottom: map.get(v.$spacers, 4);
+          position: relative;
+          z-index: 1;
+
+          h3 {
+            font-size: map.get(v.$font-sizes, 'xl');
+            font-weight: map.get(v.$font-weights, 'bold');
+            margin-bottom: map.get(v.$spacers, 2);
+            color: v.$white;
+          }
+
+          p {
+            font-size: map.get(v.$font-sizes, 'sm');
+            line-height: 1.6;
+            opacity: 0.9;
+            margin: 0;
+          }
+        }
+
+        // Contact details list
+        .contact-details {
+          margin-bottom: map.get(v.$spacers, 4);
+          position: relative;
+          z-index: 1;
+
+          .contact-detail-item {
+            @include mix.flex(row, flex-start, flex-start);
+            gap: map.get(v.$spacers, 2);
+            margin-bottom: map.get(v.$spacers, 3);
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .contact-icon {
+              flex-shrink: 0;
+              width: 20px;
+              height: 20px;
+              margin-top: 2px;
+
+              svg {
+                width: 100%;
+                height: 100%;
+                fill: currentColor;
+              }
+            }
+
+            .contact-text {
+              @include mix.flex(column, flex-start, flex-start);
+              gap: map.get(v.$spacers, 1);
+
+              .label {
+                font-size: map.get(v.$font-sizes, 'xs');
+                font-weight: map.get(v.$font-weights, 'medium');
+                opacity: 0.8;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+              }
+
+              .value {
+                font-size: map.get(v.$font-sizes, 'sm');
+                font-weight: map.get(v.$font-weights, 'regular');
+                line-height: 1.5;
+              }
+            }
+          }
+        }
+
+        // Social media links
+        .contact-social {
+          position: relative;
+          z-index: 1;
+
+          .social-label {
+            font-size: map.get(v.$font-sizes, 'xs');
+            font-weight: map.get(v.$font-weights, 'medium');
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: map.get(v.$spacers, 2);
+          }
+
+          .social-links {
+            @include mix.flex(row, flex-start, center);
+            gap: map.get(v.$spacers, 2);
+
+            .social-link {
+              width: 36px;
+              height: 36px;
+              background: rgba(v.$white, 0.2);
+              @include mix.border-radius(50%);
+              @include mix.flex(row, center, center);
+              @include mix.transition(v.$transition-base);
+
+              svg {
+                width: 18px;
+                height: 18px;
+                fill: currentColor;
+              }
+
+              &:hover {
+                background: rgba(v.$white, 0.3);
+                @include mix.transform(translateY(-2px));
+              }
+            }
+          }
+        }
+      }
+
+      // Contact form card
+      .contact-form-card {
+        background-color: var(--color-surface);
+        padding: map.get(v.$spacers, 4);
+        @include mix.border-radius(v.$border-radius-lg);
+        border: 1px solid var(--color-primary);
+
+        .contact-form-fields {
+          display: grid;
+          grid-template-columns: 1fr 1fr;      // Two-column form layout
+          gap: map.get(v.$spacers, 3);
+
+          @include mix.respond-to-max('md') {
+            grid-template-columns: 1fr;        // Single column on mobile
+            gap: map.get(v.$spacers, 3);
+          }
+
+          .form-group {
+            @include mix.flex(column, flex-start, stretch);
+            gap: map.get(v.$spacers, 1);
+
+            // Full-width form groups span both columns
+            &.form-group-full {
+              grid-column: 1 / -1;
+            }
+
+            .form-label {
+              font-size: map.get(v.$font-sizes, 'sm');
+              font-weight: map.get(v.$font-weights, 'medium');
+              color: v.$dark-gray;
+              margin: 0;
+            }
+
+            // Base styles for form inputs
+            .form-input,
+            .form-select,
+            .form-textarea {
+              width: 100%;
+              padding: map.get(v.$spacers, 2);
+              border: 2px solid v.$light-gray;
+              @include mix.border-radius(v.$border-radius);
+              font-size: map.get(v.$font-sizes, 'sm');
+              font-family: v.$font-family-sans;
+              @include mix.transition(v.$transition-base);
+              background: v.$white;
+
+              &:focus {
+                outline: none;
+                border-color: v.$primary;
+                @include mix.box-shadow(0 0 0 3px rgba(v.$primary, 0.1));
+              }
+
+              &:invalid:not(:focus):not(:placeholder-shown) {
+                border-color: #dc3545;          // Red for validation errors
+              }
+
+              &::placeholder {
+                color: v.$gray;
+                opacity: 0.7;
+              }
+            }
+
+            // Textarea specific styles
+            .form-textarea {
+              resize: vertical;
+              min-height: 100px;
+              line-height: 1.6;
+            }
+
+            // Select dropdown with custom arrow
+            .form-select {
+              cursor: pointer;
+              background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+              background-position: right 12px center;
+              background-repeat: no-repeat;
+              background-size: 16px;
+              padding-right: 40px;
+              appearance: none;              // Remove default browser styling
+            }
+
+            // Custom checkbox styling
+            .form-checkbox-container {
+              @include mix.flex(row, flex-start, flex-start);
+              gap: map.get(v.$spacers, 2);
+              cursor: pointer;
+              font-size: map.get(v.$font-sizes, 'xs');
+              line-height: 1.5;
+
+              .form-checkbox {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+
+                &:checked + .form-checkmark {
+                  background-color: v.$primary;
+                  border-color: v.$primary;
+
+                  &::after {
+                    display: block;
+                  }
+                }
+              }
+
+              // Custom checkmark design
+              .form-checkmark {
+                position: relative;
+                width: 18px;
+                height: 18px;
+                border: 2px solid v.$light-gray;
+                @include mix.border-radius(v.$border-radius-sm);
+                @include mix.transition(v.$transition-base);
+                flex-shrink: 0;
+                margin-top: 1px;
+
+                // Checkmark icon using CSS
+                &::after {
+                  content: '';
+                  position: absolute;
+                  display: none;
+                  left: 5px;
+                  top: 1px;
+                  width: 5px;
+                  height: 9px;
+                  border: solid v.$white;
+                  border-width: 0 2px 2px 0;
+                  transform: rotate(45deg);
+                }
+              }
+
+              .form-checkbox-text {
+                color: v.$dark-gray;
+                
+                .form-link {
+                  color: v.$primary;
+                  text-decoration: none;
+                  
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+
+            // Form validation error messages
+            .form-error {
+              font-size: map.get(v.$font-sizes, 'xs');
+              color: #dc3545;
+              margin-top: -8px;
+              display: none;
+
+              &.show {
+                display: block;
+              }
+            }
+          }
+
+          // Form submission section
+          .form-actions {
+            grid-column: 1 / -1;
+            margin-top: map.get(v.$spacers, 1);
+
+            .form-submit-btn {
+              width: 100%;
+              position: relative;
+              @include mix.flex(row, center, center);
+              gap: map.get(v.$spacers, 2);
+
+              @include mix.respond-to-min('md') {
+                width: auto;
+                min-width: 180px;
+              }
+
+              // Loading state content
+              .btn-loading {
+                @include mix.flex(row, center, center);
+                gap: map.get(v.$spacers, 2);
+
+                .loading-spinner {
+                  width: 18px;
+                  height: 18px;
+                  animation: spin 1s linear infinite;
+                }
+              }
+
+              &:disabled {
+                opacity: 0.7;
+                cursor: not-allowed;
+              }
+            }
+          }
+
+          // Form status messages
+          .form-status {
+            grid-column: 1 / -1;
+            margin-top: map.get(v.$spacers, 2);
+
+            .form-success,
+            .form-error-general {
+              @include mix.flex(row, flex-start, center);
+              gap: map.get(v.$spacers, 2);
+              padding: map.get(v.$spacers, 2);
+              @include mix.border-radius(v.$border-radius);
+              font-size: map.get(v.$font-sizes, 'sm');
+
+              svg {
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+              }
+            }
+
+            // Success message styling
+            .form-success {
+              background: rgba(#22c55e, 0.1);
+              color: #15803d;
+              border: 1px solid rgba(#22c55e, 0.3);
+
+              svg {
+                fill: #22c55e;
+              }
+            }
+
+            // Error message styling
+            .form-error-general {
+              background: rgba(#dc3545, 0.1);
+              color: #dc3545;
+              border: 1px solid rgba(#dc3545, 0.3);
+
+              svg {
+                fill: #dc3545;
+              }
+            }
+          }
+        }
+      }
+
+      // Spinner animation keyframes
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      // Responsive contact form adjustments
+      @include mix.respond-to-max('lg') {
+        .contact-info-card {
+          padding: map.get(v.$spacers, 4);
+        }
+
+        .contact-form-card {
+          padding: map.get(v.$spacers, 4);
+        }
+      }
+
+      @include mix.respond-to-max('md') {
+        .contact-info-card {
+          padding: map.get(v.$spacers, 3);
+        }
+
+        .contact-form-card {
+          padding: map.get(v.$spacers, 3);
+        }
+      }
+    }
+  }
+}
+
+// Statistics/counting section with background
+.counting-info {
+  @include mix.flex(row, center, center);
+  height: 500px;
+  
+  @include mix.respond-to-max('lg') {
+    padding: 100px 0;
+  }
+  
+  @include mix.respond-to-max('md') {
+    height: auto;
+    padding: 80px 0;
+  }
+  
+  @include mix.respond-to-max('sm') {
+    padding: 60px 0;
+  }
+
+  .counting-content {
+    max-width: 900px;
+    @include mix.grid(2, map.get(v.$spacers, 6));    // Two-column layout
+    
+    @include mix.respond-to-max('md') {
+      max-width: 600px;
+      @include mix.grid(1, map.get(v.$spacers, 4));  // Single column on mobile
+      text-align: center;
+      margin: 0 auto;
+      
+      // Reorder content on mobile
+      .info {
+        order: 1;
+      }
+      
+      .box-counting {
+        order: 2;
+        justify-self: center;
+      }
+    }
+
+    // Information/description section
+    .info {
+      max-width: 299px;
+      
+      @include mix.respond-to-max('md') {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      .title,
+      .text {
+        color: v.$white;
+      }
+
+      .title {
+        max-width: 250px;
+        font-size: map.get(v.$font-sizes, '2xl');
+        font-weight: map.get(v.$font-weights, 'bold');
+        line-height: 1.3;
+        margin-bottom: map.get(v.$spacers, 3);
+        
+        @include mix.respond-to-max('md') {
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .subinfo {
+          color: v.$primary;
+          font-weight: map.get(v.$font-weights, 'semibold');
+        }
+      }
+
+      .text {
+        font-size: map.get(v.$font-sizes, 'base');
+        font-weight: map.get(v.$font-weights, 'regular');
+        line-height: 1.6;
+        margin-bottom: map.get(v.$spacers, 4);
+      }
+    }
+
+    // Statistics counters section
+    .box-counting {
+      align-self: center;
+      @include mix.align-items(center);
+      @include mix.grid(3, map.get(v.$spacers, 3));  // 3 columns of counters
+      
+      @include mix.respond-to-max('md') {
+        @include mix.grid(2, map.get(v.$spacers, 4));  // 2 columns on tablet
+      }
+      
+      @include mix.respond-to-max('sm') {
+        @include mix.grid(1, map.get(v.$spacers, 3));  // 1 column on mobile
+      }
+
+      // Individual counter cards
+      .counts {
+        @include mix.flex(column, center, center);
+        color: v.$white;
+        background-color: rgba(v.$primary, 0.2);
+        width: 180px;
+        height: 160px;
+
+        .number {
+          font-size: map.get(v.$font-sizes, '2xl');
+          font-weight: map.get(v.$font-weights, 'bold');
+          line-height: 1;
+          margin-bottom: map.get(v.$spacers, 1);
+        }
+
+        .label {
+          font-size: map.get(v.$font-sizes, 'sm');
+          font-weight: map.get(v.$font-weights, 'medium');
+          text-align: center;
+          line-height: 1.4;
+        }
+
+        svg {
+          width: 50px;
+          height: 50px;
+          margin-bottom: map.get(v.$spacers, 2);
+        }
+      }
+    }
+  }
+}
+
+// Client companies section with logo carousel
+.client-companies {
+  .customers-carousel {
+    .slider-container {
+      gap: 30px;
+    }
+    
+    .client-company {
+      height: 140px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      @include mix.border-radius(v.$border-radius-lg);
+      @include mix.transition(all 0.6s);
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;                // Maintain aspect ratio
+        filter: grayscale(100%);            // Black and white by default
+        @include mix.transition(all 0.6s);
+        @include mix.border-radius(v.$border-radius-lg);
+      }
+
+      &:hover {
+        @include mix.transform(scale(1.1));
+
+        .image {
+          filter: grayscale(0%);            // Full color on hover
+        }
+      }
+    }
+  }
+}
+
+// Testimonials section with dual layout support
+.testimonials {
+  @include mix.flex(column, center, center);
+  
+  // Grid version of testimonials
+  .testimonials-grid {
+    position: relative;
+    @include mix.flex(row, center, center);
+    gap: map.get(v.$spacers, 4);
+    width: 1250px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 1;
+
+    @include mix.respond-to-max('md') {
+      width: 824px;
+    }
+
+    @include mix.respond-to-max('sm') {
+      width: 100%;
+    }
+  
+    // Shared styles for testimonial cards
+    .comment {
+      @include mix.flex(column, center, center);
+      background-color: var(--color-surface);
+      width: 400px;
+      height: 300px;
+      padding: map.get(v.$spacers, 4);
+      border-radius: 20px;
+      box-sizing: border-box;
+      border: 1px solid var(--color-primary);
+      visibility: hidden;
+      transition: v.$transition-smooth;
+
+      @include mix.respond-to-max('sm') {
+        width: 100%;
+      }
+      
+      // Quote icon with flip transformation
+      .quote-icon {
+        width: 70px;
+        height: 70px;
+        color: var(--color-primary);
+        transform: scaleX(-1) scaleY(-1);     // Flip both horizontally and vertically
+        opacity: 0.8;
+        
+        @media (max-width: 575px) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      // Testimonial message text
+      .message {
+        .text {
+          font-size: map.get(v.$font-sizes, 'base');
+          font-weight: map.get(v.$font-weights, 'regular');
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 1.5;
+          margin: 0;
+          
+          @media (max-width: 575px) {
+            font-size: map.get(v.$font-sizes, 'sm');
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+          }
+        }
+      }
+
+      // User information section
+      .info-user {
+        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
+        align-items: center;
+        gap: 15px;
+        height: auto;
+        min-height: 60px;
+
+        // User avatar image
+        .image {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+          
+          @media (max-width: 575px) {
+            width: 40px;
+            height: 40px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        // User details
+        .info {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+
+          .name {
+            font-weight: map.get(v.$font-weights, 'semibold');
+            color: var(--color-text-primary);
+            margin-bottom: 2px;
+            
+            @media (max-width: 575px) {
+              font-size: map.get(v.$font-sizes, 'sm');
+            }
+          }
+
+          .role {
+            font-size: map.get(v.$font-sizes, 'sm');
+            font-weight: map.get(v.$font-weights, 'bold');
+            color: var(--color-primary);;
+            margin-bottom: 5px;
+            
+            @media (max-width: 575px) {
+              font-size: map.get(v.$font-sizes, 'xs');
+            }
+          }
+
+          // Star rating display
+          .rating {
+            display: flex;
+            gap: 1px;
+
+            .star {
+              width: 20px;
+              height: 20px;
+              color: #ffd700;
+              
+              @media (max-width: 575px) {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Contact call-to-action section
+.contact-info {
+  @include mix.flex(column, center, center);
+  background-color: transparent;
+  position: relative;
+  height: 500px;
+
+  .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-header {
+    margin-bottom: map.get(v.$spacers, 5);
+
+    @include mix.respond-to-max('md') {
+      margin-bottom: map.get(v.$spacers, 4);
+    }
+
+    @include mix.respond-to-max('sm') {
+      margin-bottom: map.get(v.$spacers, 3);
+    }
+
+    .contact-title {
+      font-size: map.get(v.$font-sizes, '3xl');
+      font-weight: map.get(v.$font-weights, 'bold');
+      color: v.$white;
+      margin-bottom: map.get(v.$spacers, 3);
+      line-height: 1.2;
+      
+      @include mix.respond-to-max('sm') {
+        font-size: map.get(v.$font-sizes, '2xl');
+      }
+    }
+
+    .contact-description {
+      font-size: map.get(v.$font-sizes, 'base');
+      font-weight: map.get(v.$font-weights, 'regular');
+      color: rgba(v.$white, 0.9);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+      
+      @include mix.respond-to-max('md') {
+        font-size: map.get(v.$font-sizes, 'base');
+      }
+      
+      @include mix.respond-to-max('sm') {
+        font-size: map.get(v.$font-sizes, 'sm');
+      }
+    }
+  }
+
+  .contact-actions {
+    .contact-cta {
+      margin-bottom: map.get(v.$spacers, 2);
+      padding: map.get(v.$spacers, 3) map.get(v.$spacers, 5);
+      font-size: map.get(v.$font-sizes, 'lg');
+      font-weight: map.get(v.$font-weights, 'semibold');
+      text-decoration: none;
+      @include mix.transition(v.$transition-smooth);
+      
+      @include mix.respond-to-max('md') {
+        padding: map.get(v.$spacers, 3) map.get(v.$spacers, 4);
+        font-size: map.get(v.$font-sizes, 'base');
+      }
+      
+      @include mix.respond-to-max('sm') {
+        padding: map.get(v.$spacers, 2) map.get(v.$spacers, 3);
+        font-size: map.get(v.$font-sizes, 'sm');
+        width: 100%;
+        max-width: 280px;
+      }
+
+      // Call-to-action button hover effects
+      &:hover {
+        @include mix.transform(translateY(-2px));
+        @include mix.box-shadow(0 10px 25px rgba(v.$primary, 0.3));
+      }
+    }
+  }
+}
