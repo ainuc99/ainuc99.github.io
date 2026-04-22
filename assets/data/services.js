@@ -1,15 +1,10 @@
 const servicesData = {
   "services": [
-    "Web Development",
-    "Mobile App Development",
-    "Cloud Solutions",
-    "Digital Marketing",
-    "UX/UI Design",
-    "DevOps & Infrastructure",
-    "AI & Machine Learning",
-    "Blockchain Solutions",
-    "Cybersecurity",
-    "Data Analytics"
+    "Windows 7 ~ 11",
+    "各种主流Linux",
+    "多种国产操作系统",
+    "各种LiveCD镜像",
+    "VHD/VHDx/RAW/ISO格式"
   ],
   "typewriterConfig": {
     "typeSpeed": 100,

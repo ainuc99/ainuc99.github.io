@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             } catch (error) {
                 // Fallback with default strings
                 const typed = new Typed('#typed-element', {
-                    strings: ['Web Development', 'Digital Marketing', 'SEO Optimization'],
+                    strings: ['Windows 7 ~ 11','各种主流Linux','多种国产操作系统'],
                     typeSpeed: 50,
                     backSpeed: 30,
                     backDelay: 1500,

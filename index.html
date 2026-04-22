@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITAgency - Professional IT Services & Web Development</title>
-    <meta name="description" content="Leading IT agency providing web development, mobile apps, cloud solutions, and digital marketing. Transform your business with cutting-edge technology solutions.">
-    <meta name="keywords" content="IT services, web development, mobile apps, cloud solutions, digital marketing">
-
-
+    <title>云固件 - 替代传统系统部署方式，成就互联网时代的个人计算机</title>
+    <meta name="description" content="虚拟机镜像文件用物理机本地启动，创新的计算机系统部署和分发方式，成就互联网时代的个人计算机">
+    <meta name="keywords" content="云固件, Multimware, 云固件镜像, 快优, QuickU, 个人计算机, PC, 虚拟机镜像, 本地启动, 系统部署, 系统分发">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+    <link rel="icon" type="image/png" href="assets/images/mw.ico">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/aos.css">
@@ -22,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="body-1">
     <div id="particles-js" class="particles-background"></div>
 
@@ -35,7 +35,7 @@
                         <div></div>
                     </div>
                 </div>
-                
+
                 <!-- Advanced Progress Bar -->
                 <div class="loader-progress">
                     <div class="progress-bar"></div>
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Header -->
     <header class="header">
         <div class="container d-flex-between">
@@ -56,7 +56,7 @@
             <!-- Navigation -->
             <nav class="navbar" id="navbar">
                 <ul class="nav-menu">
-                    <li class="dropdown">
+                    <!--li class="dropdown">
                         <a class="dropdown-toggle" data-dropdown="home-dropdown">Home</a>
                         <ul class="dropdown-menu" id="home-dropdown">
                             <li><a href="index.html" class="dropdown-item">Home 1</a></li>
@@ -65,20 +65,13 @@
                             <li><a href="home-page-3.html" class="dropdown-item">Home 3</a></li>
                             <li><a href="home-page-4.html" class="dropdown-item">Home 4</a></li>
                         </ul>
-                    </li>
-                    <li><a href="about-us.html" class="nav-link">About Us</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-dropdown="blog-dropdown">Blog</a>
-                        <ul class="dropdown-menu" id="blog-dropdown">
-                            <li><a href="blog-column-1.html" class="dropdown-item">Blog Column 1</a></li>
-                            <li><a href="blog-column-2.html" class="dropdown-item">Blog Column 2</a></li>
-                            <li><a href="blog-column-3.html" class="dropdown-item">Blog Column 3</a></li>
-                            <li><a href="article.html" class="dropdown-item">Blog Detail Page</a></li>
-                        </ul>
-                    </li> 
-                    <li class="dropdown">
+                    </li-->
+                    <li><a href="index.html" class="nav-link">首页</a></li>
+                    <li><a href="#supported_os" class="nav-link">支持系统</a></li>
+                    <li><a href="#use-cases" class="nav-link">使用场景</a></li>
+                    <li><a href="#" class="nav-link">免费镜像</a></li>
+                    <li><a href="#" class="nav-link">教程</a></li>
+                    <!--li class="dropdown">
                         <a class="dropdown-toggle" data-dropdown="pages-dropdown">Pages</a>
                         <ul class="dropdown-menu" id="pages-dropdown">
                             <li><a href="process.html" class="dropdown-item">Process</a></li>
@@ -92,18 +85,36 @@
                             <li><a href="buttons.html" class="dropdown-item">Buttons</a></li>
                             <li><a href="typography.html" class="dropdown-item">Fonts</a></li>
                         </ul>
-                    </li>
-                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                    </li-->
+                    <li><a href="#" class="nav-link">镜像市场</a></li>
+                    <!--li class="dropdown">
+                        <a class="dropdown-toggle" data-dropdown="blog-dropdown">博客</a>
+                        <ul class="dropdown-menu" id="blog-dropdown">
+                            <li><a href="blog-column-1.html" class="dropdown-item">Blog Column 1</a></li>
+                            <li><a href="blog-column-2.html" class="dropdown-item">Blog Column 2</a></li>
+                            <li><a href="blog-column-3.html" class="dropdown-item">Blog Column 3</a></li>
+                            <li><a href="article.html" class="dropdown-item">Blog Detail Page</a></li>
+                        </ul>
+                    </li-->
                 </ul>
             </nav>
 
             <!-- Get Quotes Button -->
             <div class="actions d-flex-center">
-                <a href="contact-us.html" class="btn btn-get-quotes">Get Quotes</a>
+                <a href="contact-us.html" class="btn btn-get-quotes">开始使用</a>
                 <div class="theme-switcher">
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
-                        <svg id="theme-toggle-light-icon" class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.894 17.894a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.106 6.106a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
-                        <svg id="theme-toggle-dark-icon" class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.69a.75.75 0 01.981.981A10.501 10.501 0 0118 19.5a10.5 10.5 0 01-10.5-10.5 10.5 10.5 0 011.718-5.528.75.75 0 01.81-.162z" clip-rule="evenodd" /></svg>
+                        <svg id="theme-toggle-light-icon" class="sun-icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.894 17.894a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.106 6.106a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                        </svg>
+                        <svg id="theme-toggle-dark-icon" class="moon-icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.69a.75.75 0 01.981.981A10.501 10.501 0 0118 19.5a10.5 10.5 0 01-10.5-10.5 10.5 10.5 0 011.718-5.528.75.75 0 01.81-.162z"
+                                clip-rule="evenodd" />
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -122,467 +133,276 @@
         <div class="hero-content-home-1">
             <div class="hero-info">
                 <div class="hero-info-content flex-column-center pb-5">
-                    <h2 class="text-white heading-hero text-shadow" 
-                        data-aos="fade-down" 
-                        data-aos-duration="800" 
+                    <h2 class="text-white heading-lg text-shadow">拿来主义的典范</h2>
+                    <h2 class="text-white heading-hero text-shadow" data-aos="fade-down" data-aos-duration="800"
                         data-aos-delay="100">
-                        Technology Solutions Excellence
+                        无须实际安装，开箱即可使用
                     </h2>
 
-                    <div data-aos="fade-right" 
-                     data-aos-duration="600" 
-                     data-aos-delay="300">
+                    <div data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
                         <h3 class="text-primary text-shadowl--letterpress">
-                            In <span id="typed-element"></span>
+                            支持<span id="typed-element"></span>
                         </h3>
                     </div>
-                    
-                    <p class="text-white w-75 text-shadow--strong" 
-                    data-aos="fade-up" 
-                    data-aos-duration="600" 
-                    data-aos-delay="500">
-                        Helping you grow through strategy, creativity and technology.
+
+                    <p class="text-white w-75 text-shadow--strong" data-aos="fade-up" data-aos-duration="600"
+                        data-aos-delay="500">
+                        简单复制文件，即可在本机上使用各种操作系统与应用环境，一个镜像就是一个系统。<br />
+                        同一个镜像，无须移动、更名等附加操作，即可支持物理机和虚拟机启动。<br />
+                        启动即可差分镜像，支持手动差分和自动差分。<br />
+                        支持默认启动、静默启动等多种自动启动方式，无须用户参与选择。
                     </p>
                 </div>
 
-                <div class="cta w-100">
-                    <div class="social-links pb-4 d-flex-between" 
-                        data-aos="fade-in" 
-                        data-aos-duration="400">
-                        <a href="javascript:void(0)" class="social-link icon-transition sm"  
-                        data-aos="zoom-in" 
-                        data-aos-duration="300" 
-                        data-aos-delay="700">
-                            <svg><use xlink:href="#twitter-x"></use></svg>
+                <!--div class="cta w-100">
+                    <div class="social-links pb-4 d-flex-between" data-aos="fade-in" data-aos-duration="400">
+                        <a href="javascript:void(0)" class="social-link icon-transition sm" data-aos="zoom-in"
+                            data-aos-duration="300" data-aos-delay="700">
+                            <svg>
+                                <use xlink:href="#twitter-x"></use>
+                            </svg>
                         </a>
-                        <a href="javascript:void(0)" class="social-link icon-transition sm"  
-                        data-aos="zoom-in" 
-                        data-aos-duration="300" 
-                        data-aos-delay="750">
-                            <svg><use xlink:href="#facebook"></use></svg>
+                        <a href="javascript:void(0)" class="social-link icon-transition sm" data-aos="zoom-in"
+                            data-aos-duration="300" data-aos-delay="750">
+                            <svg>
+                                <use xlink:href="#facebook"></use>
+                            </svg>
                         </a>
-                        <a href="javascript:void(0)" class="social-link icon-transition sm"  
-                        data-aos="zoom-in" 
-                        data-aos-duration="300" 
-                        data-aos-delay="800">
-                            <svg><use xlink:href="#linkedin"></use></svg>
+                        <a href="javascript:void(0)" class="social-link icon-transition sm" data-aos="zoom-in"
+                            data-aos-duration="300" data-aos-delay="800">
+                            <svg>
+                                <use xlink:href="#linkedin"></use>
+                            </svg>
                         </a>
-                        <a href="javascript:void(0)" class="social-link icon-transition sm"  
-                        data-aos="zoom-in" 
-                        data-aos-duration="300" 
-                        data-aos-delay="850">
-                            <svg><use xlink:href="#instagram"></use></svg>
+                        <a href="javascript:void(0)" class="social-link icon-transition sm" data-aos="zoom-in"
+                            data-aos-duration="300" data-aos-delay="850">
+                            <svg>
+                                <use xlink:href="#instagram"></use>
+                            </svg>
                         </a>
-                    </div>
+                    </div-->
 
-                    <div class="cta-buttons w-100 d-flex gap-4">
-                        <a href="contact-us.html" class="btn btn-get-quotes" 
-                        data-aos="fade-right" 
-                        data-aos-duration="500" 
+                <div class="cta-buttons w-100 d-flex gap-4">
+                    <a href="contact-us.html" class="btn btn-get-quotes" data-aos="fade-right" data-aos-duration="500"
                         data-aos-delay="900">
-                            Get Quotes
-                        </a>
-                        <a href="contact-us.html" class="btn btn-outline" 
-                        data-aos="fade-left" 
-                        data-aos-duration="500" 
+                        开始使用
+                    </a>
+                    <a href="contact-us.html" class="btn btn-outline" data-aos="fade-left" data-aos-duration="500"
                         data-aos-delay="950">
-                            Get Started
-                        </a>
-                    </div>
+                        常见问题
+                    </a>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
     <!-- Main 1 -->
-    <div class="main d-flex-center pt-8 pb-8">
-        <!-- Main Content -->
+    <div id="supported_os" class="main d-flex-center pt-8 pb-8">
+        <!-- 支持的操作系统 -->
         <div class="container main-content">
             <!-- Services section -->
             <section class="service-cards-modern">
-                <div class="d-flex-baseline-between pb-5" 
-                    data-aos="fade-down" 
-                    data-aos-duration="600" 
+                <!--div class="d-flex-baseline-between pb-5" data-aos="fade-down" data-aos-duration="600"
                     data-aos-delay="0">
-                    <h2>Our Services</h2>
-                    <a href="services.html" class="btn btn-primary">See Services</a>
+                    <h2>支持的操作系统</h2>
+                    <a href="services.html" class="btn btn-primary">镜像仓库</a>
+                </div-->
+                <div class="d-flex-center pb-5" data-aos="fade-down" data-aos-duration="600" data-aos-delay="0">
+                    <h2 class="heading-lg">支持的操作系统</h2>
                 </div>
-
                 <div class="services-grid">
-                    <div class="service-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="0">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="0">
                         <div class="service-icon">
-                            <svg><use xlink:href="#monitor-code"></use></svg>
+                            <svg>
+                                <use xlink:href="#monitor-code"></use>
+                            </svg>
                         </div>
                         <div class="service-description">
-                            <h3>Web Development</h3>
-                            <p>Professional web solutions with modern technologies and responsive designs.</p>
+                            <h4>Windows 7</h4>
+                            <p>支持Windows 7旗舰版和企业版,使用VHD镜像格式,支持差分启动</p>
                         </div>
-                        <a class="overlay-link" href="javascript:void(0)"></a>
-                    </div>
-                    
-                    <div class="service-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="100">
-                        <div class="service-icon">
-                            <svg><use xlink:href="#phone"></use></svg>
-                        </div>
-                        <div class="service-description">
-                            <h4>Mobile App Development</h4>
-                            <p>Native and cross-platform mobile applications for iOS and Android.</p>
-                        </div>
-                        <a class="overlay-link" href="javascript:void(0)"></a>
-                    </div>
-                    
-                    <div class="service-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="200">
-                        <div class="service-icon">
-                            <svg><use xlink:href="#cloud-iot-2"></use></svg>
-                        </div>
-                        <div class="service-description">
-                            <h4>Cloud Solutions</h4>
-                            <p>Scalable cloud infrastructure and deployment solutions for your business.</p>
-                        </div>
-                        <a class="overlay-link" href="javascript:void(0)"></a>
+                        <!--a class="overlay-link" href="javascript:void(0)"></a-->
                     </div>
 
-                    <div class="service-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="0">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-icon">
-                            <svg><use xlink:href="#seo-monitor"></use></svg>
+                            <svg>
+                                <use xlink:href="#phone"></use>
+                            </svg>
                         </div>
                         <div class="service-description">
-                            <h4>Digital Marketing</h4>
-                            <p>Strategic digital marketing campaigns to boost your online presence.</p>
+                            <h4>Windows 8 ~ 11</h4>
+                            <p>支持8~11全系列所有版本,推荐使用VHDx格式,支持启动前差分,支持移动模式</p>
                         </div>
-                        <a class="overlay-link" href="javascript:void(0)"></a>
+                        <!--a class="overlay-link" href="javascript:void(0)"></a-->
                     </div>
-                    
-                    <div class="service-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="100">
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-icon">
-                            <svg><use xlink:href="#vector-nodes-6"></use></svg>
+                            <svg>
+                                <use xlink:href="#database-2"></use>
+                            </svg>
                         </div>
                         <div class="service-description">
-                            <h4>UX/UI Design</h4>
-                            <p>User-centered design experiences that engage and convert your audience.</p>
+                            <h4>国产操作系统</h4>
+                            <p>支持银河麒麟,UOS统信,中科方德等国产系统的x86版本<br />其他架构后续将会支持</p>
                         </div>
-                        <a class="overlay-link" href="javascript:void(0)"></a>
+                        <!--a class="overlay-link" href="javascript:void(0)"></a-->
                     </div>
-                    
-                    <div class="service-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="200">
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-icon">
-                            <svg><use xlink:href="#database-2"></use></svg>
+                            <svg>
+                                <use xlink:href="#cloud-iot-2"></use>
+                            </svg>
                         </div>
                         <div class="service-description">
-                            <h4>Data Analytics</h4>
-                            <p>Transform your data into actionable insights for better business decisions.</p>
+                            <h4>RedHat系Linux</h4>
+                            <p>支持基于dracut的initrd脚本模式,包括Fedora,CentOS,Rocky等发行版,使用自研内核支持VHDx格式</p>
                         </div>
-                        <a class="overlay-link" href="javascript:void(0)"></a>
+                        <!--a class="overlay-link" href="javascript:void(0)"></a-->
                     </div>
-                </div>
-            </section>
 
-            <!-- About Our Company section -->
-            <section class="about-our-company">
-                <div class="about-info pb-4" 
-                    data-aos="fade-right" 
-                    data-aos-duration="600" 
-                    data-aos-delay="0">
-                    <div class="about-texts pb-4">
-                        <h4 class="text-accent">About Our Company</h4>
-                        <h2 class="about-info-title">We're Passionate About Delivering Quality That Elevates Your Business.</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione illum ut, 
-                            obcaecati voluptate incidunt vero esse repellendus voluptates eveniet dolores.
-                        </p>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="service-icon">
+                            <svg>
+                                <use xlink:href="#seo-monitor"></use>
+                            </svg>
+                        </div>
+                        <div class="service-description">
+                            <h4>Debian系Linux</h4>
+                            <p>支持基于mkinitramfs的Debian及其衍生发行版,包括Ubuntu衍生版和LinuxMint,使用自研内核支持VHDx格式</p>
+                        </div>
+                        <!--a class="overlay-link" href="javascript:void(0)"></a-->
                     </div>
-                    
-                    <div class="about-progress">
-                        <div class="custom-progress" data-progress 
-                            data-label="IT Consulting" 
-                            data-percentage="90" 
-                            data-color="var(--color-primary)" 
-                            data-bg="var(--color-text-primary)" 
-                            data-text-color="var(--color-text-primary)">
-                        </div>
 
-                        <div class="custom-progress" data-progress 
-                            data-label="Web Development" 
-                            data-percentage="75" 
-                            data-color="var(--color-primary)" 
-                            data-bg="var(--color-text-primary)" 
-                            data-text-color="var(--color-text-primary)">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <svg>
+                                <use xlink:href="#vector-nodes-6"></use>
+                            </svg>
                         </div>
-
-                        <div class="custom-progress" data-progress 
-                            data-label="UX Design" 
-                            data-percentage="70" 
-                            data-color="var(--color-primary)" 
-                            data-bg="var(--color-text-primary)" 
-                            data-text-color="var(--color-text-primary)">
+                        <div class="service-description">
+                            <h4>Arch系Linux</h4>
+                            <p>支持基于mkinitcpio的Arch Linux及其衍生发行版,使用自研内核支持VHDx格式</p>
                         </div>
+                        <!--a class="overlay-link" href="javascript:void(0)"></a-->
                     </div>
-                </div>
 
-                <div class="about-image" 
-                    data-hover-3d 
-                    data-aos="fade-left" 
-                    data-aos-duration="600" 
-                    data-aos-delay="0">
-                    <img src="assets/images/backgrounds/computer-code.png" alt="About Image">
                 </div>
             </section>
         </div>
     </div>
 
-    <!-- Counting info section -->
-    <section class="counting-info container">
-        <div class="counting-content">
-            <div class="info" 
-                data-aos="fade-down" 
-                data-aos-delay="100">
-                <h2 class="title">Have <span class="subinfo">25 Years</span> of Experiences</h2>
-                <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Blanditiis quod veniam temporibus eaque, a neque nulla.
-                </p>
-
-                <a href="javascript:void(0)" class="btn btn-outline" 
-                    data-aos="fade-right" 
-                    data-aos-duration="500" 
-                    data-aos-delay="950">
-                    Get Started
-                </a>
-            </div>
-            <div class="box-counting">
-                <div class="counts" 
-                    data-aos="fade-down" 
-                    data-aos-delay="100">
-                    <svg><use xlink:href="#bulb-2"></use></svg>
-                    <span class="number" data-counter>3785+</span>
-                    <span class="label">Successful Projects</span>
-                </div>
-                <div class="counts"
-                    data-aos="fade-up" 
-                    data-aos-delay="100">
-                    <svg><use xlink:href="#hand-shake"></use></svg>
-                    <span class="number" data-counter>9800+</span>
-                    <span class="label">Satisfied Clients</span>
-                </div>
-                <div class="counts" 
-                    data-aos="fade-down" 
-                    data-aos-delay="100">
-                    <svg><use xlink:href="#message-3-text"></use></svg>
-                    <span class="number" data-counter>1052+</span>
-                    <span class="label">Support Tickets Resolved</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Main 2 -->
-    <div class="main d-flex-center pt-8 pb-8">
-        <!-- Main Content 2 -->
+    <div id="use-cases" class="main d-flex-center pt-8 pb-8">
+        <!-- 使用场景 -->
         <div class="container main-content">
-            <!-- Process section -->
-            <section class="step-info">
-                <div class="d-flex-center pb-5"
-                    data-aos="fade-down" 
-                    data-aos-duration="600" 
-                    data-aos-delay="0">
-                    <h2 class="heading-lg">Our Processes</h2>
-                </div>
-
-                <div class="box-step-info">
-                    <!-- Step 1 -->
-                    <div class="step up">
-                        <div class="process-info d-flex-center"
-                        data-aos="fade-down"
-                        data-aos-delay="100">
-                            <div class="process-icon">
-                                <svg><use xlink:href="#code-1"></use></svg>
-                            </div>
-                            <div class="process-text">
-                                <span class="text text-shadowl--white">1. WE INVESTIGATE AND PLAN</span>
-                                <p>We analyze your requirements and create a comprehensive strategy tailored to your business goals.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="step right">
-                        <div class="process-info d-flex-center"
-                        data-aos="fade-left"
-                        data-aos-delay="150">
-                            <div class="process-icon">
-                                <svg><use xlink:href="#monitor-code"></use></svg>
-                            </div>
-                            <div class="process-text">
-                                <span class="text text-shadowl--white">2. WE CO-CREATE AND DEVELOP</span>
-                                <p>Working together, we build innovative solutions using cutting-edge technology and best practices.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Central Image -->
-                    <div class="central-image">
-                        <img class="image" src="assets/images/backgrounds/process.jpg" alt="Process">
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="step down">
-                        <div class="process-info d-flex-center"
-                        data-aos="fade-up"
-                        data-aos-delay="200">
-                            <div class="process-icon">
-                                <svg><use xlink:href="#refresh-user-1"></use></svg>
-                            </div>
-                            <div class="process-text">
-                                <span class="text text-shadowl--white">3. WE ACCOMPANY AND GUARANTEE</span>
-                                <p>We provide ongoing support and maintenance to ensure your solution performs optimally over time.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="step left">
-                        <div class="process-info d-flex-center"
-                        data-aos="fade-right"
-                        data-aos-delay="250">
-                            <div class="process-icon">
-                                <svg><use xlink:href="#hand-shake"></use></svg>
-                            </div>
-                            <div class="process-text">
-                                <span class="text text-shadowl--white">4. WE DELIVER AND LAUNCH</span>
-                                <p>We deploy your solution with thorough testing and seamless implementation.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!-- Portfolio section -->
             <section class="portfolio pt-8">
-                <div class="d-flex-center pb-5"
-                    data-aos="fade-down" 
-                    data-aos-duration="600" 
-                    data-aos-delay="0">
-                    <h2 class="heading-lg">Our Portfolio</h2>
+                <div class="d-flex-center pb-5" data-aos="fade-down" data-aos-duration="600" data-aos-delay="0">
+                    <h2 class="heading-lg">使用场景</h2>
                 </div>
 
-                <div class="portfolio-isotope" 
-                    data-aos="fade-up" 
-                    data-aos-delay="100">
-                    
+                <div class="portfolio-isotope" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="portfolio-filters-container d-flex-center pb-5">
                         <ul class="portfolio-filters">
-                            <li class="filter-btn active" data-filter="*">All Projects</li>
-                            <li class="filter-btn" data-filter=".filter-web">Web Development</li>
-                            <li class="filter-btn" data-filter=".filter-mobile">Mobile Apps</li>
-                            <li class="filter-btn" data-filter=".filter-design">UI/UX Design</li>
-                            <li class="filter-btn" data-filter=".filter-branding">Branding</li>
+                            <li class="filter-btn active" data-filter="*">全部场景</li>
+                            <li class="filter-btn" data-filter=".filter-personal">个人用户</li>
+                            <li class="filter-btn" data-filter=".filter-family">家庭用户</li>
+                            <li class="filter-btn" data-filter=".filter-team">团队与小组</li>
+                            <li class="filter-btn" data-filter=".filter-enterprise">企业与教育</li>
                         </ul>
                     </div>
 
                     <div class="portfolio-grid">
-                        <div class="portfolio-item filter-web" 
-                            data-aos="zoom-in" 
-                            data-aos-delay="0">
+                        <div class="portfolio-item filter-personal" data-aos="zoom-in" data-aos-delay="0">
                             <div class="portfolio-card">
                                 <div class="portfolio-image">
-                                    <img class="image" src="assets/images/portfolio/project-1.png" alt="E-commerce Platform">
+                                    <img class="image" src="assets/images/portfolio/project-1.png"
+                                        alt="E-commerce Platform">
                                     <a href="assets/images/portfolio/project-1.png" class="portfolio-lightbox"></a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h3>E-commerce Platform</h3>
-                                    <span class="portfolio-category">Web Development</span>
+                                    <h4>个人单电脑多系统环境</h4>
+                                    <span class="portfolio-category">个人用户</span>
                                 </div>
                             </div>
                             <a class="overlay-link" href="javascript:void(0)"></a>
                         </div>
 
-                        <div class="portfolio-item filter-mobile" 
-                            data-aos="zoom-in" 
-                            data-aos-delay="50">
+                        <div class="portfolio-item filter-family" data-aos="zoom-in" data-aos-delay="50">
                             <div class="portfolio-card">
                                 <div class="portfolio-image">
-                                    <img class="image" src="assets/images/portfolio/project-2.png" alt="Fitness Tracking App">
+                                    <img class="image" src="assets/images/portfolio/project-2.png"
+                                        alt="Fitness Tracking App">
                                     <a href="assets/images/portfolio/project-2.png" class="portfolio-lightbox"></a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h4>Fitness Tracking App</h4>
-                                    <span class="portfolio-category">Mobile Apps</span>
+                                    <h4>家庭用户单设备多用户</h4>
+                                    <span class="portfolio-category">家庭用户</span>
                                 </div>
                             </div>
                             <a class="overlay-link" href="javascript:void(0)"></a>
                         </div>
 
-                        <div class="portfolio-item filter-design" 
-                            data-aos="zoom-in" 
-                            data-aos-delay="100">
+                        <div class="portfolio-item filter-family" data-aos="zoom-in" data-aos-delay="100">
                             <div class="portfolio-card">
                                 <div class="portfolio-image">
-                                    <img class="image" src="assets/images/portfolio/project-3.png" alt="Banking Dashboard">
+                                    <img class="image" src="assets/images/portfolio/project-3.png"
+                                        alt="Banking Dashboard">
                                     <a href="assets/images/portfolio/project-3.png" class="portfolio-lightbox"></a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h4>Banking Dashboard</h4>
-                                    <span class="portfolio-category">UI/UX Design</span>
+                                    <h4>家庭用户隐藏式系统</h4>
+                                    <span class="portfolio-category">家庭用户</span>
                                 </div>
                             </div>
                             <a class="overlay-link" href="javascript:void(0)"></a>
                         </div>
 
-                        <div class="portfolio-item filter-branding" 
-                            data-aos="zoom-in" 
-                            data-aos-delay="150">
+                        <div class="portfolio-item filter-team" data-aos="zoom-in" data-aos-delay="150">
                             <div class="portfolio-card">
                                 <div class="portfolio-image">
-                                    <img class="image" src="assets/images/portfolio/project-4.png" alt="Tech Startup Branding">
+                                    <img class="image" src="assets/images/portfolio/project-4.png"
+                                        alt="Tech Startup Branding">
                                     <a href="assets/images/portfolio/project-4.png" class="portfolio-lightbox"></a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h4>Tech Startup Brand</h4>
-                                    <span class="portfolio-category">Branding</span>
+                                    <h4>快速分发公共镜像与环境管理</h4>
+                                    <span class="portfolio-category">团队与小组</span>
                                 </div>
                             </div>
                             <a class="overlay-link" href="javascript:void(0)"></a>
                         </div>
 
-                        <div class="portfolio-item filter-web" 
-                            data-aos="zoom-in" 
-                            data-aos-delay="200">
+                        <div class="portfolio-item filter-team" data-aos="zoom-in" data-aos-delay="200">
                             <div class="portfolio-card">
                                 <div class="portfolio-image">
-                                    <img class="image" src="assets/images/portfolio/project-5.png" alt="Restaurant Website">
+                                    <img class="image" src="assets/images/portfolio/project-5.png"
+                                        alt="Restaurant Website">
                                     <a href="assets/images/portfolio/project-5.png" class="portfolio-lightbox"></a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h4>Restaurant Website</h4>
-                                    <span class="portfolio-category">Web Development</span>
+                                    <h4>开发与测试环境快速部署</h4>
+                                    <span class="portfolio-category">团队与小组</span>
                                 </div>
                             </div>
                             <a class="overlay-link" href="javascript:void(0)"></a>
                         </div>
 
-                        <div class="portfolio-item filter-mobile" 
-                            data-aos="zoom-in" 
-                            data-aos-delay="250">
+                        <div class="portfolio-item filter-enterprise" data-aos="zoom-in" data-aos-delay="250">
                             <div class="portfolio-card">
                                 <div class="portfolio-image">
-                                    <img class="image" src="assets/images/portfolio/project-6.png" alt="Travel Planning App">
+                                    <img class="image" src="assets/images/portfolio/project-6.png"
+                                        alt="Travel Planning App">
                                     <a href="assets/images/portfolio/project-6.png" class="portfolio-lightbox"></a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h4>Travel Planning App</h4>
-                                    <span class="portfolio-category">Mobile Apps</span>
+                                    <h4>计算机快速部署与同步</h4>
+                                    <span class="portfolio-category">企业与教育</span>
                                 </div>
                             </div>
                             <a class="overlay-link" href="javascript:void(0)"></a>
@@ -593,78 +413,25 @@
         </div>
     </div>
 
-    <!-- Client company section -->
-    <section class="client-companies container pt-8 pb-8">
-        <div class="text-center mt-6 mb-6" 
-            data-aos="fade-up" 
-            data-aos-duration="600">
-            <h2 class="text-white">Building Success With Great Companies</h2>
-        </div>
-
-        <div class="customers-carousel universal-slider">
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-01.png" alt="Company 01">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-02.png" alt="Company 02">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-03.png" alt="Company 03">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-04.png" alt="Company 04">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-05.png" alt="Company 05">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-06.png" alt="Company 06">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-01.png" alt="Company 01">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-02.png" alt="Company 02">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-03.png" alt="Company 03">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-04.png" alt="Company 04">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-05.png" alt="Company 05">
-            </div>
-            <div class="client-company">
-                <img class="image" src="assets/images/companies/company-06.png" alt="Company 06">
-            </div>
-        </div>
-    </section>
-
     <!-- Main 3 -->
     <div class="main d-flex-center pt-8 pb-8">
-        <!-- Main Content 3 -->
+        <!-- 云固件快优 -->
         <div class="container main-content">
             <!-- Pricing Plans section -->
             <section class="pricing-plants">
-                <div class="text-center pb-5"
-                    data-aos="fade-down" 
-                    data-aos-duration="600" 
-                    data-aos-delay="0">
-                    <h2 class="heading-lg">Pricing Plans</h2>
-                    <p>Clear, simple, and flexible plans for your business.</p>
+                <div class="text-center pb-5" data-aos="fade-down" data-aos-duration="600" data-aos-delay="0">
+                    <h2 class="heading-lg">云固件快优</h2>
+                    <p>体验云固件最简单、最快速、最便捷的产品</p>
                 </div>
 
                 <div class="options-plants">
-                    <div class="plants" 
-                    data-aos="fade-left" 
-                    data-aos-delay="150">
-                        <div class="plant-header">
-                            <h2 class="mb-0">Basic</h2>
-                            <p>Perfect for small businesses and startups</p>
+                    <div class="plants" data-aos="fade-left" data-aos-delay="150">
+                        <div class="plant-header text-center mb-6">
+                            <h2 class="mb-0">快优入门版</h2>
+                            <p>性价比极高的初学者体验U盘<br />包含精心挑选的Windows,Linux,国产系统镜像</p>
                         </div>
                         <div class="price d-flex-center">
-                            <span class="price-main">$37 <span class="price-discount">$50</span></span>
+                            <span class="price-main">￥149</span>
                         </div>
                         <div class="d-flex-center">
                             <a href="javascript:void(0)" class="btn btn-primary">Buy Basic Plan</a>
@@ -673,35 +440,50 @@
                             <div class="line"></div>
                             <ul class="benefits-list">
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Up to 5 Pages Website</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Mobile Responsive Design</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Basic SEO Optimization</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Contact Form Integration</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">1 Month Free Support</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">SSL Certificate</span>
                                 </li>
                                 <li class="benefit-item unavailable">
                                     <div class="circle-x-svg">
                                         <svg viewBox="0 0 24 24" width="18" height="18">
-                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"/>
-                                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"
+                                                fill="none" />
+                                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor"
+                                                stroke-width="2" />
+                                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor"
+                                                stroke-width="2" />
                                         </svg>
                                     </div>
                                     <span class="text">E-commerce Functionality</span>
@@ -709,9 +491,12 @@
                                 <li class="benefit-item unavailable">
                                     <div class="circle-x-svg">
                                         <svg viewBox="0 0 24 24" width="18" height="18">
-                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"/>
-                                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"
+                                                fill="none" />
+                                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor"
+                                                stroke-width="2" />
+                                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor"
+                                                stroke-width="2" />
                                         </svg>
                                     </div>
                                     <span class="text">Advanced Analytics</span>
@@ -719,9 +504,12 @@
                                 <li class="benefit-item unavailable">
                                     <div class="circle-x-svg">
                                         <svg viewBox="0 0 24 24" width="18" height="18">
-                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"/>
-                                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"
+                                                fill="none" />
+                                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor"
+                                                stroke-width="2" />
+                                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor"
+                                                stroke-width="2" />
                                         </svg>
                                     </div>
                                     <span class="text">Priority Support</span>
@@ -729,19 +517,17 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="plants most-popular" 
-                    data-aos="fade-down" 
-                    data-aos-delay="100">
-                        <div class="tag-most-popular">
+                    <div class="plants most-popular" data-aos="fade-down" data-aos-delay="100">
+                        <!--div class="tag-most-popular">
                             <span>Most Popular</span>
-                        </div>
+                        </div-->
 
-                        <div class="plant-header">
-                            <h2 class="mb-0">Pro</h2>
-                            <p>Ideal for growing businesses</p>
+                        <div class="plant-header text-center mb-6">
+                            <h2 class="mb-0">快优增强版</h2>
+                            <p>双接口128G容量U盘<br />含超过30多个系统镜像容量超100G<br />赠送一年镜像更新服务</p>
                         </div>
                         <div class="price d-flex-center">
-                            <span class="price-main">$57 <span class="price-discount">$70</span></span>
+                            <span class="price-main">￥249</span>
                         </div>
                         <div class="d-flex-center">
                             <a href="javascript:void(0)" class="btn btn-primary">Buy Pro Plan</a>
@@ -750,43 +536,62 @@
                             <div class="line"></div>
                             <ul class="benefits-list">
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Up to 5 Pages Website</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Mobile Responsive Design</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Basic SEO Optimization</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Contact Form Integration</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">1 Month Free Support</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">SSL Certificate</span>
                                 </li>
                                 <li class="benefit-item unavailable">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">E-commerce Functionality</span>
                                 </li>
                                 <li class="benefit-item unavailable">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Advanced Analytics</span>
                                 </li>
                                 <li class="benefit-item unavailable">
                                     <div class="circle-x-svg">
                                         <svg viewBox="0 0 24 24" width="18" height="18">
-                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"/>
-                                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"
+                                                fill="none" />
+                                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor"
+                                                stroke-width="2" />
+                                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor"
+                                                stroke-width="2" />
                                         </svg>
                                     </div>
                                     <span class="text">Priority Support</span>
@@ -794,15 +599,13 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="plants" 
-                    data-aos="fade-right" 
-                    data-aos-delay="150">
+                    <div class="plants" data-aos="fade-right" data-aos-delay="150">
                         <div class="plant-header text-center mb-6">
-                            <h2 class="mb-0">Enterprise</h2>
-                            <p>For large-scale businesses</p>
+                            <h2 class="mb-0">快优专业版</h2>
+                            <p>最全功能的云固件快优<br />内置专业版授权，含高级功能<br />赠送一年镜像更新服务</p>
                         </div>
                         <div class="price d-flex-center">
-                            <span class="price-main">$77 <span class="price-discount">$100</span></span>
+                            <span class="price-main">￥379</span>
                         </div>
                         <div class="d-flex-center">
                             <a href="javascript:void(0)" class="btn btn-primary">Buy Enterprise Plan</a>
@@ -811,655 +614,60 @@
                             <div class="line"></div>
                             <ul class="benefits-list">
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Up to 5 Pages Website</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Mobile Responsive Design</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Basic SEO Optimization</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Contact Form Integration</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">1 Month Free Support</span>
                                 </li>
                                 <li class="benefit-item">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">SSL Certificate</span>
                                 </li>
                                 <li class="benefit-item unavailable">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">E-commerce Functionality</span>
                                 </li>
                                 <li class="benefit-item unavailable">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Advanced Analytics</span>
                                 </li>
                                 <li class="benefit-item unavailable">
-                                    <svg class="benefit-icon"><use xlink:href="#check-circle-1"></use></svg>
+                                    <svg class="benefit-icon">
+                                        <use xlink:href="#check-circle-1"></use>
+                                    </svg>
                                     <span class="text">Priority Support</span>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- Testimonials section -->
-    <section class="testimonials container pt-8 pb-8">
-        <div class="text-center pb-5"
-            data-aos="fade-down" 
-            data-aos-duration="600" 
-            data-aos-delay="0">
-            <h2 class="heading-lg text-white">Testimonials</h2>
-            <p class="text-white">Trusted feedback from companies and partners who believe in our quality.</p>
-        </div>
-
-        <div class="testimonials-grid p-2" data-testimonials="home"
-            data-aos="fade-up" 
-            data-aos-delay="100">
-            
-            <!-- Slide 1 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-01.png" alt="Face 01">
-                        </div>
-                        <div class="info">
-                            <span class="name">Adrien Jacob</span>
-                            <span class="role">CEO</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 2 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-02.png" alt="Face 02">
-                        </div>
-                        <div class="info">
-                            <span class="name">Diana Taylor</span>
-                            <span class="role">Graphic Designer</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-03.png" alt="Face 03">
-                        </div>
-                        <div class="info">
-                            <span class="name">Sarah Johnson</span>
-                            <span class="role">Businesswoman</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 4 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-04.png" alt="Face 04">
-                        </div>
-                        <div class="info">
-                            <span class="name">Michael Brown</span>
-                            <span class="role">Marketing Director</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 5 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-02.png" alt="Face 02">
-                        </div>
-                        <div class="info">
-                            <span class="name">Emma Wilson</span>
-                            <span class="role">Product Manager</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 6 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-01.png" alt="Face 01">
-                        </div>
-                        <div class="info">
-                            <span class="name">James Anderson</span>
-                            <span class="role">Tech Lead</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 7 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-03.png" alt="Face 03">
-                        </div>
-                        <div class="info">
-                            <span class="name">Lisa Martinez</span>
-                            <span class="role">UX Designer</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 8 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-04.png" alt="Face 04">
-                        </div>
-                        <div class="info">
-                            <span class="name">David Rodriguez</span>
-                            <span class="role">Software Engineer</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 9 -->
-            <div class="comment" data-comment>
-                <div class="d-flex flex-column gap-2">
-                    <svg class="quote-icon"><use xlink:href="#double-quotes-end-1"></use></svg>
-                    <div class="message">
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maxime tempora ipsum dicta nesciunt, perspiciatis placeat molestias 
-                            nemo vitae nulla tempore.
-                        </p>
-                    </div>
-                    <div class="info-user">
-                        <div class="image">
-                            <img src="assets/images/testimonials/face-02.png" alt="Face 02">
-                        </div>
-                        <div class="info">
-                            <span class="name">Amanda Thompson</span>
-                            <span class="role">Operations Manager</span>
-                            <div class="rating">
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                                <svg class="star"><use xlink:href="#star-filled"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main 4 -->
-    <div class="main d-flex-center pt-10 pb-8">
-        <!-- Main Content -->
-        <div class="container main-content">
-            <!-- Blog section -->
-            <section class="blog no-blog-sidebar">
-                <div class="d-flex-baseline-between pb-5" 
-                    data-aos="fade-down" 
-                    data-aos-duration="600" 
-                    data-aos-delay="0">
-                    <h2>Latest Blog Posts</h2>
-                    <a href="blog-column-2.html" class="btn btn-primary">View All Posts</a>
-                </div>
-
-                <div class="blog-grid blog-grid-col3">
-                    <!-- Blog Post 1 -->
-                    <article class="blog-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="0">
-                        <div class="blog-image">
-                            <img class="image" src="assets/images/blog/post-1.png" alt="The Future of Web Development">
-                            <div class="blog-category">
-                                <span class="category-tag">Technology</span>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <div class="blog-date">
-                                    <svg><use xlink:href="#calendar"></use></svg>
-                                    <span>July 15, 2025</span>
-                                </div>
-                                <div class="blog-author">
-                                    <svg><use xlink:href="#user"></use></svg>
-                                    <span>James Wilson</span>
-                                </div>
-                            </div>
-                            <h3 class="blog-title">The Future of Web Development: Trends to Watch in 2025</h3>
-                            <p class="blog-excerpt">
-                                Discover the latest trends shaping the web development landscape, 
-                                from AI-powered tools to progressive web applications and beyond.
-                            </p>
-                            <div class="blog-footer">
-                                <a href="article.html" class="read-more">
-                                    Read More
-                                    <svg><use xlink:href="#arrow-right"></use></svg>
-                                </a>
-                                <div class="blog-stats">
-                                    <span class="reading-time">
-                                        <svg><use xlink:href="#clock"></use></svg>
-                                        4 min read
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="overlay-link" href="article.html"></a>
-                    </article>
-
-                    <!-- Blog Post 2 -->
-                    <article class="blog-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="100">
-                        <div class="blog-image">
-                            <img class="image" src="assets/images/blog/post-2.png" alt="Mobile App Security Best Practices">
-                            <div class="blog-category">
-                                <span class="category-tag">Security</span>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <div class="blog-date">
-                                    <svg><use xlink:href="#calendar"></use></svg>
-                                    <span>July 10, 2025</span>
-                                </div>
-                                <div class="blog-author">
-                                    <svg><use xlink:href="#user"></use></svg>
-                                    <span>James Wilson</span>
-                                </div>
-                            </div>
-                            <h3 class="blog-title">Mobile App Security: Best Practices for Developers</h3>
-                            <p class="blog-excerpt">
-                                Learn essential security measures every mobile developer should implement 
-                                to protect user data and ensure app integrity.
-                            </p>
-                            <div class="blog-footer">
-                                <a href="article.html" class="read-more">
-                                    Read More
-                                    <svg><use xlink:href="#arrow-right"></use></svg>
-                                </a>
-                                <div class="blog-stats">
-                                    <span class="reading-time">
-                                        <svg><use xlink:href="#clock"></use></svg>
-                                        7 min read
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="overlay-link" href="article.html"></a>
-                    </article>
-
-                    <!-- Blog Post 3 -->
-                    <article class="blog-card" 
-                        data-aos="fade-up" 
-                        data-aos-delay="200">
-                        <div class="blog-image">
-                            <img class="image" src="assets/images/blog/post-3.png" alt="Cloud Migration Strategies">
-                            <div class="blog-category">
-                                <span class="category-tag">Cloud</span>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <div class="blog-date">
-                                    <svg><use xlink:href="#calendar"></use></svg>
-                                    <span>July 5, 2025</span>
-                                </div>
-                                <div class="blog-author">
-                                    <svg><use xlink:href="#user"></use></svg>
-                                    <span>Emma Rodriguez</span>
-                                </div>
-                            </div>
-                            <h3 class="blog-title">Cloud Migration Strategies for Modern Businesses</h3>
-                            <p class="blog-excerpt">
-                                A comprehensive guide to successfully migrating your business infrastructure 
-                                to the cloud with minimal downtime and maximum efficiency.
-                            </p>
-                            <div class="blog-footer">
-                                <a href="article.html" class="read-more">
-                                    Read More
-                                    <svg><use xlink:href="#arrow-right"></use></svg>
-                                </a>
-                                <div class="blog-stats">
-                                    <span class="reading-time">
-                                        <svg><use xlink:href="#clock"></use></svg>
-                                        6 min read
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="overlay-link" href="article.html"></a>
-                    </article>
-                </div>
-            </section>
-            
-            <!-- Contact Form section -->
-            <section class="contact-form pt-5">
-                <div class="d-flex-center pb-5"
-                    data-aos="fade-down" 
-                    data-aos-duration="600" 
-                    data-aos-delay="0">
-                    <h2 class="heading-lg">Contact Us</h2>
-                </div>
-
-                <div class="contact-form-container"
-                    data-aos="fade-up" 
-                    data-aos-delay="100">
-                    
-                    <div class="contact-form-content">
-                        <!-- Contact Info -->
-                        <div class="contact-info-card">
-                            <div class="contact-info-header">
-                                <h3>Let's Start a Conversation</h3>
-                                <p>Let's build the future of your business together. Contact our experts and start your digital journey today.</p>
-                            </div>
-
-                            <div class="contact-details">
-                                <div class="contact-detail-item">
-                                    <div class="contact-icon">
-                                        <svg><use xlink:href="#phone"></use></svg>
-                                    </div>
-                                    <div class="contact-text">
-                                        <span class="label">Phone</span>
-                                        <span class="value">+1 (800) 987-6543</span>
-                                    </div>
-                                </div>
-
-                                <div class="contact-detail-item">
-                                    <div class="contact-icon">
-                                        <svg><use xlink:href="#envelope-1"></use></svg>
-                                    </div>
-                                    <div class="contact-text">
-                                        <span class="label">Email</span>
-                                        <span class="value">hello@itagency.com</span>
-                                    </div>
-                                </div>
-
-                                <div class="contact-detail-item">
-                                    <div class="contact-icon">
-                                        <svg><use xlink:href="#map-marker-1"></use></svg>
-                                    </div>
-                                    <div class="contact-text">
-                                        <span class="label">Address</span>
-                                        <span class="value">789 Innovation Avenue, Future Town, FT 67890</span>
-                                    </div>
-                                </div>
-
-                                <div class="contact-detail-item">
-                                    <div class="contact-icon">
-                                        <svg><use xlink:href="#alarm-1"></use></svg>
-                                    </div>
-                                    <div class="contact-text">
-                                        <span class="label">Business Hours</span>
-                                        <span class="value">Mon - Fri: 9:00 AM - 6:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="contact-social">
-                                <span class="social-label">Follow Us</span>
-                                <div class="social-links">
-                                    <a href="javascript:void(0)" class="social-link icon-transition sm" >
-                                        <svg><use xlink:href="#twitter-x"></use></svg>
-                                    </a>
-                                    <a href="javascript:void(0)" class="social-link icon-transition sm" >
-                                        <svg><use xlink:href="#facebook"></use></svg>
-                                    </a>
-                                    <a href="javascript:void(0)" class="social-link icon-transition sm" >
-                                        <svg><use xlink:href="#linkedin"></use></svg>
-                                    </a>
-                                    <a href="javascript:void(0)" class="social-link icon-transition sm" >
-                                        <svg><use xlink:href="#instagram"></use></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Contact Form -->
-                        <div class="contact-form-card">
-                            <form id="contactForm" action="contact.php" method="POST" class="contact-form-fields">
-                                <!-- Message sending notification -->
-                                <div class="form-status">
-                                    <div class="form-success" id="form-success" style="display: none;">
-                                        <svg><use xlink:href="#lni-checkmark-circle"></use></svg>
-                                        <span>Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</span>
-                                    </div>
-                                    <div class="form-error-general" id="form-error" style="display: none;">
-                                        <svg><use xlink:href="#lni-warning"></use></svg>
-                                        <span>Something went wrong. Please try again or contact us directly.</span>
-                                    </div>
-                                </div>
-
-                                <!-- Form fields -->
-                                <div class="form-group">
-                                    <label for="name" class="form-label">Full Name *</label>
-                                    <input type="text" id="name" name="name" class="form-input" required>
-                                    <span class="form-error" id="name-error"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email" class="form-label">Email Address *</label>
-                                    <input type="email" id="email" name="email" class="form-input" required>
-                                    <span class="form-error" id="email-error"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" class="form-input">
-                                    <span class="form-error" id="phone-error"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="company" class="form-label">Company</label>
-                                    <input type="text" id="company" name="company" class="form-input">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="service" class="form-label">Service Interested In</label>
-                                    <select id="service" name="service" class="form-select">
-                                        <option value="">Select a service</option>
-                                        <option value="web-development">Web Development</option>
-                                        <option value="mobile-app">Mobile App Development</option>
-                                        <option value="cloud-solutions">Cloud Solutions</option>
-                                        <option value="digital-marketing">Digital Marketing</option>
-                                        <option value="ui-ux-design">UI/UX Design</option>
-                                        <option value="data-analytics">Data Analytics</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="budget" class="form-label">Project Budget</label>
-                                    <select id="budget" name="budget" class="form-select">
-                                        <option value="">Select budget range</option>
-                                        <option value="under-5k">Under $5,000</option>
-                                        <option value="5k-15k">$5,000 - $15,000</option>
-                                        <option value="15k-50k">$15,000 - $50,000</option>
-                                        <option value="50k-100k">$50,000 - $100,000</option>
-                                        <option value="over-100k">Over $100,000</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group form-group-full">
-                                    <label for="message" class="form-label">Project Details *</label>
-                                    <textarea id="message" name="message" class="form-textarea" rows="5" 
-                                    placeholder="Tell us about your project requirements, goals, and any specific features you need..." required></textarea>
-                                    <span class="form-error" id="message-error"></span>
-                                </div>
-
-                                <div class="form-group form-group-full">
-                                    <label class="form-checkbox-container">
-                                        <input type="checkbox" name="newsletter" class="form-checkbox">
-                                        <span class="form-checkmark"></span>
-                                        <span class="form-checkbox-text">Subscribe to our newsletter for updates and tech insights</span>
-                                    </label>
-                                </div>
-
-                                <div class="form-group form-group-full">
-                                    <label class="form-checkbox-container">
-                                        <input type="checkbox" name="privacy" class="form-checkbox" required>
-                                        <span class="form-checkmark"></span>
-                                        <span class="form-checkbox-text">I agree to the <a href="#privacy" class="form-link">Privacy Policy</a> and <a href="#terms" class="form-link">Terms of Service</a> *</span>
-                                    </label>
-                                    <span class="form-error" id="privacy-error"></span>
-                                </div>
-
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary form-submit-btn">
-                                        <span>Send Message</span>
-                                    </button>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -1473,68 +681,62 @@
             <div class="container">
                 <div class="footer-content">
                     <!-- Company Info -->
-                    <div class="footer-section footer-about" 
-                        data-aos="fade-up" 
-                        data-aos-delay="100">
+                    <div class="footer-section footer-about" data-aos="fade-up" data-aos-delay="100">
                         <div class="footer-logo">
-                            <img class="image" src="assets/images/logo-transparent-01.png" alt="ITAgency Logo">
+                            <img class="image" src="assets/images/logo-transparent-01.png" alt="云固件">
                         </div>
                         <p class="footer-description">
-                            Empowering businesses with smart, innovative tech solutions. 
-                            We craft high-impact web development, mobile apps, and digital 
-                            services that fuel your growth and success.
+                            虚拟机镜像文件用物理机本地启动，创新的计算机系统部署和分发方式，成就互联网时代的个人计算机。
                         </p>
-                        
+
                         <div class="footer-social">
-                            <span class="social-label">Follow Us</span>
+                            <span class="social-label">关注我们</span>
                             <div class="social-links">
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="200">
-                                    <svg><use xlink:href="#twitter-x"></use></svg>
+                                <a href="javascript:void(0)" class="social-link icon-transition" data-aos="zoom-in"
+                                    data-aos-delay="200">
+                                    <svg>
+                                        <use xlink:href="#twitter-x"></use>
+                                    </svg>
                                 </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="250">
-                                    <svg><use xlink:href="#facebook"></use></svg>
+                                <a href="javascript:void(0)" class="social-link icon-transition" data-aos="zoom-in"
+                                    data-aos-delay="250">
+                                    <svg>
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
                                 </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="300">
-                                    <svg><use xlink:href="#linkedin"></use></svg>
+                                <a href="javascript:void(0)" class="social-link icon-transition" data-aos="zoom-in"
+                                    data-aos-delay="300">
+                                    <svg>
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
                                 </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="350">
-                                    <svg><use xlink:href="#instagram"></use></svg>
+                                <a href="javascript:void(0)" class="social-link icon-transition" data-aos="zoom-in"
+                                    data-aos-delay="350">
+                                    <svg>
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
                                 </a>
-                            </div>
+                            </div>                            
                         </div>
+                        <p class="footer-copyright"><br/>©2026 云固件 版权所有<br/>All Rights Reserved.</p>
+                        <!-- Copyright -->
+                        <!--div class="footer-copyright" data-aos="fade-up" data-aos-delay="500"-->
+
+                        <!--/div-->
                     </div>
 
                     <!-- Navigation Links -->
-                    <div class="footer-section footer-links" 
-                        data-aos="fade-up" 
-                        data-aos-delay="200">
-                        <h4 class="footer-title">Navigation</h4>
+                    <div class="footer-section footer-links" data-aos="fade-up" data-aos-delay="200">
+                        <!--h4 class="footer-title">导航</h4-->
                         <ul class="footer-menu">
                             <li><a href="index.html" class="footer-link">Home</a></li>
                             <li><a href="about-us.html" class="footer-link">About Us</a></li>
-                            <li><a href="services.html" class="footer-link">Services</a></li>
-                            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
-                            <li><a href="team.html" class="footer-link">Team</a></li>
-                            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
-                            <li><a href="blog-column-2.html" class="footer-link">Blog</a></li>
-                            <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-                            <li><a href="terms-conditions.html" class="footer-link">Terms of Service</a></li>
                         </ul>
                     </div>
 
                     <!-- Services -->
-                    <div class="footer-section footer-services" 
-                        data-aos="fade-up" 
-                        data-aos-delay="300">
-                        <h4 class="footer-title">Our Services</h4>
+                    <div class="footer-section footer-services" data-aos="fade-up" data-aos-delay="300">
+                        <!--h4 class="footer-title">Our Services</h4-->
                         <ul class="footer-menu">
                             <li><a href="javascript:void(0)" class="footer-link">Web Development</a></li>
                             <li><a href="javascript:void(0)" class="footer-link">Mobile App Development</a></li>
@@ -1547,86 +749,7 @@
                         </ul>
                     </div>
 
-                    <!-- Contact Info -->
-                    <div class="footer-section footer-contact" 
-                        data-aos="fade-up" 
-                        data-aos-delay="400">
-                        <h4 class="footer-title">Contact Info</h4>
-                        <div class="footer-contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg><use xlink:href="#map-marker-1"></use></svg>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Address</span>
-                                    <span class="contact-value">789 Innovation Avenue, Future Town, FT 67890</span>
-                                </div>
-                            </div>
 
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg><use xlink:href="#phone"></use></svg>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Phone</span>
-                                    <span class="contact-value">+1 (800) 987-6543</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg><use xlink:href="#envelope-1"></use></svg>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Email</span>
-                                    <span class="contact-value">hello@itagency.com</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg><use xlink:href="#alarm-1"></use></svg>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Business Hours</span>
-                                    <span class="contact-value">Mon - Fri: 9:00 AM - 6:00 PM</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Newsletter -->
-                    <div class="footer-section footer-newsletter" 
-                        data-aos="fade-up" 
-                        data-aos-delay="500">
-                        <h4 class="footer-title">Newsletter</h4>
-                        <p class="newsletter-description">
-                            Subscribe to our newsletter for the latest tech insights and updates.
-                        </p>
-                        <form class="newsletter-form" id="newsletterForm">
-                            <div class="newsletter-input-group">
-                                <input type="email" 
-                                    class="newsletter-input" 
-                                    placeholder="Enter your email address" 
-                                    required>
-                                <button type="submit" class="newsletter-btn">
-                                    <svg><use xlink:href="#arrow-right"></use></svg>
-                                </button>
-                            </div>
-                            <label class="newsletter-checkbox">
-                                <input name="newsletter-agreement" type="checkbox">
-                                <span class="checkmark"></span>
-                                <span class="checkbox-text">I agree to the <a href="privacy-policy.html">Privacy Policy</a></span>
-                            </label>
-                        </form>
-
-                        <!-- Copyright -->
-                        <div class="footer-copyright" 
-                            data-aos="fade-up" 
-                            data-aos-delay="500">
-                            <p>© 2026 <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1635,7 +758,7 @@
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
         <svg viewBox="0 0 24 24">
-            <path d="M7 14l5-5 5 5z"/>
+            <path d="M7 14l5-5 5 5z" />
         </svg>
     </button>
 
@@ -1644,17 +767,18 @@
     <script src="assets/lib/aos/aos.js"></script>
     <script src="assets/lib/hover3dBgEffects/hover3d-bg-effects.js"></script>
     <script src="assets/lib/typed/typed.umd.js"></script>
-    
+
     <script src="assets/js/custom-isotope.js"></script>
     <script src="assets/js/testimonials.js"></script>
     <script src="assets/js/auto-progress-bar.js"></script>
     <script src="assets/js/animate-counters.js"></script>
     <script src="assets/js/universal-slider.js"></script>
-    <script src="assets/js/contact-form-demo.js"></script>
+    <!--script src="assets/js/contact-form-demo.js"></script-->
 
     <script src="assets/data/particles-config.js"></script>
     <script src="assets/data/services.js"></script>
-    
-    <script src="assets/js/main-01.js"></script>
+
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
