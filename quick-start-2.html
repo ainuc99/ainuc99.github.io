@@ -2,59 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速安装指南 - 云固件镜像 | 云固件</title>
+    <meta name="description" content="快速安装云固件镜像的详细指南。">
+    <meta name="keywords" content="云固件, 快速安装, 镜像, 安装指南">
     
-    <title>The Future of Web Development: Trends to Watch in 2025 | ITAgency Blog</title>
-    <meta name="description" content="Discover the latest web development trends for 2025, including AI integration, serverless architecture, and progressive web apps that are shaping the future of digital experiences.">
-    <meta name="keywords" content="web development 2025, web development trends, AI integration, serverless architecture, progressive web apps, WebAssembly, headless CMS">
-    <meta name="author" content="James Wilson">
-    <meta name="robots" content="index,follow">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="The Future of Web Development: Trends to Watch in 2025 | ITAgency Blog">
-    <meta property="og:description" content="Discover the latest web development trends for 2025, including AI integration, serverless architecture, and progressive web apps that are shaping the future of digital experiences.">
-    <meta property="og:image" content="#">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="627">
-    <meta property="og:image:alt" content="Modern web development workspace with code and design elements">
-    <meta property="og:url" content="https://yoursite.com/pages/blog/article.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="ITAgency">
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Future of Web Development: Trends to Watch in 2025">
-    <meta name="twitter:description" content="Discover the latest web development trends for 2025, including AI integration, serverless architecture, and progressive web apps.">
-    <meta name="twitter:image" content="#">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yoursite.com/pages/blog/article.html">
-    
-    <!-- Article specific meta -->
-    <meta property="article:published_time" content="2025-11-15T10:00:00Z">
-    <meta property="article:modified_time" content="2025-11-15T10:00:00Z">
-    <meta property="article:author" content="James Wilson">
-    <meta property="article:section" content="Technology">
-    <meta property="article:tag" content="Web Development">
-    <meta property="article:tag" content="Technology Trends">
-    <meta property="article:tag" content="AI Integration">
-    <meta property="article:word_count" content="850">
-
 
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/mw.ico">
-  
+    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/universal-slider.css">
+    <link rel="stylesheet" href="assets/css/hover3d-effects.css">
+    <link rel="stylesheet" href="assets/css/auto-progress-bar.css">
     
     <!-- General CSS files -->
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="body-1">    
+<body class="body-2">
+    <canvas id="meteorShowerCanvas" class="meteorShowerCanvas"></canvas>
+   
     <!-- Tech Page Loader -->
     <div id="page-loader" class="page-loader">
         <div class="loader-container">
@@ -147,7 +117,6 @@
         </div>
     </header>
 
-
     <!-- Hero -->
     <section class="page-header flex-column-center p-3">
         <div class="page-header-content">
@@ -167,9 +136,27 @@
                         云固件快速安装指南，包括云固件主程序和云固件镜像的安装步骤，帮助用户快速上手使用云固件。
                     </p>
                 </div>
+
+                <div class="cta w-100 d-flex-center">                  
+                    <div class="cta-buttons d-flex gap-4">
+                        <a href="quick-start-1.html" class="btn btn-get-quotes" 
+                        data-aos="fade-right" 
+                        data-aos-duration="500" 
+                        data-aos-delay="900">
+                            ① 云固件主程序
+                        </a>
+                        <a href="quick-start-2.html" class="btn btn-outline" 
+                        data-aos="fade-left" 
+                        data-aos-duration="500" 
+                        data-aos-delay="950">
+                            ② 云固件镜像
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Main 1 -->
     <div class="main d-flex-center pt-8 pb-8">
@@ -456,17 +443,7 @@
                                         <p>For residents of the European Union, you may contact our Data Protection Officer at <a href="mailto:dpo@itagency.com" class="text-primary">dpo@itagency.com</a> for matters related to GDPR compliance.</p>
                                     </div>
                                 </section>
-                <!-- Article Navigation -->
-                <nav class="article-navigation d-flex justify-content-between mt-5 mb-4">
-                  <a href="article.html" class="nav-link prev" rel="prev">
-                    <span class="nav-label">←</span>
-                    <span class="nav-title">Mobile App Security Best Practices</span>
-                  </a>
-                  <a href="article.html" class="nav-link next" rel="next">
-                    <span class="nav-title">Cloud Migration Strategies</span>
-                    <span class="nav-label">→</span>
-                  </a>
-                </nav>
+
                                 <!-- Footer Note -->
                                 <div class="privacy-footer"
                                     data-aos="fade-up" 
@@ -477,14 +454,13 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Footer -->
     <footer class="footer pb-5">
@@ -660,9 +636,14 @@
 
     <!-- JavaScript -->
     <script src="assets/lib/aos/aos.js"></script>
-
-    <script src="assets/js/universal-slider.js"></script>
+    <script src="assets/lib/hover3dBgEffects/hover3d-bg-effects.js"></script>
+    
     <script src="assets/js/custom-isotope.js"></script>
+    <script src="assets/js/testimonials.js"></script>
+    <script src="assets/js/meteor-shower-effect.js"></script>
+    <script src="assets/js/auto-progress-bar.js"></script>
+    <script src="assets/js/animate-counters.js"></script>
+    <script src="assets/js/universal-slider.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

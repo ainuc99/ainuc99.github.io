@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs - Frequently Asked Questions | ITAgency</title>
-    <meta name="description" content="Find quick answers to the most common questions about ITAgency's services, support, project timelines, pricing, and more. We're here to help you understand our process better.">
-
-
+    <title>FAQs - 常见问题 | 云固件</title>
+    <meta name="description" content="这里是一些使用云固件时遇到的常见问题和解答。">
+    <meta name="keywords" content="云固件, Multimware, 云固件镜像, 快优, QuickU, 个人计算机, PC, 虚拟机镜像, 本地启动, 系统部署, 系统分发">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/ico-01.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/mw.ico">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/universal-slider.css">
     <link rel="stylesheet" href="assets/css/faq-accordion.css">
-    
+
     <!-- General CSS files -->
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="body-1">    
+
+<body class="body-1">
     <!-- Tech Page Loader -->
     <div id="page-loader" class="page-loader">
         <div class="loader-container">
@@ -31,7 +32,7 @@
                         <div></div>
                     </div>
                 </div>
-                
+
                 <!-- Advanced Progress Bar -->
                 <div class="loader-progress">
                     <div class="progress-bar"></div>
@@ -39,7 +40,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Header -->
     <header class="header">
         <div class="container d-flex-between">
@@ -52,7 +53,7 @@
             <!-- Navigation -->
             <nav class="navbar" id="navbar">
                 <ul class="nav-menu">
-                    <li class="dropdown">
+                    <!--li class="dropdown">
                         <a class="dropdown-toggle" data-dropdown="home-dropdown">Home</a>
                         <ul class="dropdown-menu" id="home-dropdown">
                             <li><a href="index.html" class="dropdown-item">Home 1</a></li>
@@ -61,20 +62,13 @@
                             <li><a href="home-page-3.html" class="dropdown-item">Home 3</a></li>
                             <li><a href="home-page-4.html" class="dropdown-item">Home 4</a></li>
                         </ul>
-                    </li>
-                    <li><a href="about-us.html" class="nav-link">About Us</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-dropdown="blog-dropdown">Blog</a>
-                        <ul class="dropdown-menu" id="blog-dropdown">
-                            <li><a href="blog-column-1.html" class="dropdown-item">Blog Column 1</a></li>
-                            <li><a href="blog-column-2.html" class="dropdown-item">Blog Column 2</a></li>
-                            <li><a href="blog-column-3.html" class="dropdown-item">Blog Column 3</a></li>
-                            <li><a href="article.html" class="dropdown-item">Blog Detail Page</a></li>
-                        </ul>
-                    </li> 
-                    <li class="dropdown">
+                    </li-->
+                    <li><a href="index.html" class="nav-link">首页</a></li>
+                    <li><a href="index.html#supported-os" class="nav-link">支持系统</a></li>
+                    <li><a href="index.html#use-cases" class="nav-link">使用场景</a></li>
+                    <li><a href="index.html#" class="nav-link">免费镜像</a></li>
+                    <li><a href="index.html#" class="nav-link">教程</a></li>
+                    <!--li class="dropdown">
                         <a class="dropdown-toggle" data-dropdown="pages-dropdown">Pages</a>
                         <ul class="dropdown-menu" id="pages-dropdown">
                             <li><a href="process.html" class="dropdown-item">Process</a></li>
@@ -88,18 +82,36 @@
                             <li><a href="buttons.html" class="dropdown-item">Buttons</a></li>
                             <li><a href="typography.html" class="dropdown-item">Fonts</a></li>
                         </ul>
-                    </li>
-                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                    </li-->
+                    <li><a href="index.html#" class="nav-link">镜像市场</a></li>
+                    <!--li class="dropdown">
+                        <a class="dropdown-toggle" data-dropdown="blog-dropdown">博客</a>
+                        <ul class="dropdown-menu" id="blog-dropdown">
+                            <li><a href="blog-column-1.html" class="dropdown-item">Blog Column 1</a></li>
+                            <li><a href="blog-column-2.html" class="dropdown-item">Blog Column 2</a></li>
+                            <li><a href="blog-column-3.html" class="dropdown-item">Blog Column 3</a></li>
+                            <li><a href="article.html" class="dropdown-item">Blog Detail Page</a></li>
+                        </ul>
+                    </li-->
                 </ul>
             </nav>
 
             <!-- Get Quotes Button -->
             <div class="actions d-flex-center">
-                <a pages/contact-us.html class="btn btn-get-quotes">Get Quotes</a>
+                <a href="contact-us.html" class="btn btn-get-quotes">开始使用</a>
                 <div class="theme-switcher">
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
-                        <svg id="theme-toggle-light-icon" class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.894 17.894a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.106 6.106a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
-                        <svg id="theme-toggle-dark-icon" class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.69a.75.75 0 01.981.981A10.501 10.501 0 0118 19.5a10.5 10.5 0 01-10.5-10.5 10.5 10.5 0 011.718-5.528.75.75 0 01.81-.162z" clip-rule="evenodd" /></svg>
+                        <svg id="theme-toggle-light-icon" class="sun-icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.894 17.894a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.106 6.106a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                        </svg>
+                        <svg id="theme-toggle-dark-icon" class="moon-icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.69a.75.75 0 01.981.981A10.501 10.501 0 0118 19.5a10.5 10.5 0 01-10.5-10.5 10.5 10.5 0 011.718-5.528.75.75 0 01.81-.162z"
+                                clip-rule="evenodd" />
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -131,7 +143,7 @@
                 <div class="particle"></div>
                 <div class="particle"></div>
             </div>
-            
+
             <!-- Geometric patterns overlay -->
             <div class="geometric-overlay">
                 <div class="geometric-shape shape-1"></div>
@@ -139,14 +151,14 @@
                 <div class="geometric-shape shape-3"></div>
                 <div class="geometric-shape shape-4"></div>
             </div>
-            
+
             <!-- Digital grid pattern -->
             <div class="digital-grid"></div>
         </div>
-        
+
         <div class="page-header-content">
             <div>
-                <div class="breadcrumb"
+                <!--div class="breadcrumb"
                     data-aos="fade-down" 
                     data-aos-duration="600" 
                     data-aos-delay="0">
@@ -157,20 +169,15 @@
                         </svg>
                     </span>
                     <span class="breadcrumb-current">FAQs</span>
-                </div>
-                
-                <h1 class="page-title"
-                    data-aos="fade-up" 
-                    data-aos-duration="600" 
-                    data-aos-delay="100">FAQs</h1>
-                
-                <p class="page-description"
-                    data-aos="fade-up" 
-                    data-aos-duration="600" 
-                    data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem similique doloremque molestiae quae.</p>
+                </div-->
+
+                <h1 class="page-title" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">常见问题</h1>
+
+                <p class="page-description" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    这里是一些使用云固件的常见问题和解答。</p>
             </div>
         </div>
-        
+
         <!-- Floating elements -->
         <div class="floating-elements">
             <div class="floating-circle floating-circle-1"></div>
@@ -184,21 +191,14 @@
         <!-- Main Content -->
         <div class="container main-content">
             <!-- Faq section -->
-            <section class="faq-section" 
-            data-faq
-            data-color="var(--color-primary)"
-            data-bg="var(--color-surface)"
-            data-title-color="var(--color-primary)"
-            data-text-color="var(--color-text-primary)"
-            data-border="1px solid var(--color-primary)"
-            data-multiple="false">
+            <section class="faq-section" data-faq data-color="var(--color-primary)" data-bg="var(--color-surface)"
+                data-title-color="var(--color-primary)" data-text-color="var(--color-text-primary)"
+                data-border="1px solid var(--color-primary)" data-multiple="false">
                 <div class="container">
                     <div class="faq-content">
-                        <div class="faq-item" 
-                            data-aos="fade-up" 
-                            data-aos-delay="100">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
                             <div class="faq-question">
-                                <h3 class="question-text">What services do you offer?</h3>
+                                <h3 class="question-text">云固件是什么？</h3>
                                 <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
                                     <svg class="faq-icon">
                                         <use xlink:href="#chevron-down"></use>
@@ -207,16 +207,16 @@
                             </div>
                             <div class="faq-answer">
                                 <div class="answer-content">
-                                    <p>We offer a comprehensive range of IT services including web development, mobile app development, cloud solutions, cybersecurity, and digital transformation consulting. Our team specializes in creating custom solutions tailored to your business needs.</p>
+                                    <p>云固件是一种全新开发的镜像文件引导程序，拥有发明专利。<br />
+                                        云固件基于UEFI固件标准，能够在BIOS阶段直接引导保存在VHD或者VHDx格式中的操作系统镜像。<br />
+                                        支持的操作系统包括Windows 7 ~ 11，各种Linux系统（内核6.0以上），以及常见的国产操作系统。</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="faq-item" 
-                            data-aos="fade-up" 
-                            data-aos-delay="200">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                             <div class="faq-question">
-                                <h3 class="question-text">How long does a typical project take?</h3>
+                                <h3 class="question-text">云固件如何工作？</h3>
                                 <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
                                     <svg class="faq-icon">
                                         <use xlink:href="#chevron-down"></use>
@@ -225,16 +225,19 @@
                             </div>
                             <div class="faq-answer">
                                 <div class="answer-content">
-                                    <p>Project timelines vary depending on complexity and scope. A simple website might take 2-4 weeks, while complex enterprise applications can take 3-6 months. We provide detailed timelines during our initial consultation and keep you updated throughout the development process.</p>
+                                    <p>云固件分成云固件主程序和云固件镜像两个部分。<br />
+                                        云固件主程序属于BIOS级别的引导程序，负责在系统启动时加载和执行云固件镜像。<br />
+                                        云固件镜像则是包含操作系统的虚拟磁盘文件。云固件镜像不仅可以包含操作系统，还可以包含驱动程序、应用软件、配置文件和用户数据。<br />
+                                        云固件主程序启动云固件镜像后，就退出运行，把系统控制权交还给操作系统。<br />
+                                        云固件镜像中的操作系统就像安装在物理硬盘上的操作系统一样运行，用户可以正常使用它来完成各种任务。
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="faq-item" 
-                            data-aos="fade-up" 
-                            data-aos-delay="300">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                             <div class="faq-question">
-                                <h3 class="question-text">Do you provide ongoing support and maintenance?</h3>
+                                <h3 class="question-text">云固件提供持续支持和维护吗？</h3>
                                 <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
                                     <svg class="faq-icon">
                                         <use xlink:href="#chevron-down"></use>
@@ -243,16 +246,17 @@
                             </div>
                             <div class="faq-answer">
                                 <div class="answer-content">
-                                    <p>Yes, we offer comprehensive maintenance and support packages. This includes regular updates, security patches, performance monitoring, and technical support. We believe in building long-term relationships with our clients.</p>
+                                    <p>是的，云固件提供主程序的不断更新和升级服务，这些都是免费提供的。<br />
+                                        云固件也提供大量L1层级的各种操作系统镜像，目前压缩后的镜像数据总量超过6TB。<br />
+                                        用户也可以参照云固件官方提供的教程进行云固件镜像的自制。
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="faq-item" 
-                            data-aos="fade-up" 
-                            data-aos-delay="400">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                             <div class="faq-question">
-                                <h3 class="question-text">What is your pricing model?</h3>
+                                <h3 class="question-text">使用云固件的计算机有什么要求？</h3>
                                 <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
                                     <svg class="faq-icon">
                                         <use xlink:href="#chevron-down"></use>
@@ -261,16 +265,16 @@
                             </div>
                             <div class="faq-answer">
                                 <div class="answer-content">
-                                    <p>Our pricing is project-based and depends on the scope, complexity, and timeline. We offer transparent pricing with no hidden fees. After understanding your requirements, we provide a detailed quote with breakdown of costs for each phase of the project.</p>
+                                    <p>使用云固件的计算机要求2015年之后生产的x86_64位架构计算机，使用基于UEFI的BIOS固件，要求硬盘使用GPT分区表。<br />
+                                        其他注意事项，可以参照《快速安装指南》中的要求。
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="faq-item" 
-                            data-aos="fade-up" 
-                            data-aos-delay="500">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                             <div class="faq-question">
-                                <h3 class="question-text">Can you work with our existing team?</h3>
+                                <h3 class="question-text">云固件收费吗？</h3>
                                 <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
                                     <svg class="faq-icon">
                                         <use xlink:href="#chevron-down"></use>
@@ -279,16 +283,17 @@
                             </div>
                             <div class="faq-answer">
                                 <div class="answer-content">
-                                    <p>Absolutely! We frequently collaborate with in-house teams and can integrate seamlessly with your existing workflows. We're flexible in our approach and can work as an extension of your team or provide guidance and training to your staff.</p>
+                                    <p>云固件主程序是免费提供的，用户可以自由下载和使用。<br />
+                                        云固件专业版也提供收费功能来满足特殊需求。<br />
+                                        云固件作者陆伟峰提供了大量免费的L1层级云固件镜像。用户也可以根据教程自制云固件镜像。
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="faq-item" 
-                            data-aos="fade-up" 
-                            data-aos-delay="600">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
                             <div class="faq-question">
-                                <h3 class="question-text">Do you sign NDAs and ensure data security?</h3>
+                                <h3 class="question-text">云固件有没有用户群，如何加入？</h3>
                                 <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
                                     <svg class="faq-icon">
                                         <use xlink:href="#chevron-down"></use>
@@ -297,7 +302,9 @@
                             </div>
                             <div class="faq-answer">
                                 <div class="answer-content">
-                                    <p>Yes, we take data security very seriously. We're happy to sign NDAs and follow strict security protocols. All our processes are compliant with industry standards, and we implement robust security measures to protect your sensitive information throughout the project lifecycle.</p>
+                                    <p>云固件拥有活跃的用户社区，用户可以查看官方网站底部的二维码进入云固件微信群、QQ群、腾讯频道等。<br />
+                                        云固件的微信群按照能力提供了分级的服务，目前包括新手群、交流群、镜像群、自制镜像群等四个级别。
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -306,56 +313,56 @@
             </section>
         </div>
     </div>
-    
+
     <!-- Footer -->
     <footer class="footer pb-5">
         <div class="footer-main">
             <div class="container">
                 <div class="footer-content">
                     <!-- Company Info -->
-                    <div class="footer-section footer-about" 
-                        data-aos="fade-up" 
-                        data-aos-delay="100">
+                    <div class="footer-section footer-about" data-aos="fade-up" data-aos-delay="100">
                         <div class="footer-logo">
                             <img class="image" src="assets/images/logo-transparent-01.png" alt="ITAgency Logo">
                         </div>
                         <p class="footer-description">
-                            Empowering businesses with smart, innovative tech solutions. 
-                            We craft high-impact web development, mobile apps, and digital 
+                            Empowering businesses with smart, innovative tech solutions.
+                            We craft high-impact web development, mobile apps, and digital
                             services that fuel your growth and success.
                         </p>
-                        
+
                         <div class="footer-social">
                             <span class="social-label">Follow Us</span>
                             <div class="social-links">
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="200">
-                                    <svg><use xlink:href="#twitter-x"></use></svg>
+                                <a href="javascript:void(0)" class="social-link icon-transition" data-aos="zoom-in"
+                                    data-aos-delay="200">
+                                    <svg>
+                                        <use xlink:href="#twitter-x"></use>
+                                    </svg>
                                 </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="250">
-                                    <svg><use xlink:href="#facebook"></use></svg>
+                                <a href="javascript:void(0)" class="social-link icon-transition" data-aos="zoom-in"
+                                    data-aos-delay="250">
+                                    <svg>
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
                                 </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="300">
-                                    <svg><use xlink:href="#linkedin"></use></svg>
+                                <a href="javascript:void(0)" class="social-link icon-transition" data-aos="zoom-in"
+                                    data-aos-delay="300">
+                                    <svg>
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
                                 </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="350">
-                                    <svg><use xlink:href="#instagram"></use></svg>
+                                <a href="javascript:void(0)" class="social-link icon-transition" data-aos="zoom-in"
+                                    data-aos-delay="350">
+                                    <svg>
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Navigation Links -->
-                    <div class="footer-section footer-links" 
-                        data-aos="fade-up" 
-                        data-aos-delay="200">
+                    <div class="footer-section footer-links" data-aos="fade-up" data-aos-delay="200">
                         <h4 class="footer-title">Navigation</h4>
                         <ul class="footer-menu">
                             <li><a href="index.html" class="footer-link">Home</a></li>
@@ -371,9 +378,7 @@
                     </div>
 
                     <!-- Services -->
-                    <div class="footer-section footer-services" 
-                        data-aos="fade-up" 
-                        data-aos-delay="300">
+                    <div class="footer-section footer-services" data-aos="fade-up" data-aos-delay="300">
                         <h4 class="footer-title">Our Services</h4>
                         <ul class="footer-menu">
                             <li><a href="javascript:void(0)" class="footer-link">Web Development</a></li>
@@ -388,14 +393,14 @@
                     </div>
 
                     <!-- Contact Info -->
-                    <div class="footer-section footer-contact" 
-                        data-aos="fade-up" 
-                        data-aos-delay="400">
+                    <div class="footer-section footer-contact" data-aos="fade-up" data-aos-delay="400">
                         <h4 class="footer-title">Contact Info</h4>
                         <div class="footer-contact-info">
                             <div class="contact-item">
                                 <div class="contact-icon">
-                                    <svg><use xlink:href="#map-marker-1"></use></svg>
+                                    <svg>
+                                        <use xlink:href="#map-marker-1"></use>
+                                    </svg>
                                 </div>
                                 <div class="contact-text">
                                     <span class="contact-label">Address</span>
@@ -405,7 +410,9 @@
 
                             <div class="contact-item">
                                 <div class="contact-icon">
-                                    <svg><use xlink:href="#phone"></use></svg>
+                                    <svg>
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
                                 </div>
                                 <div class="contact-text">
                                     <span class="contact-label">Phone</span>
@@ -415,7 +422,9 @@
 
                             <div class="contact-item">
                                 <div class="contact-icon">
-                                    <svg><use xlink:href="#envelope-1"></use></svg>
+                                    <svg>
+                                        <use xlink:href="#envelope-1"></use>
+                                    </svg>
                                 </div>
                                 <div class="contact-text">
                                     <span class="contact-label">Email</span>
@@ -425,7 +434,9 @@
 
                             <div class="contact-item">
                                 <div class="contact-icon">
-                                    <svg><use xlink:href="#alarm-1"></use></svg>
+                                    <svg>
+                                        <use xlink:href="#alarm-1"></use>
+                                    </svg>
                                 </div>
                                 <div class="contact-text">
                                     <span class="contact-label">Business Hours</span>
@@ -436,34 +447,31 @@
                     </div>
 
                     <!-- Newsletter -->
-                    <div class="footer-section footer-newsletter" 
-                        data-aos="fade-up" 
-                        data-aos-delay="500">
+                    <div class="footer-section footer-newsletter" data-aos="fade-up" data-aos-delay="500">
                         <h4 class="footer-title">Newsletter</h4>
                         <p class="newsletter-description">
                             Subscribe to our newsletter for the latest tech insights and updates.
                         </p>
                         <form class="newsletter-form" id="newsletterForm">
                             <div class="newsletter-input-group">
-                                <input type="email" 
-                                    class="newsletter-input" 
-                                    placeholder="Enter your email address" 
+                                <input type="email" class="newsletter-input" placeholder="Enter your email address"
                                     required>
                                 <button type="submit" class="newsletter-btn">
-                                    <svg><use xlink:href="#arrow-right"></use></svg>
+                                    <svg>
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
                                 </button>
                             </div>
                             <label class="newsletter-checkbox">
                                 <input name="newsletter-agreement" type="checkbox">
                                 <span class="checkmark"></span>
-                                <span class="checkbox-text">I agree to the <a href="privacy-policy.html">Privacy Policy</a></span>
+                                <span class="checkbox-text">I agree to the <a href="privacy-policy.html">Privacy
+                                        Policy</a></span>
                             </label>
                         </form>
 
                         <!-- Copyright -->
-                        <div class="footer-copyright" 
-                            data-aos="fade-up" 
-                            data-aos-delay="500">
+                        <div class="footer-copyright" data-aos="fade-up" data-aos-delay="500">
                             <p>© 2026 <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
                         </div>
                     </div>
@@ -475,7 +483,7 @@
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
         <svg viewBox="0 0 24 24">
-            <path d="M7 14l5-5 5 5z"/>
+            <path d="M7 14l5-5 5 5z" />
         </svg>
     </button>
 
@@ -485,6 +493,7 @@
     <script src="assets/js/faq-accordion.js"></script>
     <script src="assets/js/custom-isotope.js"></script>
     <script src="assets/js/universal-slider.js"></script>
-    <script src="assets/js/main-01.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
