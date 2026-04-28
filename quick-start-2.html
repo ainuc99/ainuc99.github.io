@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>快速安装指南 - 云固件镜像 | 云固件</title>
     <meta name="description" content="快速安装云固件镜像的详细指南。">
     <meta name="keywords" content="云固件, 快速安装, 镜像, 安装指南">
-    
+
 
 
     <!-- Favicon -->
@@ -17,14 +18,15 @@
     <link rel="stylesheet" href="assets/css/universal-slider.css">
     <link rel="stylesheet" href="assets/css/hover3d-effects.css">
     <link rel="stylesheet" href="assets/css/auto-progress-bar.css">
-    
+
     <!-- General CSS files -->
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="body-2">
     <canvas id="meteorShowerCanvas" class="meteorShowerCanvas"></canvas>
-   
+
     <!-- Tech Page Loader -->
     <div id="page-loader" class="page-loader">
         <div class="loader-container">
@@ -35,7 +37,7 @@
                         <div></div>
                     </div>
                 </div>
-                
+
                 <!-- Advanced Progress Bar -->
                 <div class="loader-progress">
                     <div class="progress-bar"></div>
@@ -43,20 +45,20 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Header -->
     <header class="header">
-        <div class="container d-flex-between">
-            <!-- Logo -->
-            <div class="logo position-relative">
-                <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
-                <a class="overlay-link" href="index.html"></a>
-            </div>
+    <div class="container d-flex-between">
+        <!-- Logo -->
+        <div class="logo position-relative">
+            <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
+            <a class="overlay-link" href="index.html"></a>
+        </div>
 
-            <!-- Navigation -->
-            <nav class="navbar" id="navbar">
-                <ul class="nav-menu">
-                    <li class="dropdown">
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <ul class="nav-menu">
+                <!--li class="dropdown">
                         <a class="dropdown-toggle" data-dropdown="home-dropdown">Home</a>
                         <ul class="dropdown-menu" id="home-dropdown">
                             <li><a href="index.html" class="dropdown-item">Home 1</a></li>
@@ -65,20 +67,14 @@
                             <li><a href="home-page-3.html" class="dropdown-item">Home 3</a></li>
                             <li><a href="home-page-4.html" class="dropdown-item">Home 4</a></li>
                         </ul>
-                    </li>
-                    <li><a href="about-us.html" class="nav-link">About Us</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-dropdown="blog-dropdown">Blog</a>
-                        <ul class="dropdown-menu" id="blog-dropdown">
-                            <li><a href="blog-column-1.html" class="dropdown-item">Blog Column 1</a></li>
-                            <li><a href="blog-column-2.html" class="dropdown-item">Blog Column 2</a></li>
-                            <li><a href="blog-column-3.html" class="dropdown-item">Blog Column 3</a></li>
-                            <li><a href="article.html" class="dropdown-item">Blog Detail Page</a></li>
-                        </ul>
-                    </li> 
-                    <li class="dropdown">
+                    </li-->
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="javascript:void(0)" class="nav-link">使用场景</a></li>
+                <li><a href="javascript:void(0)" class="nav-link">支持系统</a></li>
+                <li><a href="javascript:void(0)" class="nav-link">镜像仓库</a></li>
+                <li><a href="javascript:void(0)" class="nav-link">最新版本</a></li>
+                <li><a href="tutorial.html" class="nav-link">教程</a></li>
+                <!--li class="dropdown">
                         <a class="dropdown-toggle" data-dropdown="pages-dropdown">Pages</a>
                         <ul class="dropdown-menu" id="pages-dropdown">
                             <li><a href="process.html" class="dropdown-item">Process</a></li>
@@ -92,63 +88,64 @@
                             <li><a href="buttons.html" class="dropdown-item">Buttons</a></li>
                             <li><a href="typography.html" class="dropdown-item">Fonts</a></li>
                         </ul>
-                    </li>
-                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-                </ul>
-            </nav>
+                    </li-->
+                <li><a href="diskhub.html" class="nav-link">镜像市场</a></li>
+                <!--li class="dropdown">
+                        <a class="dropdown-toggle" data-dropdown="blog-dropdown">博客</a>
+                        <ul class="dropdown-menu" id="blog-dropdown">
+                            <li><a href="blog-column-1.html" class="dropdown-item">Blog Column 1</a></li>
+                            <li><a href="blog-column-2.html" class="dropdown-item">Blog Column 2</a></li>
+                            <li><a href="blog-column-3.html" class="dropdown-item">Blog Column 3</a></li>
+                            <li><a href="article.html" class="dropdown-item">Blog Detail Page</a></li>
+                        </ul>
+                    </li-->
+            </ul>
+        </nav>
 
-            <!-- Get Quotes Button -->
-            <div class="actions d-flex-center">
-                <a pages/contact-us.html class="btn btn-get-quotes">Get Quotes</a>
-                <div class="theme-switcher">
-                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
-                        <svg id="theme-toggle-light-icon" class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.894 17.894a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.106 6.106a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
-                        <svg id="theme-toggle-dark-icon" class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.69a.75.75 0 01.981.981A10.501 10.501 0 0118 19.5a10.5 10.5 0 01-10.5-10.5 10.5 10.5 0 011.718-5.528.75.75 0 01.81-.162z" clip-rule="evenodd" /></svg>
-                    </button>
-                </div>
+        <!-- Get Quotes Button -->
+        <div class="actions d-flex-center">
+            <a href="quick-start-1.html" class="btn btn-get-quotes">开始使用</a>
+            <div class="theme-switcher">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <svg id="theme-toggle-light-icon" class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.894 17.894a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.106 6.106a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+                    </svg>
+                    <svg id="theme-toggle-dark-icon" class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.69a.75.75 0 01.981.981A10.501 10.501 0 0118 19.5a10.5 10.5 0 01-10.5-10.5 10.5 10.5 0 011.718-5.528.75.75 0 01.81-.162z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
             </div>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
         </div>
-    </header>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </div>
+</header>
 
     <!-- Hero -->
     <section class="page-header flex-column-center p-3">
         <div class="page-header-content">
             <div class="hero-info pt-7 pb-5">
                 <div class="hero-info-content flex-column-center pb-5">
-                    <h2 class="text-white heading-hero text-shadow" 
-                        data-aos="fade-down" 
-                        data-aos-duration="800" 
-                        data-aos-delay="100">
+                    <h2 class="text-white heading-hero text-shadow" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
                         云固件快速安装指南
                     </h2>
-                    
-                    <p class="hero-sub-text text-white text-shadow--strong" 
-                    data-aos="fade-up" 
-                    data-aos-duration="600" 
-                    data-aos-delay="500">
-                        云固件快速安装指南，包括云固件主程序和云固件镜像的安装步骤，帮助用户快速上手使用云固件。<br/>两个步骤全部完成即可体验云固件的强大功能。当前页面为第二步：安装云固件镜像。
+
+                    <p class="hero-sub-text text-white text-shadow--strong" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                        云固件快速安装指南，包括云固件主程序和云固件镜像的安装步骤，帮助用户快速上手使用云固件。<br>两个步骤全部完成即可体验云固件的强大功能。当前页面为第二步：安装云固件镜像。
                     </p>
                 </div>
 
-                <div class="cta w-100 d-flex-center">                  
+                <div class="cta w-100 d-flex-center">
                     <div class="cta-buttons d-flex gap-4">
-                        <a href="quick-start-1.html" class="btn btn-secondary" 
-                        data-aos="fade-right" 
-                        data-aos-duration="500" 
-                        data-aos-delay="900">
+                        <a href="quick-start-1.html" class="btn btn-secondary" data-aos="fade-right" data-aos-duration="500" data-aos-delay="900">
                             ① 云固件主程序
                         </a>
-                        <a href="quick-start-2.html" class="btn btn-primary" 
-                        data-aos="fade-left" 
-                        data-aos-duration="500" 
-                        data-aos-delay="950">
+                        <a href="quick-start-2.html" class="btn btn-primary" data-aos="fade-left" data-aos-duration="500" data-aos-delay="950">
                             ② 云固件镜像
                         </a>
                     </div>
@@ -169,58 +166,57 @@
                     <div class="container">
                         <div class="d-flex gap-4">
                             <!-- Sidebar -->
-                            <aside class="privacy-sidebar"
-                                data-aos="fade-right" 
-                                data-aos-duration="600" 
-                                data-aos-delay="100">
+                            <aside class="privacy-sidebar" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
                                 <div class="sidebar-sticky">
                                     <h3 class="font-semibold mb-3">目录</h3>
                                     <ul class="sidebar-menu">
-                                        <li><a href="privacy-policy.html#overview" class="sidebar-link">Overview</a></li>
+                                        <li><a href="privacy-policy.html#overview" class="sidebar-link">Overview</a>
+                                        </li>
                                         <li><a href="privacy-policy.html#information-collection" class="sidebar-link">Information We Collect</a></li>
-                                        <li><a href="privacy-policy.html#information-use" class="sidebar-link">How We Use Information</a></li>
+                                        <li><a href="privacy-policy.html#information-use" class="sidebar-link">How We
+                                                Use Information</a></li>
                                         <li><a href="privacy-policy.html#information-sharing" class="sidebar-link">Information Sharing</a></li>
-                                        <li><a href="privacy-policy.html#data-security" class="sidebar-link">Data Security</a></li>
-                                        <li><a href="privacy-policy.html#cookies" class="sidebar-link">Cookies & Tracking</a></li>
-                                        <li><a href="privacy-policy.html#user-rights" class="sidebar-link">Your Rights</a></li>
+                                        <li><a href="privacy-policy.html#data-security" class="sidebar-link">Data
+                                                Security</a></li>
+                                        <li><a href="privacy-policy.html#cookies" class="sidebar-link">Cookies &
+                                                Tracking</a></li>
+                                        <li><a href="privacy-policy.html#user-rights" class="sidebar-link">Your
+                                                Rights</a></li>
                                         <li><a href="privacy-policy.html#children-privacy" class="sidebar-link">Children's Privacy</a></li>
-                                        <li><a href="privacy-policy.html#policy-changes" class="sidebar-link">Policy Changes</a></li>
-                                        <li><a href="privacy-policy.html#contact-privacy" class="sidebar-link">Contact Us</a></li>
+                                        <li><a href="privacy-policy.html#policy-changes" class="sidebar-link">Policy
+                                                Changes</a></li>
+                                        <li><a href="privacy-policy.html#contact-privacy" class="sidebar-link">Contact
+                                                Us</a></li>
                                     </ul>
                                 </div>
                             </aside>
 
                             <!-- Main Content -->
-                            <div class="privacy-main"
-                                data-aos="fade-left" 
-                                data-aos-duration="600" 
-                                data-aos-delay="200">
-                                
+                            <div class="privacy-main" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
+
                                 <!-- Section 1: Overview -->
-                                <section id="overview" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="100">
+                                <section id="overview" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                                     <h2 class="section-title font-bold">1. Overview</h2>
-                                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This Privacy Policy describes how itagency collects, uses, and shares your personal information when you visit or use our services.</p>
-                                    <p class="mb-3">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
-                                    <div class="highlight-box"
-                                        data-aos="zoom-in" 
-                                        data-aos-duration="600" 
-                                        data-aos-delay="200">
+                                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This
+                                        Privacy Policy describes how itagency collects, uses, and shares your personal
+                                        information when you visit or use our services.</p>
+                                    <p class="mb-3">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        We are committed to protecting your privacy and ensuring transparency about our
+                                        data practices.</p>
+                                    <div class="highlight-box" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
                                         <p class="font-semibold">Key Commitment:</p>
-                                        <p>We never sell your personal information to third parties and only collect data necessary to provide and improve our services.</p>
+                                        <p>We never sell your personal information to third parties and only collect
+                                            data necessary to provide and improve our services.</p>
                                     </div>
                                 </section>
 
                                 <!-- Section 2: Information We Collect -->
-                                <section id="information-collection" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="200">
+                                <section id="information-collection" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                                     <h2 class="section-title font-bold">2. Information We Collect</h2>
-                                    <p class="mb-3">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. We collect several types of information from and about users of our services.</p>
-                                    
+                                    <p class="mb-3">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                                        We collect several types of information from and about users of our services.
+                                    </p>
+
                                     <h3 class="subsection-title font-semibold">2.1 Personal Information</h3>
                                     <ul class="privacy-list">
                                         <li>Name, email address, and contact information</li>
@@ -237,18 +233,20 @@
                                         <li>Interaction data with our services and features</li>
                                     </ul>
 
-                                    <h3 class="subsection-title font-semibold">2.3 Cookies and Tracking Technologies</h3>
-                                    <p class="mb-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. We use cookies and similar technologies to enhance your experience and analyze site usage.</p>
+                                    <h3 class="subsection-title font-semibold">2.3 Cookies and Tracking Technologies
+                                    </h3>
+                                    <p class="mb-3">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore. We use cookies and similar technologies to enhance your
+                                        experience and analyze site usage.</p>
                                 </section>
 
                                 <!-- Section 3: How We Use Information -->
-                                <section id="information-use" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="300">
+                                <section id="information-use" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
                                     <h2 class="section-title font-bold">3. How We Use Your Information</h2>
-                                    <p class="mb-3">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. We use the information we collect for various purposes.</p>
-                                    
+                                    <p class="mb-3">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim. We use the information we collect for various
+                                        purposes.</p>
+
                                     <h3 class="subsection-title font-semibold">3.1 Service Provision</h3>
                                     <ul class="privacy-list">
                                         <li>To provide, maintain, and improve our services</li>
@@ -265,41 +263,43 @@
                                         <li>To respond to your comments and questions</li>
                                     </ul>
 
-                                    <div class="info-box"
-                                        data-aos="zoom-in" 
-                                        data-aos-duration="600" 
-                                        data-aos-delay="400">
+                                    <div class="info-box" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
                                         <p class="font-semibold">Marketing Communications:</p>
-                                        <p>You can opt out of marketing communications at any time by clicking the unsubscribe link in our emails or contacting us directly.</p>
+                                        <p>You can opt out of marketing communications at any time by clicking the
+                                            unsubscribe link in our emails or contacting us directly.</p>
                                     </div>
                                 </section>
 
                                 <!-- Section 4: Information Sharing -->
-                                <section id="information-sharing" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="400">
+                                <section id="information-sharing" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
                                     <h2 class="section-title font-bold">4. Information Sharing and Disclosure</h2>
-                                    <p class="mb-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. We do not sell, trade, or otherwise transfer your personal information to third parties except as described below.</p>
+                                    <p class="mb-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                        accusantium. We do not sell, trade, or otherwise transfer your personal
+                                        information to third parties except as described below.</p>
 
                                     <h3 class="subsection-title font-semibold">4.1 Service Providers</h3>
-                                    <p class="mb-3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. We may share information with trusted service providers who assist us in operating our business.</p>
+                                    <p class="mb-3">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                        blanditiis praesentium voluptatum. We may share information with trusted service
+                                        providers who assist us in operating our business.</p>
 
                                     <h3 class="subsection-title font-semibold">4.2 Legal Requirements</h3>
-                                    <p class="mb-3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. We may disclose information when required by law or to protect our rights and safety.</p>
+                                    <p class="mb-3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                                        fugit. We may disclose information when required by law or to protect our rights
+                                        and safety.</p>
 
                                     <h3 class="subsection-title font-semibold">4.3 Business Transfers</h3>
-                                    <p class="mb-3">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. In the event of a merger, acquisition, or sale, your information may be transferred as part of that transaction.</p>
+                                    <p class="mb-3">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. In
+                                        the event of a merger, acquisition, or sale, your information may be transferred
+                                        as part of that transaction.</p>
                                 </section>
 
                                 <!-- Section 5: Data Security -->
-                                <section id="data-security" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="500">
+                                <section id="data-security" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
                                     <h2 class="section-title font-bold">5. Data Security</h2>
-                                    <p class="mb-3">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse. We implement appropriate technical and organizational measures to protect your personal information.</p>
-                                    
+                                    <p class="mb-3">Quis autem vel eum iure reprehenderit qui in ea voluptate velit
+                                        esse. We implement appropriate technical and organizational measures to protect
+                                        your personal information.</p>
+
                                     <h3 class="subsection-title font-semibold">5.1 Security Measures</h3>
                                     <ul class="privacy-list">
                                         <li>Encryption of data in transit and at rest</li>
@@ -308,22 +308,20 @@
                                         <li>Employee training on data protection best practices</li>
                                     </ul>
 
-                                    <div class="warning-box"
-                                        data-aos="zoom-in" 
-                                        data-aos-duration="600" 
-                                        data-aos-delay="600">
+                                    <div class="warning-box" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
                                         <p class="font-semibold">Important Notice:</p>
-                                        <p>While we strive to protect your information, no method of transmission over the internet is 100% secure. Please use strong passwords and keep your account information confidential.</p>
+                                        <p>While we strive to protect your information, no method of transmission over
+                                            the internet is 100% secure. Please use strong passwords and keep your
+                                            account information confidential.</p>
                                     </div>
                                 </section>
 
                                 <!-- Section 6: Cookies & Tracking -->
-                                <section id="cookies" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="600">
+                                <section id="cookies" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
                                     <h2 class="section-title font-bold">6. Cookies and Tracking Technologies</h2>
-                                    <p class="mb-3">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis. We use cookies and similar technologies to enhance your browsing experience.</p>
+                                    <p class="mb-3">Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                                        corporis. We use cookies and similar technologies to enhance your browsing
+                                        experience.</p>
 
                                     <h3 class="subsection-title font-semibold">6.1 Types of Cookies</h3>
                                     <ul class="privacy-list">
@@ -334,16 +332,16 @@
                                     </ul>
 
                                     <h3 class="subsection-title font-semibold">6.2 Managing Cookies</h3>
-                                    <p class="mb-3">Similique sunt in culpa qui officia deserunt mollitia animi. You can control cookies through your browser settings and our cookie preference center.</p>
+                                    <p class="mb-3">Similique sunt in culpa qui officia deserunt mollitia animi. You can
+                                        control cookies through your browser settings and our cookie preference center.
+                                    </p>
                                 </section>
 
                                 <!-- Section 7: Your Rights -->
-                                <section id="user-rights" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="700">
+                                <section id="user-rights" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
                                     <h2 class="section-title font-bold">7. Your Privacy Rights</h2>
-                                    <p class="mb-3">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit. You have certain rights regarding your personal information.</p>
+                                    <p class="mb-3">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                                        impedit. You have certain rights regarding your personal information.</p>
 
                                     <h3 class="subsection-title font-semibold">7.1 Access and Portability</h3>
                                     <ul class="privacy-list">
@@ -359,42 +357,41 @@
                                         <li>Object to certain types of processing</li>
                                     </ul>
 
-                                    <div class="info-box"
-                                        data-aos="zoom-in" 
-                                        data-aos-duration="600" 
-                                        data-aos-delay="800">
+                                    <div class="info-box" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="800">
                                         <p class="font-semibold">Exercise Your Rights:</p>
-                                        <p>To exercise any of these rights, please contact us using the information provided in the Contact section below. We will respond to your request within 30 days.</p>
+                                        <p>To exercise any of these rights, please contact us using the information
+                                            provided in the Contact section below. We will respond to your request
+                                            within 30 days.</p>
                                     </div>
                                 </section>
 
                                 <!-- Section 8: Children's Privacy -->
-                                <section id="children-privacy" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="800">
+                                <section id="children-privacy" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
                                     <h2 class="section-title font-bold">8. Children's Privacy</h2>
-                                    <p class="mb-3">Omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis. Our services are not directed to children under the age of 13.</p>
-                                    <p class="mb-3">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus. We do not knowingly collect personal information from children under 13.</p>
-                                    
-                                    <div class="warning-box"
-                                        data-aos="zoom-in" 
-                                        data-aos-duration="600" 
-                                        data-aos-delay="900">
+                                    <p class="mb-3">Omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+                                        debitis. Our services are not directed to children under the age of 13.</p>
+                                    <p class="mb-3">Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                                        reiciendis voluptatibus. We do not knowingly collect personal information from
+                                        children under 13.</p>
+
+                                    <div class="warning-box" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="900">
                                         <p class="font-semibold">Parental Notice:</p>
-                                        <p>If you believe we have collected information from a child under 13, please contact us immediately so we can take appropriate action to remove such information.</p>
+                                        <p>If you believe we have collected information from a child under 13, please
+                                            contact us immediately so we can take appropriate action to remove such
+                                            information.</p>
                                     </div>
                                 </section>
 
                                 <!-- Section 9: Policy Changes -->
-                                <section id="policy-changes" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="900">
+                                <section id="policy-changes" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="900">
                                     <h2 class="section-title font-bold">9. Changes to This Privacy Policy</h2>
-                                    <p class="mb-3">Et harum quidem rerum facilis est et expedita distinctio. We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.</p>
-                                    <p class="mb-3">Nam libero tempore, cum soluta nobis est eligendi optio. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
-                                    
+                                    <p class="mb-3">Et harum quidem rerum facilis est et expedita distinctio. We may
+                                        update this Privacy Policy from time to time to reflect changes in our practices
+                                        or applicable laws.</p>
+                                    <p class="mb-3">Nam libero tempore, cum soluta nobis est eligendi optio. We will
+                                        notify you of any material changes by posting the new Privacy Policy on this
+                                        page and updating the "Last updated" date.</p>
+
                                     <h3 class="subsection-title font-semibold">9.1 Notification Methods</h3>
                                     <ul class="privacy-list">
                                         <li>Email notification for significant changes</li>
@@ -404,17 +401,13 @@
                                 </section>
 
                                 <!-- Section 10: Contact Us -->
-                                <section id="contact-privacy" class="privacy-section"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="1000">
+                                <section id="contact-privacy" class="privacy-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1000">
                                     <h2 class="section-title font-bold">10. Contact Us</h2>
-                                    <p class="mb-3">Omnis voluptas assumenda est, omnis dolor repellendus. If you have any questions about this Privacy Policy or our privacy practices, please contact us.</p>
-                                    
-                                    <div class="contact-info"
-                                        data-aos="fade-up" 
-                                        data-aos-duration="600" 
-                                        data-aos-delay="300">
+                                    <p class="mb-3">Omnis voluptas assumenda est, omnis dolor repellendus. If you have
+                                        any questions about this Privacy Policy or our privacy practices, please contact
+                                        us.</p>
+
+                                    <div class="contact-info" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
                                         <div class="d-flex flex-column gap-2">
                                             <div class="contact-item">
                                                 <span class="font-semibold">Privacy Officer Email:</span>
@@ -430,27 +423,25 @@
                                             </div>
                                             <div class="contact-item">
                                                 <span class="font-semibold">Mailing Address:</span>
-                                                <span>itagency Privacy Department<br>123 Business St, Suite 100<br>City, State 12345</span>
+                                                <span>itagency Privacy Department<br>123 Business St, Suite 100<br>City,
+                                                    State 12345</span>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="highlight-box mt-4"
-                                        data-aos="zoom-in" 
-                                        data-aos-duration="600" 
-                                        data-aos-delay="400">
+                                    <div class="highlight-box mt-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
                                         <p class="font-semibold">Data Protection Officer:</p>
-                                        <p>For residents of the European Union, you may contact our Data Protection Officer at <a href="mailto:dpo@itagency.com" class="text-primary">dpo@itagency.com</a> for matters related to GDPR compliance.</p>
+                                        <p>For residents of the European Union, you may contact our Data Protection
+                                            Officer at <a href="mailto:dpo@itagency.com" class="text-primary">dpo@itagency.com</a> for matters related to GDPR
+                                            compliance.</p>
                                     </div>
                                 </section>
 
                                 <!-- Footer Note -->
-                                <div class="privacy-footer"
-                                    data-aos="fade-up" 
-                                    data-aos-duration="600" 
-                                    data-aos-delay="100">
+                                <div class="privacy-footer" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-                                        <p class="text-muted">This privacy policy is effective as of January 15, 2025 and applies to all information collected by itagency.</p>
+                                        <p class="text-muted">This privacy policy is effective as of January 15, 2025
+                                            and applies to all information collected by itagency.</p>
                                     </div>
                                 </div>
                             </div>
@@ -461,183 +452,78 @@
         </div>
     </div>
 
-
     <!-- Footer -->
-    <footer class="footer pb-5">
-        <div class="footer-main">
-            <div class="container">
-                <div class="footer-content">
-                    <!-- Company Info -->
-                    <div class="footer-section footer-about" 
-                        data-aos="fade-up" 
-                        data-aos-delay="100">
-                        <div class="footer-logo">
-                            <img class="image" src="assets/images/logo-transparent-01.png" alt="ITAgency Logo">
-                        </div>
-                        <p class="footer-description">
-                            Empowering businesses with smart, innovative tech solutions. 
-                            We craft high-impact web development, mobile apps, and digital 
-                            services that fuel your growth and success.
-                        </p>
-                        
-                        <div class="footer-social">
-                            <span class="social-label">Follow Us</span>
-                            <div class="social-links">
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="200">
-                                    <svg><use xlink:href="#twitter-x"></use></svg>
-                                </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="250">
-                                    <svg><use xlink:href="#facebook"></use></svg>
-                                </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="300">
-                                    <svg><use xlink:href="#linkedin"></use></svg>
-                                </a>
-                                <a href="javascript:void(0)" class="social-link icon-transition"  
-                                data-aos="zoom-in" 
-                                data-aos-delay="350">
-                                    <svg><use xlink:href="#instagram"></use></svg>
-                                </a>
-                            </div>
-                        </div>
+    <footer class="footer pt-5 pb-5">
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section footer-about" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                    <p class="footer-description mt-2">
+                        虚拟机镜像文件用物理机本地启动，创新的计算机系统部署和分发方式，成就互联网时代的个人计算机。
+                    </p>
+                    <p class="footer-description">©2026 云固件 版权所有<br>All Rights Reserved.</p>
+                    <div class="footer-logo">
+                        <img class="image" src="assets/images/logo-transparent-01.png" alt="云固件">
                     </div>
+                </div>
 
-                    <!-- Navigation Links -->
-                    <div class="footer-section footer-links" 
-                        data-aos="fade-up" 
-                        data-aos-delay="200">
-                        <h4 class="footer-title">Navigation</h4>
-                        <ul class="footer-menu">
-                            <li><a href="index.html" class="footer-link">Home</a></li>
-                            <li><a href="about-us.html" class="footer-link">About Us</a></li>
-                            <li><a href="services.html" class="footer-link">Services</a></li>
-                            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
-                            <li><a href="team.html" class="footer-link">Team</a></li>
-                            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
-                            <li><a href="blog-column-2.html" class="footer-link">Blog</a></li>
-                            <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-                            <li><a href="terms-conditions.html" class="footer-link">Terms of Service</a></li>
-                        </ul>
+                <!-- 导航链接 -->
+                <div class="footer-section footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <!--h4 class="footer-title">导航</h4-->
+                    <ul class="footer-menu" style="text-align: center;">
+                        <li><a href="index.html" class="footer-link">首页</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">使用场景</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">支持系统</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">云固件快优</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">镜像仓库</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">镜像市场</a></li>
+                    </ul>
+                </div>
+
+                <!-- 教程类导航 -->
+                <div class="footer-section footer-services" data-aos="fade-up" data-aos-delay="300">
+                    <!--h4 class="footer-title">Our Services</h4-->
+                    <ul class="footer-menu" style="text-align: center;">
+                        <li><a href="javascript:void(0)" class="footer-link">入门指南</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">快速安装指南</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">初级教程</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">中级教程</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">高级教程</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">使用手册</a></li>
+                        <li><a href="javascript:void(0)" class="footer-link">云固件小课堂</a></li>
+                    </ul>
+                </div>
+
+                <!-- 微信新手群 -->
+                <div class="footer-section footer-about" data-aos="fade-up" data-aos-delay="400">
+                    <div>
+                        <img class="image" src="assets/images/wx-newbie.png" alt="微信新手群">
                     </div>
+                </div>
 
-                    <!-- Services -->
-                    <div class="footer-section footer-services" 
-                        data-aos="fade-up" 
-                        data-aos-delay="300">
-                        <h4 class="footer-title">Our Services</h4>
-                        <ul class="footer-menu">
-                            <li><a href="javascript:void(0)" class="footer-link">Web Development</a></li>
-                            <li><a href="javascript:void(0)" class="footer-link">Mobile App Development</a></li>
-                            <li><a href="javascript:void(0)" class="footer-link">Cloud Solutions</a></li>
-                            <li><a href="javascript:void(0)" class="footer-link">Digital Marketing</a></li>
-                            <li><a href="javascript:void(0)" class="footer-link">UI/UX Design</a></li>
-                            <li><a href="javascript:void(0)" class="footer-link">Data Analytics</a></li>
-                            <li><a href="javascript:void(0)" class="footer-link">Cybersecurity</a></li>
-                            <li><a href="javascript:void(0)" class="footer-link">IT Consulting</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact Info -->
-                    <div class="footer-section footer-contact" 
-                        data-aos="fade-up" 
-                        data-aos-delay="400">
-                        <h4 class="footer-title">Contact Info</h4>
-                        <div class="footer-contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg><use xlink:href="#map-marker-1"></use></svg>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Address</span>
-                                    <span class="contact-value">789 Innovation Avenue, Future Town, FT 67890</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg><use xlink:href="#phone"></use></svg>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Phone</span>
-                                    <span class="contact-value">+1 (800) 987-6543</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg><use xlink:href="#envelope-1"></use></svg>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Email</span>
-                                    <span class="contact-value">hello@itagency.com</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg><use xlink:href="#alarm-1"></use></svg>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Business Hours</span>
-                                    <span class="contact-value">Mon - Fri: 9:00 AM - 6:00 PM</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Newsletter -->
-                    <div class="footer-section footer-newsletter" 
-                        data-aos="fade-up" 
-                        data-aos-delay="500">
-                        <h4 class="footer-title">Newsletter</h4>
-                        <p class="newsletter-description">
-                            Subscribe to our newsletter for the latest tech insights and updates.
-                        </p>
-                        <form class="newsletter-form" id="newsletterForm">
-                            <div class="newsletter-input-group">
-                                <input type="email" 
-                                    class="newsletter-input" 
-                                    placeholder="Enter your email address" 
-                                    required>
-                                <button type="submit" class="newsletter-btn">
-                                    <svg><use xlink:href="#arrow-right"></use></svg>
-                                </button>
-                            </div>
-                            <label class="newsletter-checkbox">
-                                <input name="newsletter-agreement" type="checkbox">
-                                <span class="checkmark"></span>
-                                <span class="checkbox-text">I agree to the <a href="privacy-policy.html">Privacy Policy</a></span>
-                            </label>
-                        </form>
-
-                        <!-- Copyright -->
-                        <div class="footer-copyright" 
-                            data-aos="fade-up" 
-                            data-aos-delay="500">
-                            <p>© 2026 <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
-                        </div>
+                <!-- QQ频道 -->
+                <div class="footer-section footer-about" data-aos="fade-up" data-aos-delay="500">
+                    <div>
+                        <img class="image" src="assets/images/wx-assistant.jpg" alt="QQ频道">
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
         <svg viewBox="0 0 24 24">
-            <path d="M7 14l5-5 5 5z"/>
+            <path d="M7 14l5-5 5 5z"></path>
         </svg>
     </button>
 
     <!-- JavaScript -->
     <script src="assets/lib/aos/aos.js"></script>
     <script src="assets/lib/hover3dBgEffects/hover3d-bg-effects.js"></script>
-    
+
     <script src="assets/js/custom-isotope.js"></script>
     <script src="assets/js/testimonials.js"></script>
     <script src="assets/js/meteor-shower-effect.js"></script>
@@ -646,4 +532,5 @@
     <script src="assets/js/universal-slider.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

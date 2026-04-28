@@ -8,8 +8,7 @@
 首页分成拿来主义、支持系统、免费镜像、使用场景、教程、云固件快优几个部分。
 
 
-
-## 免费镜像
+## 镜像仓库
 
 提供Windows 7 ~ 11 5个企业版，其中10/11使用LTSC版本。
 
@@ -24,5 +23,23 @@ Linux提供CentOS Steam、Debian 13、Ubuntu 24.04 LTS、Manjora KDE四个版本
 
 后两篇教程，对应了开始使用页面。
 
+## 使用说明
+
+本网站内容页使用PostHTML生成。
+
+安装PostHTML
+
+```
+# 初始化
+npm init -y
+
+# 安装核心工具（如果之前装过可跳过）
+npm install -D posthtml-cli posthtml-include
+```
 
 
+自动生成静态页面
+
+```
+npm run watch
+```
