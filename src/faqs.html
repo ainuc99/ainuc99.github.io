@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - 常见问题 | 云固件</title>
+    <meta name="description" content="这里是一些使用云固件时遇到的常见问题和解答。">
+    <meta name="keywords" content="云固件, Multimware, 云固件镜像, 快优, QuickU, 个人计算机, PC, 虚拟机镜像, 本地启动, 系统部署, 系统分发">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/mw.ico">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/universal-slider.css">
+    <link rel="stylesheet" href="assets/css/faq-accordion.css">
+
+    <!-- General CSS files -->
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="body-1">
+    <!-- Tech Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-container">
+            <div class="loader-content">
+                <!-- Advanced Tech Spinner Only -->
+                <div class="loader-spinner">
+                    <div class="spinner-ring">
+                        <div></div>
+                    </div>
+                </div>
+
+                <!-- Advanced Progress Bar -->
+                <div class="loader-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <include src="inc/header.tpl.html"></include>
+
+    <!-- Page Header Section -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <!-- Animated particles/dots background -->
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <!-- Geometric patterns overlay -->
+            <div class="geometric-overlay">
+                <div class="geometric-shape shape-1"></div>
+                <div class="geometric-shape shape-2"></div>
+                <div class="geometric-shape shape-3"></div>
+                <div class="geometric-shape shape-4"></div>
+            </div>
+
+            <!-- Digital grid pattern -->
+            <div class="digital-grid"></div>
+        </div>
+
+        <div class="page-header-content">
+            <div>
+                <!--div class="breadcrumb"
+                    data-aos="fade-down" 
+                    data-aos-duration="600" 
+                    data-aos-delay="0">
+                    <a href="index.html" class="breadcrumb-link">Home</a>
+                    <span class="breadcrumb-separator">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </span>
+                    <span class="breadcrumb-current">FAQs</span>
+                </div-->
+
+                <h1 class="page-title" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">常见问题</h1>
+
+                <p class="page-description" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    这里是一些使用云固件的常见问题和解答。</p>
+            </div>
+        </div>
+
+        <!-- Floating elements -->
+        <div class="floating-elements">
+            <div class="floating-circle floating-circle-1"></div>
+            <div class="floating-circle floating-circle-2"></div>
+            <div class="floating-circle floating-circle-3"></div>
+        </div>
+    </section>
+
+    <!-- Main 1 -->
+    <div class="main d-flex-center pt-8 pb-8">
+        <!-- Main Content -->
+        <div class="container main-content">
+            <!-- Faq section -->
+            <section class="faq-section" data-faq data-color="var(--color-primary)" data-bg="var(--color-surface)"
+                data-title-color="var(--color-primary)" data-text-color="var(--color-text-primary)"
+                data-border="1px solid var(--color-primary)" data-multiple="false">
+                <div class="container">
+                    <div class="faq-content">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="faq-question">
+                                <h3 class="question-text">云固件是什么？</h3>
+                                <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
+                                    <svg class="faq-icon">
+                                        <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    <p>云固件是一种全新开发的镜像文件引导程序，拥有发明专利。<br />
+                                        云固件基于UEFI固件标准，能够在BIOS阶段直接引导保存在VHD或者VHDx格式中的操作系统镜像。<br />
+                                        支持的操作系统包括Windows 7 ~ 11，各种Linux系统（内核6.0以上），以及常见的国产操作系统。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="faq-question">
+                                <h3 class="question-text">云固件如何工作？</h3>
+                                <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
+                                    <svg class="faq-icon">
+                                        <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    <p>云固件分成云固件主程序和云固件镜像两个部分。<br />
+                                        云固件主程序属于BIOS级别的引导程序，负责在系统启动时加载和执行云固件镜像。<br />
+                                        云固件镜像则是包含操作系统的虚拟磁盘文件。云固件镜像不仅可以包含操作系统，还可以包含驱动程序、应用软件、配置文件和用户数据。<br />
+                                        云固件主程序启动云固件镜像后，就退出运行，把系统控制权交还给操作系统。<br />
+                                        云固件镜像中的操作系统就像安装在物理硬盘上的操作系统一样运行，用户可以正常使用它来完成各种任务。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="faq-question">
+                                <h3 class="question-text">云固件提供持续支持和维护吗？</h3>
+                                <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
+                                    <svg class="faq-icon">
+                                        <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    <p>是的，云固件提供主程序的不断更新和升级服务，这些都是免费提供的。<br />
+                                        云固件也提供大量L1层级的各种操作系统镜像，目前压缩后的镜像数据总量超过6TB。<br />
+                                        用户也可以参照云固件官方提供的教程进行云固件镜像的自制。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="faq-question">
+                                <h3 class="question-text">使用云固件的计算机有什么要求？</h3>
+                                <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
+                                    <svg class="faq-icon">
+                                        <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    <p>使用云固件的计算机要求2015年之后生产的x86_64位架构计算机，使用基于UEFI的BIOS固件，要求硬盘使用GPT分区表。<br />
+                                        其他注意事项，可以参照《快速安装指南》中的要求。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="faq-question">
+                                <h3 class="question-text">云固件收费吗？</h3>
+                                <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
+                                    <svg class="faq-icon">
+                                        <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    <p>云固件主程序是免费提供的，用户可以自由下载和使用。<br />
+                                        云固件专业版也提供收费功能来满足特殊需求。<br />
+                                        云固件作者陆伟峰提供了大量免费的L1层级云固件镜像。用户也可以根据教程自制云固件镜像。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                            <div class="faq-question">
+                                <h3 class="question-text">云固件有没有用户群，如何加入？</h3>
+                                <button class="faq-toggle" aria-expanded="false" aria-label="Toggle answer">
+                                    <svg class="faq-icon">
+                                        <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    <p>云固件拥有活跃的用户社区，用户可以查看官方网站底部的二维码进入云固件微信群、QQ群、腾讯频道等。<br />
+                                        云固件的微信群按照能力提供了分级的服务，目前包括新手群、交流群、镜像群、自制镜像群等四个级别。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <include src="inc/footer.tpl.html"></include>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z" />
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/lib/aos/aos.js"></script>
+
+    <script src="assets/js/faq-accordion.js"></script>
+    <script src="assets/js/custom-isotope.js"></script>
+    <script src="assets/js/universal-slider.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
