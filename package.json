@@ -4,7 +4,8 @@
   "description": "云固件官方网站，分成首页、免费镜像、教程三个栏目。博客文章通过另外的项目自动生成，嵌入为二级目录。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "posthtml src/*.html -o ./",
+    "watch": "posthtml src/*.html -o ./ -w"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,8 @@
   },
   "homepage": "https://github.com/ainuc99/ainuc99.github.io#readme",
   "devDependencies": {
+    "posthtml": "^0.16.7",
     "posthtml-cli": "^0.10.0",
     "posthtml-include": "^2.0.1"
-  },
-  "scripts": {
-    "build": "posthtml src/*.html -o ./",
-    "watch": "posthtml src/*.html -o ./ -w"
   }
 }
