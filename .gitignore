@@ -1,5 +1,18 @@
-node_modules/
+# 忽略 根目录 所有自动编译出来的 HTML
+/*.html
+
+# 保留 src 目录（你的源码）
+!/src/
+
+# 忽略 CSS 编译产物（可选）
+/css/*.css
+/css/*.min.css
+
+# 其他
+/node_modules/
+/.vscode/
 dist/
 build/
 .env
 package-lock.json
+
