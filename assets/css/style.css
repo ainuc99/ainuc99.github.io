@@ -1906,7 +1906,7 @@ body {
   -moz-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  height: 430px;
+  height: 400px;
   background-color: var(--color-surface);
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -2147,7 +2147,8 @@ body {
   color: #1e88e5;
 }
 .main .main-content .blog .blog-grid .blog-card .blog-excerpt {
-  font-size: 0.875rem;
+/*  font-size: 0.875rem; */
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   flex-grow: 1;
